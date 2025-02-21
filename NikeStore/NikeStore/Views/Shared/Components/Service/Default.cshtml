@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Service>
+
+@foreach (var service in Model)
+{
+    <div class="Components">
+        <div class="Contain_img">
+            <img src="@service.ImageUrl" alt="">
+        </div>
+        <div class="Content">
+            <h2>@service.Name</h2>
+            <ul>
+                @foreach(var item in service.ServiceTypes)
+				{
+                    <li><a href="@item.Link">@item.Name</a></li>
+				}
+            </ul>
+        </div>
+    </div>
+}

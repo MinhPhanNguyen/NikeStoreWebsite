@@ -1,0 +1,12 @@
+﻿@model IEnumerable<WebApplication1.Models.Product>
+
+<h2>Danh sách sản phẩm</h2>
+@foreach (var item in Model)
+{
+    <div>
+        <h3>@item.Name</h3>
+        <img src="@item.ImageUrl" alt="@item.Name" width="150" />
+        <p>Giá: @item.Price VNĐ</p>
+        <a asp-controller="Product" asp-action="Details" asp-route-id="@item.ProductID">Xem chi tiết</a>
+    </div>
+}

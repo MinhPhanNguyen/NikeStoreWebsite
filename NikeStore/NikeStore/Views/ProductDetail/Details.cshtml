@@ -1,0 +1,82 @@
+﻿@{
+	ViewData["Title"] = "Chi tiết sản phẩm";
+}
+<div class="ProductDetail">
+	<section class="Section_1 row">
+		<div class="Contain_img col-lg-7 row">
+			<div class="ImgItems col-lg-2">
+				<img src="/images/ProductDetail/AIR FORCE 1 07.jpg" alt="Alternate Text" />
+				<img src="/images/ProductDetail/AIR FORCE 1 07 (1).jpg" alt="Alternate Text" />
+				<img src="/images/ProductDetail/AIR FORCE 1 07 (2).jpg" alt="Alternate Text" />
+				<img src="/images/ProductDetail/AIR FORCE 1 07 (3).jpg" alt="Alternate Text" />
+				<img src="/images/ProductDetail/AIR FORCE 1 07 (4).jpg" alt="Alternate Text" />
+				<img src="/images/ProductDetail/AIR FORCE 1 07 (5).jpg" alt="Alternate Text" />
+			</div>
+
+			<div class="ImgDisplay col-lg-10">
+				<img src="~/media/products/@Model.ImageUrl" alt="Alternate Text" id="displayedImage" />
+				<div class="PrevNext">
+					<button><i class="fa-solid fa-angle-left"></i></button>
+					<button><i class="fa-solid fa-angle-right"></i></button>
+				</div>
+			</div>
+		</div>
+
+		<div class="Content  col-lg-5">
+			<div class="Title">
+				<h2>@Model.Name</h2>
+				<h3>@Model.ProductCategory?.CategoryName</h3>
+				<span>@Model.Price</span>
+			</div>
+
+			<div class="TypeOption">
+				<img src="/images/ProductDetail/type1.jpg" alt="Alternate Text" />
+				<img src="/images/ProductDetail/type2.jpg" alt="Alternate Text" />
+				<img src="/images/ProductDetail/type3.jpg" alt="Alternate Text" />
+				<img src="/images/ProductDetail/type4.jpg" alt="Alternate Text" />
+				<img src="/images/ProductDetail/type5.jpg" alt="Alternate Text" />
+			</div>
+
+			<div class="SizeOption">
+				<div class="SizeTitle">
+					<h3>Chọn Size</h3>
+					<span><i class="fa-brands fa-readme"></i> Hướng dẫn chọn Size</span>
+				</div>
+				<ul>
+					<vc:product-size></vc:product-size>
+				</ul>
+			</div>
+
+			<div class="btn">
+				<a asp-action="Add" asp-controller="Cart" asp-route-Id="@Model.ProductID" class="button">Thêm vào giỏ hàng</a>
+				<a class="button">Yêu thích <i class="fa-regular fa-heart"></i></a>
+			</div>
+		</div>
+	</section>
+
+	<section class="Section_2">
+		<div class="Container">
+			<div class="TitleDescription" onclick="toggleDescription(this)">
+				<h3>Mô tả sản phẩm</h3>
+				<i class="UpDes fa-solid fa-angle-down"></i>
+				<i class="DownDes fa-solid fa-angle-up"></i>
+			</div>
+
+			<div class="Content">
+				<p>@Html.Raw(Model.Description)</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="Section_3">
+		<div class="RateStatistic" onclick="toggleRate(this)">
+			<span>Đánh giá 4.9/5.0 (320)<i class="fa-solid fa-star"></i></span>
+			<i class="UpRate fa-solid fa-angle-down"></i>
+			<i class="DownRate fa-solid fa-angle-up"></i>
+		</div>
+
+		<div class="RateContent">
+			<vc:product-review></vc:product-review>
+		</div>
+	</section>
+</div>

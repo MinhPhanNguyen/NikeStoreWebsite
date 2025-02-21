@@ -1,0 +1,67 @@
+﻿@model Product
+
+@{
+	ViewData["Title"] = "Thêm sản phẩm";
+}
+
+<div class="Dashboard">
+	<div class="DashboardContent">
+		<div class="AddTable Manager">
+			<div class="Container">
+				<div class="Title">
+					<h3>Thêm sản phẩm</h3>
+				</div>
+
+				<form asp-action="Add" enctype="multipart/form-data">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<div class="form-group">
+						<label for="Name">Tên sản phẩm:</label>
+						<input asp-for="Name" type="text" class="form-control" />
+						<span asp-validation-for="Name" class="text-danger"></span>
+					</div>
+
+					<div class="form-group">
+						<label for="Description">Mô tả:</label>
+						<textarea asp-for="Description" type="text" id="Description" class="form-control"></textarea>
+						<span asp-validation-for="Description" class="text-danger"></span>
+					</div>
+
+					<div class="form-group">
+						<label for="Price">Giá:</label>
+						<input asp-for="Price" type="number" step="0.01" class="form-control" />
+						<span asp-validation-for="Price" class="text-danger"></span>
+					</div>
+
+					<div class="form-group">
+						<label for="StockQuantity">Số lượng tồn kho:</label>
+						<input asp-for="StockQuantity" type="number" min="1" class="form-control" />
+						<span asp-validation-for="StockQuantity" class="text-danger"></span>
+					</div>
+
+					<div class="form-group">
+						<label for="CategoryID">Danh mục:</label>
+						<select asp-for="CategoryID" class="form-control" asp-items="ViewBag.ProductCategory">
+							<option value="">-- Chọn danh mục --</option>
+						</select>
+						<span asp-validation-for="CategoryID" class="text-danger"></span>
+					</div>
+
+					<div class="btnAddTable form-group">
+						<button>Thêm</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	@{
+		await Html.PartialAsync("_ValidationScriptsPartial");
+	}
+
+	<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+	<script>
+		CKEDITOR.replace('Description');
+	</script>
+}

@@ -1,0 +1,46 @@
+﻿@import url(https://db.onlinewebfonts.com/c/7196ac7bbe07eb77290c0e71f4310b34?family=Mazda+Type+Regular);
+
+@font-face {
+    font-family: "Mazda Type";
+    src: url("https://db.onlinewebfonts.com/t/7196ac7bbe07eb77290c0e71f4310b34.eot");
+    src: url("https://db.onlinewebfonts.com/t/7196ac7bbe07eb77290c0e71f4310b34.eot?#iefix")format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/7196ac7bbe07eb77290c0e71f4310b34.woff2")format("woff2"), url("https://db.onlinewebfonts.com/t/7196ac7bbe07eb77290c0e71f4310b34.woff")format("woff"), url("https://db.onlinewebfonts.com/t/7196ac7bbe07eb77290c0e71f4310b34.ttf")format("truetype"), url("https://db.onlinewebfonts.com/t/7196ac7bbe07eb77290c0e71f4310b34.svg#Mazda Type Regular")format("svg");
+}
+
+* {
+    scrollbar-width: thin;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mazda Type";
+    transition: all 0.2s ease-in-out;
+}
+
+body {
+    font-family: "Mazda Type";
+    position: relative;
+    background-color: var(--background-color);
+    max-width: 100%;
+    height: auto;
+}
+
+ul, a, i {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+}

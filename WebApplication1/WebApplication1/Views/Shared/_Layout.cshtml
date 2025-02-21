@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NikeStore</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/_Layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Client/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/fontawesome-free-6.7.2-web/css/all.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NikeStore.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="Container">
+            <div class="Logo">
+                <a href="/"><img src="~/images/icon/logo.png" alt="Logo" /></a>
+            </div>
+            <div class="Menu">
+                <div class="MenuItems">
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="Tìm kiếm sản phẩm" />
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </li>
+                        <li class="menu-item" data-dropdown="dropdown_Product"><a href="/ProductList/Index">Sản phẩm</a></li>
+                        <li class="menu-item" data-dropdown="dropdown_Promotion"><a href="/Promotion/Index">Ưu đãi</a></li>
+                        <li class="menu-item" data-dropdown="dropdown_Service"><a href="/Service/Index">Dịch vụ</a></li>
+                        <li><a href="/Contact/Index">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-overlay"></div>
+
+                <div class="dropdown-menu">
+                    <div id="dropdown_Product" class="dropdown">
+                        <ul>
+                            <li><h2>Phổ biến</h2></li>
+                            <li><p>Bán chạy nhất</p></li>
+                            <li><p>Sản phẩm mới</p></li>
+                        </ul>
+                        <ul>
+                            <li><h2>Collections</h2></li>
+                            @* @foreach (var item in Model) *@
+                            @* { *@
+                            @*     <li><p>@item.ProductCategory?.CategoryName</p></li> *@
+                            @* } *@
+                        </ul>
+                        <ul>
+                            <li><h2>Jordan</h2></li>
+                            <li><p>Tất cả sản phẩm</p></li>
+                            <li><p>Mới nhất</p></li>
+                            <li><p>Jordan Basketball</p></li>
+                            <li><p>Jordan Golf</p></li>
+                            <li><p>Jordan x PSG</p></li>
+                        </ul>
+                        <ul>
+                            <li><h2>Thể thao</h2></li>
+                            <li><p>Football</p></li>
+                            <li><p>Running</p></li>
+                            <li><p>Basketball</p></li>
+                            <li><p>Golf</p></li>
+                            <li><p>Fitness</p></li>
+                            <li><p>Tennis</p></li>
+                            <li><p>Yoga</p></li>
+                            <li><p>Dance</p></li>
+                        </ul>
+                    </div>
+
+                    <div id="dropdown_Promotion" class="dropdown">
+                        <ul>
+                            <li><h2>Sale</h2></li>
+                            <li><p>Các sản phẩm Sale</p></li>
+                            <li><p>Sale Bán chạy</p></li>
+                        </ul>
+                        <ul>
+                            <li><h2>Sale tặng kèm</h2></li>
+                            <li><p>Vớ - Dưới 2tr</p></li>
+                            <li><p>5%, Vớ - 2tr đến 5tr</p></li>
+                            <li><p>5%, Vớ, Vệ sinh - 5tr đến 8tr</p></li>
+                            <li><p>10% - 8tr đến 12tr</p></li>
+                            <li><p>10%, Vớ - 12tr đến 15tr</p></li>
+                            <li><p>FullCombo - Trên 15tr</p></li>
+                        </ul>
+                        <ul>
+                            <li><h2>Sale thể thao</h2></li>
+                            <li><p>Football</p></li>
+                            <li><p>Running</p></li>
+                            <li><p>Basketball</p></li>
+                            <li><p>Golf</p></li>
+                            <li><p>Fitness</p></li>
+                            <li><p>Tennis</p></li>
+                            <li><p>Yoga</p></li>
+                            <li><p>Dance</p></li>
+                        </ul>
+                        <ul>
+                            <li><h2>Voucher giảm giá</h2></li>
+                            <li><p>Voucher của bạn</p></li>
+                            <li><p>Săn voucher</p></li>
+                        </ul>
+                    </div>
+
+                    <div id="dropdown_Service" class="dropdown">
+                        <vc:service></vc:service>
+                    </div>
+                </div>
+            </div>
+            <div class="Account">
+                <ul>
+                    <li><a href="/Log/Index" class="LogIn">Đăng nhập/Đăng ký</a></li>
+                    <li><a href="/WishList/Index"><i class="fa-regular fa-heart"></i></a></li>
+                    <li><a href="/Cart/Index"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="/Account/Index" class="AccountIcon"><span>MinhNguyen</span><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class='CustomerSupport'>
+        <ul>
+            <li><img src="~/images/icon/fbsquare.png" /></li>
+            <li><img src="~/images/icon/ytbsquare.png" /></li>
+            <li><img src="~/images/icon/messenger.png" /></li>
+            <li><i class="fa-solid fa-comment" onclick="handleChatbot()"></i></li>
+        </ul>
+        <div class='Chatbot'>
+            <div class='Chatbot_input'>
+                <i class="fa-solid fa-circle-xmark Close_svg" onclick="closeChatbot()"></i>
+                <div class='Container'>
+                    <textarea placeholder="Bạn đang cần hỗ trợ?"></textarea>
+                    <button><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Services">
+        <div class="CloseServices">
+            <div onclick="closeServices()" class="service-item">
+                <a href="#"><span><i class="fa-solid fa-xmark"></i></span></a>
+            </div>
+            <div class="service-item">
+                <a href="/ProductList/Index">
+                    <span><i class="fa-solid fa-money-bill-wave"></i></i></span>
+                    <span class="content">Sản phẩm</span>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="/Promotion/Index">
+                    <span><i class="fa-solid fa-tags"></i></span>
+                    <span class="content">Ưu đãi</span>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="/Service/Index">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <span class="content">Dịch vụ</span>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="/Cart/Index">
+                    <span><i class="fa-solid fa-cart-shopping"></i></span>
+                    <span class="content">Giỏ hàng</span>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="tel:0934190061">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <span class="content">Hotline kinh doanh 0934.1900.61</span>
+                </a>
+            </div>
+            <div class="service-item">
+                <a href="tel:0934190061">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <span class="content">Hotline dịch vụ 0934.1900.61</span>
+                </a>
+            </div>
+        </div>
+        <div class="OpenServices">
+            <div onclick="openServices()" class="service-item">
+                <a href="#"><span><i class="fa-solid fa-bars"></i></span></a>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+
+    <footer>
+        <div class="TotalFooter">
+            <ul>
+                <h2>SẢN PHẨM</h2>
+                @* @foreach (var item in Model) *@
+                @* { *@
+                @*     <li><a href="/ProductDetail/Index/@item.CategoryID">@item.ProductCategory?.CategoryName</a></li> *@
+                @* } *@
+            </ul>
+            <ul>
+                <h2>DỊCH VỤ</h2>
+                <li><a href="/">Dịch vụ sau bán hàng</a></li>
+                <li><a href="/">Phụ kiện</a></li>
+                <li><a href="/">Chăm sóc khách hàng</a></li>
+            </ul>
+            <ul>
+                <h2>CHÍNH SÁCH</h2>
+                <li><a href="/">Chính sách Thanh toán</a></li>
+                <li><a href="/">Chính sách Bảo mật</a></li>
+                <li><a href="/">Chính sách Giao nhận - Vận chuyển</a></li>
+            </ul>
+            <ul>
+                <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+                <li><a href="tel:0934190061">Hotline Kinh doanh: 0934.1900.61</a></li>
+                <li><a href="tel:0934190061">Hotline Dịch vụ: 0934.1900.61</a></li>
+                <li><a href="mailto:SWminh0918195615@gmail.com">Email: SWminh0918195615@gmail.com</a></li>
+                <li class="icon">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="~/images/icon/fbsquare.png" alt="facebook">
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <img src="~/images/icon/ytbsquare.png" alt="youtube">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <p>© 2024 MinhNguyenGroup Việt Nam</p>
+    </footer>
+
+    <script src="~/js/_Layout.js"></script>
+    <script src="~/js/Client/script.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
