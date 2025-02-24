@@ -18,7 +18,7 @@
             <div class="Contain">
                 @foreach (var product in Model)
                 {
-                    <a asp-action="Details" asp-controller="ProductDetail" asp-route-Id="@product.ProductID" class="Components col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <a asp-action="Details" asp-controller="Product" asp-route-Id="@product.ProductID" class="Components col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="Contain_img">
                             <img src="/media/products/@product.ImageUrl" alt="@product.Name" />
                         </div>

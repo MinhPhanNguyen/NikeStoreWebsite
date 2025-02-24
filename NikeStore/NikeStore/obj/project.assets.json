@@ -4930,23 +4930,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vi Tính Phong Thư\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\NikeStore-main\\NikeStore\\NikeStore\\NikeStore.csproj",
+      "projectUniqueName": "D:\\TestWebsite\\NikeStore\\NikeStore\\NikeStore.csproj",
       "projectName": "NikeStore",
-      "projectPath": "D:\\NikeStore-main\\NikeStore\\NikeStore\\NikeStore.csproj",
-      "packagesPath": "C:\\Users\\Vi Tính Phong Thư\\.nuget\\packages\\",
-      "outputPath": "D:\\NikeStore-main\\NikeStore\\NikeStore\\obj\\",
+      "projectPath": "D:\\TestWebsite\\NikeStore\\NikeStore\\NikeStore.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\TestWebsite\\NikeStore\\NikeStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vi Tính Phong Thư\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4955,7 +4955,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

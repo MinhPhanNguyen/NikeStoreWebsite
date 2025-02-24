@@ -3,6 +3,16 @@
 
 @{
 	ViewData["Title"] = "Danh sách quyền";
+
+	Paginate paginate = new Paginate();
+
+	int page = 1;
+
+	if (ViewBag.Pager != null)
+	{
+		paginate = ViewBag.Pager;
+		page = paginate.CurrentPage;
+	}
 }
 
 <div class="Dashboard">

@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\NikeStore-main\\NikeStore\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\TestWebsite\\NikeStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|d:\\testwebsite\\nikestore\\nikestore\\models\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|solutionrelative:nikestore\\models\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|d:\\testwebsite\\nikestore\\nikestore\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|solutionrelative:nikestore\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -33,11 +38,41 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Promotion.cs",
+              "DocumentMoniker": "D:\\TestWebsite\\NikeStore\\NikeStore\\Models\\Promotion.cs",
+              "RelativeDocumentMoniker": "NikeStore\\Models\\Promotion.cs",
+              "ToolTip": "D:\\TestWebsite\\NikeStore\\NikeStore\\Models\\Promotion.cs",
+              "RelativeToolTip": "NikeStore\\Models\\Promotion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T07:47:31.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\TestWebsite\\NikeStore\\NikeStore\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "NikeStore\\Models\\Product.cs",
+              "ToolTip": "D:\\TestWebsite\\NikeStore\\NikeStore\\Models\\Product.cs",
+              "RelativeToolTip": "NikeStore\\Models\\Product.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAowAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T07:45:06.905Z",
+              "EditorCaption": ""
             }
           ]
         }

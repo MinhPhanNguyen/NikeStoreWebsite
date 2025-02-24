@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\NikeStore-main\\NikeStore\\",
+  "WorkspaceRootPath": "D:\\TestWebsite\\NikeStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|d:\\nikestore-main\\nikestore\\nikestore\\areas\\admin\\views\\product\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|solutionrelative:nikestore\\areas\\admin\\views\\product\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|d:\\testwebsite\\nikestore\\nikestore\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|solutionrelative:nikestore\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|d:\\nikestore-main\\nikestore\\nikestore\\areas\\admin\\views\\shared\\_paging.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|solutionrelative:nikestore\\areas\\admin\\views\\shared\\_paging.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|d:\\testwebsite\\nikestore\\nikestore\\views\\service\\authaccessories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|solutionrelative:nikestore\\views\\service\\authaccessories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|d:\\testwebsite\\nikestore\\nikestore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97771216-B14C-4D78-A879-3B454AB80E04}|NikeStore\\NikeStore.csproj|solutionrelative:nikestore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,15 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -42,36 +42,53 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Product.cshtml",
-              "DocumentMoniker": "D:\\NikeStore-main\\NikeStore\\NikeStore\\Areas\\Admin\\Views\\Product\\Product.cshtml",
-              "RelativeDocumentMoniker": "NikeStore\\Areas\\Admin\\Views\\Product\\Product.cshtml",
-              "ToolTip": "D:\\NikeStore-main\\NikeStore\\NikeStore\\Areas\\Admin\\Views\\Product\\Product.cshtml",
-              "RelativeToolTip": "NikeStore\\Areas\\Admin\\Views\\Product\\Product.cshtml",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAIcAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\TestWebsite\\NikeStore\\NikeStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NikeStore\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\TestWebsite\\NikeStore\\NikeStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NikeStore\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGUAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T00:57:54.464Z",
+              "WhenOpened": "2025-02-24T07:16:17.468Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Paging.cshtml",
-              "DocumentMoniker": "D:\\NikeStore-main\\NikeStore\\NikeStore\\Areas\\Admin\\Views\\Shared\\_Paging.cshtml",
-              "RelativeDocumentMoniker": "NikeStore\\Areas\\Admin\\Views\\Shared\\_Paging.cshtml",
-              "ToolTip": "D:\\NikeStore-main\\NikeStore\\NikeStore\\Areas\\Admin\\Views\\Shared\\_Paging.cshtml",
-              "RelativeToolTip": "NikeStore\\Areas\\Admin\\Views\\Shared\\_Paging.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Title": "AuthAccessories.cshtml",
+              "DocumentMoniker": "D:\\TestWebsite\\NikeStore\\NikeStore\\Views\\Service\\AuthAccessories.cshtml",
+              "RelativeDocumentMoniker": "NikeStore\\Views\\Service\\AuthAccessories.cshtml",
+              "ToolTip": "D:\\TestWebsite\\NikeStore\\NikeStore\\Views\\Service\\AuthAccessories.cshtml",
+              "RelativeToolTip": "NikeStore\\Views\\Service\\AuthAccessories.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T00:57:52.604Z",
+              "WhenOpened": "2025-02-24T07:14:28.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "D:\\TestWebsite\\NikeStore\\NikeStore\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "NikeStore\\Controllers\\ServiceController.cs",
+              "ToolTip": "D:\\TestWebsite\\NikeStore\\NikeStore\\Controllers\\ServiceController.cs*",
+              "RelativeToolTip": "NikeStore\\Controllers\\ServiceController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T07:10:07.593Z",
               "EditorCaption": ""
             }
           ]

@@ -123,7 +123,7 @@
 		<div class="ProductList col-lg-10">
 			@foreach (var product in Model)
 			{
-				<a asp-action="Details" asp-controller="ProductDetail" asp-route-Id="@product.ProductID" class="Components">
+				<a asp-action="Details" asp-controller="Product" asp-route-Id="@product.ProductID" class="Components">
 					<div class="Contain_img">
 						<img src="/media/products/@product.ImageUrl" alt="@product.Name" />
 					</div>

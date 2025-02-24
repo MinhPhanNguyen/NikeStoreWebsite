@@ -11,7 +11,7 @@
             <ul>
                 @foreach(var item in service.ServiceTypes)
 				{
-                    <li><a href="@item.Link">@item.Name</a></li>
+                    <li><a asp-action="@item.Link" asp-controller="Service">@item.Name</a></li>
 				}
             </ul>
         </div>
