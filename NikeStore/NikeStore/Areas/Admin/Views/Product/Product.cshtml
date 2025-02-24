@@ -2,6 +2,16 @@
 
 @{
 	ViewData["Title"] = "Danh sách sản phẩm";
+
+	Paginate paginate = new Paginate();
+
+	int page = 1;
+
+	if (ViewBag.Pager != null)
+	{
+		paginate = ViewBag.Pager;
+		page = paginate.CurrentPage;
+	}
 }
 
 <div class="Dashboard">
@@ -123,9 +133,7 @@
 							</div>
 
 							<div class="PageMove">
-								<i class="LeftMove fa-solid fa-angle-left"></i>
-								<input type="text" placeholder="Trang 1 / 50">
-								<i class="RightMove fa-solid fa-angle-right"></i>
+								<partial name="_Paging" model="paginate" />
 							</div>
 						</div>
 					</div>

@@ -9181,8 +9181,16 @@
       "PackagePath": "staticwebassets\\media\\customers\\d02973ba-2f53-4768-8a0a-1cdbf9669279_nike-just-do-it.jpg"
     },
     {
+      "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\2558781a-59a1-4683-9b24-be172c4ca486_banner-ve-sinh-giay-mobile-goc.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\2558781a-59a1-4683-9b24-be172c4ca486_banner-ve-sinh-giay-mobile-goc.jpg"
+    },
+    {
       "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\26d6a9c7-204f-4667-adfc-5671025b2267_images (1).jpg",
       "PackagePath": "staticwebassets\\media\\products\\26d6a9c7-204f-4667-adfc-5671025b2267_images (1).jpg"
+    },
+    {
+      "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\3dd118a2-0a94-4a4e-a183-751098ecd036_dich-vu-ve-sinh-giay-washintown.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\3dd118a2-0a94-4a4e-a183-751098ecd036_dich-vu-ve-sinh-giay-washintown.jpg"
     },
     {
       "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\455aa42a-7669-4f9d-b01a-d16431343d5e_nike-just-do-it.jpg",
@@ -9195,6 +9203,18 @@
     {
       "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\4ff496c5-1574-4187-813e-b57395cf5945_images (1).jpg",
       "PackagePath": "staticwebassets\\media\\products\\4ff496c5-1574-4187-813e-b57395cf5945_images (1).jpg"
+    },
+    {
+      "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\8211b54c-90ca-4a8a-8127-2f1682dc103a_vn-11134207-7ras8-m5wmiviylzqu4f.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\8211b54c-90ca-4a8a-8127-2f1682dc103a_vn-11134207-7ras8-m5wmiviylzqu4f.jpg"
+    },
+    {
+      "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\83e103f5-43ff-4346-b244-e3e09761a446_dan-bao-ve-de-giay-sneaker-3.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\83e103f5-43ff-4346-b244-e3e09761a446_dan-bao-ve-de-giay-sneaker-3.jpg"
+    },
+    {
+      "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\8814ec85-6ace-470e-bef0-0357c27fdd14_san-pham-phuc-hoi-giay-toan-dien.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\8814ec85-6ace-470e-bef0-0357c27fdd14_san-pham-phuc-hoi-giay-toan-dien.jpg"
     },
     {
       "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\AIR FORCE 1 07.jpg",
@@ -9211,6 +9231,22 @@
     {
       "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\W NIKE DUNK LOW NEXT NATURE.jpg",
       "PackagePath": "staticwebassets\\media\\products\\W NIKE DUNK LOW NEXT NATURE.jpg"
+    },
+    {
+      "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\be16f4d5-bd85-4987-ad0e-542d68682fef_thiế1676712879147.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\be16f4d5-bd85-4987-ad0e-542d68682fef_thiế1676712879147.jpg"
+    },
+    {
+      "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\cf564138-2e6b-4b2f-a73b-4cfe35a33661_99b4e708b63aebd68defd3c1abe01279.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\cf564138-2e6b-4b2f-a73b-4cfe35a33661_99b4e708b63aebd68defd3c1abe01279.jpg"
+    },
+    {
+      "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\ed84764b-0d69-473f-8fcc-587b08dbe33b_99b4e708b63aebd68defd3c1abe01279.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\ed84764b-0d69-473f-8fcc-587b08dbe33b_99b4e708b63aebd68defd3c1abe01279.jpg"
+    },
+    {
+      "Id": "D:\\NikeStore-main\\NikeStore\\NikeStore\\wwwroot\\media\\products\\feb5bd40-65ff-4a30-a3ee-aad0dd5d6753_Nike-Crescent-Mall-1.jpg",
+      "PackagePath": "staticwebassets\\media\\products\\feb5bd40-65ff-4a30-a3ee-aad0dd5d6753_Nike-Crescent-Mall-1.jpg"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.NikeStore.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

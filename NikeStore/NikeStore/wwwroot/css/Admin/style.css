@@ -1536,19 +1536,18 @@
             transform: scale(1.1);
         }
 
-    .Manager .Section_2 .PageMove i {
-        padding: 0.8em;
-        cursor: pointer;
-        position: absolute;
-    }
+        .Manager .Section_2 .PageMove .pagination {
+            display: flex;
+            align-items: center;
+        }
 
-    .Manager .Section_2 .PageMove .LeftMove {
-        left: 0;
-    }
+        .Manager .Section_2 .PageMove .pagination li {
+        }
 
-    .Manager .Section_2 .PageMove .RightMove {
-        right: 0;
-    }
+            .Manager .Section_2 .PageMove .pagination li a {
+                border-radius: unset;
+                font-size: 0.9em;
+            }
 
     .Manager .Section_2 .Container .PageMove i:hover {
         background-color: #ededed;

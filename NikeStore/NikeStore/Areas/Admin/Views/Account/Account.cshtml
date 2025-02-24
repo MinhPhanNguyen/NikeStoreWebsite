@@ -1,7 +1,15 @@
-﻿@model IEnumerable<NikeStore.Models.Account>
-
-@{
+﻿@{
 	ViewData["Title"] = "Danh sách tài khoản";
+
+	Paginate paginate = new Paginate();
+
+	int page = 1;
+
+	if (ViewBag.Pager != null)
+	{
+		paginate = ViewBag.Pager;
+		page = paginate.CurrentPage;
+	}
 }
 
 <div class="Dashboard">
@@ -32,9 +40,7 @@
 
 						<div class="RightFilter">
 							<div class="PageMove">
-								<i class="LeftMove fa-solid fa-angle-left"></i>
-								<input type="text" placeholder="Trang 1 / 50">
-								<i class="RightMove fa-solid fa-angle-right"></i>
+								<partial name="_Paging" model="paginate" />
 							</div>
 						</div>
 					</div>
@@ -47,11 +53,10 @@
 								<tr>
 									<th>STT</th>
 									<th>Tên tài khoản</th>
-									<th>Ảnh</th>
 									<th>Mật khẩu</th>
 									<th>Email</th>
 									<th>Số điện thoại</th>
-									<th>Địa chỉ</th>
+									<th>Quyền</th>
 									<th>Sửa</th>
 									<th>Xóa</th>
 								</tr>
@@ -60,15 +65,30 @@
 								@foreach (var account in Model)
 								{
 									<tr>
-										<td>@account.AccountID</td>
-										<td>@account.AccountName</td>
-										<td><img src="~/media/accounts/@account.ImgUrl" alt="Alternate Text" /></td>
-										<td>@account.Password</td>
-										<td>@account.Email</td>
-										<td>@account.PhoneNumber</td>
-										<td>@account.Address</td>
-										<td><a asp-action="Edit" asp-controller="Account" asp-route-Id="@account.AccountID"><i class="fa-solid fa-edit"></i></a></td>
-										<td><a asp-action="Delete" asp-controller="Account" asp-route-Id="@account.AccountID"><i class="fa-solid fa-trash"></i></a></td>
+										<td>@(account.User.Id.Length > 10 ? account.User.Id.Substring(0, 10) + "..." : account.User.Id)</td>
+										<td>@account.User.UserName</td>
+										<td>@(account.User.PasswordHash.Length > 10 ? account.User.PasswordHash.Substring(0, 10) + "..." : account.User.PasswordHash)</td>
+										<td>@account.User.Email</td>
+										<td>@account.User.PhoneNumber</td>
+										<td>@account.RoleName</td>
+										<td>
+											@if (account.User.Id != ViewBag.LogginedUser) 
+											{
+												@if (account.RoleName != "Admin")
+												{
+													<a asp-action="Edit" asp-controller="Account" asp-route-Id="@account.User.Id"><i class="fa-solid fa-edit"></i></a>
+												}
+											}
+										</td>
+										<td>
+											@if (account.User.Id != ViewBag.LogginedUser)
+											{
+												@if (account.RoleName != "Admin")
+												{
+													<a asp-action="Delete" asp-controller="Account" asp-route-Id="@account.User.Id"><i class="fa-solid fa-trash"></i></a>
+												}
+											}
+										</td>
 									</tr>
 								}
 							</tbody>

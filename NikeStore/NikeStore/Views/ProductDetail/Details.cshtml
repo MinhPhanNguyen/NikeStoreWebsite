@@ -1,4 +1,6 @@
-﻿@{
+﻿@model NikeStore.Models.Product
+
+@{
 	ViewData["Title"] = "Chi tiết sản phẩm";
 }
 <div class="ProductDetail">
@@ -76,7 +78,7 @@
 		</div>
 
 		<div class="RateContent">
-			<vc:product-review></vc:product-review>
+			@* <vc:product-review></vc:product-review> *@
 		</div>
 	</section>
 </div>

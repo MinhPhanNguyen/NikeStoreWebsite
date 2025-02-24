@@ -23,13 +23,11 @@ namespace NikeStore.Controllers
             return View();
         }
 
-        [AllowAnonymous]
         public IActionResult LogIn(string returnUrl)
         {
             return View(new LogInViewModel { ReturnUrl = returnUrl });
         }
 
-        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> LogIn(LogInViewModel login)
         {
@@ -45,13 +43,11 @@ namespace NikeStore.Controllers
             return View(login);
         }
 
-        [AllowAnonymous]
         public IActionResult SignIn()
         {
             return View();
         }
 
-        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> SignIn(Account user)
         {

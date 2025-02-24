@@ -13,7 +13,7 @@ namespace NikeStore.Models
         public Importing Importing { get; set; }
 
         [Required(ErrorMessage = "Mã sản phẩm không được để trống.")]
-        public int ProductID { get; set; }
+        public long ProductID { get; set; }
         public Product Product { get; set; }
 
         [Range(1, int.MaxValue, ErrorMessage = "Số lượng phải lớn hơn 0.")]

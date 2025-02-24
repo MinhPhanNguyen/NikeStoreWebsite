@@ -273,16 +273,6 @@ namespace NikeStore.Repository
                 _context.SaveChanges();
             }
 
-            if (!_context.ProductReview.Any())
-            {
-                _context.ProductReview.AddRange(
-                    new ProductReview { UserName = "HoangThiHoa", ImgUrl = "/images/Banner/img_sc2.png", ProductId = 1, ReviewDate = DateTime.Now, Rating = 5, Comment = "Giày rất đẹp, chất lượng tốt!" },
-                    new ProductReview { UserName = "NguyenVanAn", ImgUrl = "/images/Banner/img_sc2.png", ProductId = 1, ReviewDate = DateTime.Now, Rating = 4, Comment = "Giày khá tốt, nhưng hơi chật." },
-                    new ProductReview { UserName = "TranMinhTuan", ImgUrl = "/images/Banner/img_sc2.png", ProductId = 1, ReviewDate = DateTime.Now, Rating = 5, Comment = "Dịch vụ tốt, giày đúng như mô tả." }
-                );
-                _context.SaveChanges();
-            }
-
             // Add Product Categories (Collections) if they don't exist
             if (!_context.Importing.Any()) // Kiểm tra xem có dữ liệu chưa
             {
@@ -302,35 +292,6 @@ namespace NikeStore.Repository
                         ImportDate = DateTime.Now,
                         TotalAmount = 20000.00m,
                         Status = "Pending"
-                    }
-                );
-                _context.SaveChanges(); // Lưu dữ liệu vào DB
-            }
-
-
-            if (!_context.ImportingDetail.Any()) // Kiểm tra xem có dữ liệu chưa
-            {
-                _context.ImportingDetail.AddRange(
-                   new ImportingDetail
-                   {
-                       ImportID = 1,
-                       ProductID = 1,
-                       Quantity = 50,
-                       UnitPrice = 120.00m
-                   },
-                    new ImportingDetail
-                    {
-                        ImportID = 1,
-                        ProductID = 2,
-                        Quantity = 30,
-                        UnitPrice = 150.00m
-                    },
-                    new ImportingDetail
-                    {
-                        ImportID = 2,
-                        ProductID = 3,
-                        Quantity = 40,
-                        UnitPrice = 100.00m
                     }
                 );
                 _context.SaveChanges(); // Lưu dữ liệu vào DB

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NikeStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b3e1339e354c682a4f952a3a0c495ed3c1dd27b")]
 [assembly: System.Reflection.AssemblyProductAttribute("NikeStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NikeStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

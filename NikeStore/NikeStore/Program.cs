@@ -7,11 +7,9 @@ using NikeStore.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Connect to database
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectedDb")));
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDistributedMemoryCache();
@@ -26,9 +24,10 @@ builder.Services.AddSession(options =>
 builder.Services.AddIdentity<AppUserModel, IdentityRole>()
     .AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 
+builder.Services.AddRazorPages();
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
-    // Password settings.
     options.Password.RequireDigit = true;
     options.Password.RequireLowercase = true;
     options.Password.RequireNonAlphanumeric = false;
@@ -39,7 +38,6 @@ builder.Services.Configure<IdentityOptions>(options =>
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
-    // Cookie settings
     options.Cookie.HttpOnly = true;
     options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
 
@@ -53,11 +51,9 @@ var app = builder.Build();
 app.UseStatusCodePagesWithRedirects("/Home/Error?statusCode={0}");
 app.UseSession();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 

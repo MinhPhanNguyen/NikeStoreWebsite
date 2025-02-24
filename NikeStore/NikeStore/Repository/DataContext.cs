@@ -13,7 +13,6 @@ namespace NikeStore.Repository
         public DbSet<Models.ProductCategory> ProductCategory { get; set; }
         public DbSet<Models.ProductColor> ProductColor { get; set; }
         public DbSet<Models.ProductImage> ProductImage { get; set; }
-        public DbSet<Models.ProductReview> ProductReview { get; set; }
         public DbSet<Models.ProductSize> ProductSize { get; set; }
         public DbSet<Models.ProductType> ProductType { get; set; }
         public DbSet<Models.ProductGender> ProductGender { get; set; }

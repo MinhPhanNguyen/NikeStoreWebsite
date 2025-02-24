@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace NikeStore.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class DashboardNotificationController : Controller
     {
         public IActionResult Index()

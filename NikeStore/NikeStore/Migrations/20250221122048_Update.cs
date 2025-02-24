@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace NikeStore.Migrations
 {
     /// <inheritdoc />
-    public partial class build : Migration
+    public partial class Update : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -84,6 +84,22 @@ namespace NikeStore.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Customer", x => x.CustomerID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Order",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OrderCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Order", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -409,7 +425,7 @@ namespace NikeStore.Migrations
                 name: "Product",
                 columns: table => new
                 {
-                    ProductID = table.Column<int>(type: "int", nullable: false)
+                    ProductID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     Slug = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -476,7 +492,7 @@ namespace NikeStore.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ImportID = table.Column<int>(type: "int", nullable: false),
                     ImportingImportID = table.Column<int>(type: "int", nullable: true),
-                    ProductID = table.Column<int>(type: "int", nullable: false),
+                    ProductID = table.Column<long>(type: "bigint", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     UnitPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
@@ -497,13 +513,36 @@ namespace NikeStore.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "OrderDetail",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    OrderCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductId = table.Column<long>(type: "bigint", nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OrderDetail", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_OrderDetail_Product_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Product",
+                        principalColumn: "ProductID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ProductImage",
                 columns: table => new
                 {
                     ProductImageID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProductID = table.Column<int>(type: "int", nullable: false)
+                    ProductID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -511,30 +550,6 @@ namespace NikeStore.Migrations
                     table.ForeignKey(
                         name: "FK_ProductImage_Product_ProductID",
                         column: x => x.ProductID,
-                        principalTable: "Product",
-                        principalColumn: "ProductID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "ProductReview",
-                columns: table => new
-                {
-                    ReviewId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImgUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProductId = table.Column<int>(type: "int", nullable: false),
-                    ReviewDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Rating = table.Column<int>(type: "int", nullable: false),
-                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProductReview", x => x.ReviewId);
-                    table.ForeignKey(
-                        name: "FK_ProductReview_Product_ProductId",
-                        column: x => x.ProductId,
                         principalTable: "Product",
                         principalColumn: "ProductID",
                         onDelete: ReferentialAction.Cascade);
@@ -600,6 +615,11 @@ namespace NikeStore.Migrations
                 column: "ProductID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_OrderDetail_ProductId",
+                table: "OrderDetail",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Payment_PaymentMethodId",
                 table: "Payment",
                 column: "PaymentMethodId");
@@ -645,11 +665,6 @@ namespace NikeStore.Migrations
                 column: "ProductID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductReview_ProductId",
-                table: "ProductReview",
-                column: "ProductId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_ServiceType_ServiceID",
                 table: "ServiceType",
                 column: "ServiceID");
@@ -680,13 +695,16 @@ namespace NikeStore.Migrations
                 name: "ImportingDetail");
 
             migrationBuilder.DropTable(
+                name: "Order");
+
+            migrationBuilder.DropTable(
+                name: "OrderDetail");
+
+            migrationBuilder.DropTable(
                 name: "Payment");
 
             migrationBuilder.DropTable(
                 name: "ProductImage");
-
-            migrationBuilder.DropTable(
-                name: "ProductReview");
 
             migrationBuilder.DropTable(
                 name: "ServiceType");

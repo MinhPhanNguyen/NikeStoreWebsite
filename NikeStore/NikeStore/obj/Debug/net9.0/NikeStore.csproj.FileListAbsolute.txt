@@ -4829,7 +4829,6 @@ D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\scopedcss\Views\Shared\_L
 D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\scopedcss\bundle\NikeStore.styles.css
 D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\scopedcss\projectbundle\NikeStore.bundle.scp.css
 D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\compressed\fr303blix2-3r8b2a0bt1.gz
-D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\compressed\j8sk1gclrf-vsh1lou5hh.gz
 D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\compressed\tm8iwardt8-3r8b2a0bt1.gz
 D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\compressed\ozulk328kl-f40llkuwsj.gz
 D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\compressed\twvrpujlgi-3r8b2a0bt1.gz
@@ -7020,5 +7019,7 @@ D:\NikeStore-main\NikeStore\NikeStore\bin\Debug\net9.0\Microsoft.AspNetCore.Iden
 D:\NikeStore-main\NikeStore\NikeStore\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 D:\NikeStore-main\NikeStore\NikeStore\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\compressed\pf1qi7c5pa-rsssuz9sb8.gz
-D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\compressed\5f502jhcbk-tsfaf6mk1j.gz
 D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\compressed\5e66idjyzq-kldcg96e5g.gz
+D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\NikeStore.sourcelink.json
+D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\compressed\5f502jhcbk-0b4modowpu.gz
+D:\NikeStore-main\NikeStore\NikeStore\obj\Debug\net9.0\compressed\j8sk1gclrf-ocg5rb4mnn.gz

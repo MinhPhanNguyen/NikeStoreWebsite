@@ -1,4 +1,6 @@
-﻿namespace NikeStore.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace NikeStore.Models
 {
     public class OrderDetail
     {
@@ -8,5 +10,8 @@
         public long ProductId { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
+
+        [ForeignKey("ProductId")]
+        public Product Product { get; set; }
     }
 }

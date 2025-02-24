@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace NikeStore.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class ProductController : Controller
     {
         private readonly DataContext _context;
@@ -26,34 +26,68 @@ namespace NikeStore.Areas.Admin.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public async Task<IActionResult> Product()
+        public async Task<IActionResult> Product(int pg =1)
         {
-            var product = await _context.Product.OrderBy(p => p.ProductID)
+            List<Product> product = await _context.Product.OrderBy(p => p.ProductID)
                 .Include(p => p.ProductCategory)
                 .Include(p => p.ProductGender)
                 .Include(p => p.ProductSize)
                 .Include(p => p.ProductColor)
                 .Include(p => p.ProductType)
                 .ToListAsync();
-            return View(product);
+           
+            const int pageSize = 10;
+
+            if(pg < 1)
+            {
+                pg = 1;
+            }
+            int recsCount = product.Count();
+
+            var pager = new Paginate(recsCount, pg, pageSize);
+
+            int recSkip = (pg - 1) * pageSize;
+
+            var data = product.Skip(recSkip).Take(pageSize).ToList();
+
+            ViewBag.Pager = pager;
+
+            return View(data);
         }
 
-        public async Task<IActionResult> HotProduct()
+        public async Task<IActionResult> HotProduct(int pg = 1)
         {
-            var product = await _context.Product.OrderBy(p => p.ProductID)
-                .Include(p => p.ProductCategory)
-                .Include(p => p.ProductGender)
-                .Include(p => p.ProductSize)
-                .Include(p => p.ProductColor)
-                .Include(p => p.ProductType)
-                .Where(p => p.IsHot == true)
-                .ToListAsync();
-            return View(product);
+            List<Product> product = await _context.Product.OrderBy(p => p.ProductID)
+               .Include(p => p.ProductCategory)
+               .Include(p => p.ProductGender)
+               .Include(p => p.ProductSize)
+               .Include(p => p.ProductColor)
+               .Include(p => p.ProductType)
+               .Where(p => p.IsHot == true)
+               .ToListAsync();
+
+            const int pageSize = 10;
+
+            if (pg < 1)
+            {
+                pg = 1;
+            }
+            int recsCount = product.Count();
+
+            var pager = new Paginate(recsCount, pg, pageSize);
+
+            int recSkip = (pg - 1) * pageSize;
+
+            var data = product.Skip(recSkip).Take(pageSize).ToList();
+
+            ViewBag.Pager = pager;
+
+            return View(data);
         }
 
-        public async Task<IActionResult> LoveProduct()
+        public async Task<IActionResult> LoveProduct(int pg = 1)
         {
-            var product = await _context.Product.OrderBy(p => p.ProductID)
+            List<Product> product = await _context.Product.OrderBy(p => p.ProductID)
                 .Include(p => p.ProductCategory)
                 .Include(p => p.ProductGender)
                 .Include(p => p.ProductSize)
@@ -61,16 +95,33 @@ namespace NikeStore.Areas.Admin.Controllers
                 .Include(p => p.ProductType)
                 .Where(p => p.IsFavorite == true)
                 .ToListAsync();
-            return View(product);
+
+            const int pageSize = 10;
+
+            if (pg < 1)
+            {
+                pg = 1;
+            }
+            int recsCount = product.Count();
+
+            var pager = new Paginate(recsCount, pg, pageSize);
+
+            int recSkip = (pg - 1) * pageSize;
+
+            var data = product.Skip(recSkip).Take(pageSize).ToList();
+
+            ViewBag.Pager = pager;
+
+            return View(data);
         }
 
-        public async Task<IActionResult> ReviewProduct()
-        {
-            var productReview = await _context.ProductReview.OrderBy(p => p.ReviewId)
-                .Include(p => p.Product)
-                .ToListAsync();
-            return View(productReview);                                                                                                                                                                                 
-        }
+        //public async Task<IActionResult> ReviewProduct()
+        //{
+        //    var productReview = await _context.ProductReview.OrderBy(p => p.ReviewId)
+        //        .Include(p => p.Product)
+        //        .ToListAsync();
+        //    return View(productReview);                                                                                                                                                                                 
+        //}
 
         [HttpGet]
         public IActionResult Add()
@@ -80,6 +131,7 @@ namespace NikeStore.Areas.Admin.Controllers
             ViewBag.ProductColor = new SelectList(_context.ProductColor, "ProductColorID", "Color");
             ViewBag.ProductGender = new SelectList(_context.ProductGender, "GenderID", "GenderName");
             ViewBag.ProductSize = new SelectList(_context.ProductSize, "ProductSizeID", "Size");
+            ViewBag.Warehouse = new SelectList(_context.Warehouse, "WarehouseID", "WarehouseName");
             return View();
         }
 
@@ -92,6 +144,7 @@ namespace NikeStore.Areas.Admin.Controllers
             ViewBag.ProductColor = new SelectList(_context.ProductColor, "ProductColorID", "Color", product.ProductColorID);
             ViewBag.ProductGender = new SelectList(_context.ProductGender, "GenderID", "GenderName", product.GenderID);
             ViewBag.ProductSize = new SelectList(_context.ProductSize, "ProductSizeID", "Size", product.ProductSizeID);
+            ViewBag.Warehouse = new SelectList(_context.Warehouse, "WarehouseID", "WarehouseName", product.WarehouseID);
 
             if (ModelState.IsValid)
             {
@@ -103,14 +156,6 @@ namespace NikeStore.Areas.Admin.Controllers
                 else
                 {
                     ModelState.AddModelError("", "Danh mục không tồn tại.");
-                    return View(product);
-                }
-
-                var slug = await _context.Product.FirstOrDefaultAsync(p => p.Slug == product.Slug);
-
-                if (slug != null)
-                {
-                    ModelState.AddModelError("", "Sản phẩm đã có trong Database");
                     return View(product);
                 }
 
@@ -149,7 +194,7 @@ namespace NikeStore.Areas.Admin.Controllers
             return View(product);
         }
 
-        public async Task<IActionResult> Edit(int Id)
+        public async Task<IActionResult> Edit(long Id)
         {
             Product product = await _context.Product.FindAsync(Id);
             ViewBag.ProductCategory = new SelectList(_context.ProductCategory, "CategoryID", "CategoryName", product.CategoryID);
@@ -157,19 +202,21 @@ namespace NikeStore.Areas.Admin.Controllers
             ViewBag.ProductColor = new SelectList(_context.ProductColor, "ProductColorID", "Color", product.ProductColorID);
             ViewBag.ProductGender = new SelectList(_context.ProductGender, "GenderID", "GenderName", product.GenderID);
             ViewBag.ProductSize = new SelectList(_context.ProductSize, "ProductSizeID", "Size", product.ProductSizeID);
+            ViewBag.Warehouse = new SelectList(_context.Warehouse, "WarehouseID", "WarehouseName", product.WarehouseID);
 
             return View(product);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int Id, Product product)
+        public async Task<IActionResult> Edit(long Id, Product product)
         {
             ViewBag.ProductCategory = new SelectList(_context.ProductCategory, "CategoryID", "CategoryName", product.CategoryID);
             ViewBag.ProductType = new SelectList(_context.ProductType, "ProductTypeID", "Type", product.ProductTypeID);
             ViewBag.ProductColor = new SelectList(_context.ProductColor, "ProductColorID", "Color", product.ProductColorID);
             ViewBag.ProductGender = new SelectList(_context.ProductGender, "GenderID", "GenderName", product.GenderID);
             ViewBag.ProductSize = new SelectList(_context.ProductSize, "ProductSizeID", "Size", product.ProductSizeID);
+            ViewBag.Warehouse = new SelectList(_context.Warehouse, "WarehouseID", "WarehouseName", product.WarehouseID);
 
             if (ModelState.IsValid)
             {
@@ -238,7 +285,7 @@ namespace NikeStore.Areas.Admin.Controllers
             return slug;
         }
 
-        public async Task<IActionResult> Delete(int Id)
+        public async Task<IActionResult> Delete(long Id)
         {
             Product product = await _context.Product.FindAsync(Id);
 

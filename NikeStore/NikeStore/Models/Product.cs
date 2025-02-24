@@ -8,7 +8,7 @@ namespace NikeStore.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ProductID { get; set; }
+        public long ProductID { get; set; }
 
         [Required, StringLength(150, MinimumLength = 3, ErrorMessage = "Tên sản phẩm phải từ 3 đến 150 ký tự.")]
         public string Name { get; set; }

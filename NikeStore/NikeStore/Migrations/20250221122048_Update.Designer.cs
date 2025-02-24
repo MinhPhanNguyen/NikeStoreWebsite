@@ -12,8 +12,8 @@ using NikeStore.Repository;
 namespace NikeStore.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250220131747_bui3")]
-    partial class bui3
+    [Migration("20250221122048_Update")]
+    partial class Update
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -350,8 +350,8 @@ namespace NikeStore.Migrations
                     b.Property<int?>("ImportingImportID")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductID")
-                        .HasColumnType("int");
+                    b.Property<long>("ProductID")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -366,6 +366,61 @@ namespace NikeStore.Migrations
                     b.HasIndex("ProductID");
 
                     b.ToTable("ImportingDetail");
+                });
+
+            modelBuilder.Entity("NikeStore.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OrderCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Order");
+                });
+
+            modelBuilder.Entity("NikeStore.Models.OrderDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("OrderCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderDetail");
                 });
 
             modelBuilder.Entity("NikeStore.Models.Payment", b =>
@@ -429,11 +484,11 @@ namespace NikeStore.Migrations
 
             modelBuilder.Entity("NikeStore.Models.Product", b =>
                 {
-                    b.Property<int>("ProductID")
+                    b.Property<long>("ProductID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("ProductID"));
 
                     b.Property<int>("CategoryID")
                         .HasColumnType("int");
@@ -577,48 +632,14 @@ namespace NikeStore.Migrations
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProductID")
-                        .HasColumnType("int");
+                    b.Property<long>("ProductID")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ProductImageID");
 
                     b.HasIndex("ProductID");
 
                     b.ToTable("ProductImage");
-                });
-
-            modelBuilder.Entity("NikeStore.Models.ProductReview", b =>
-                {
-                    b.Property<int>("ReviewId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewId"));
-
-                    b.Property<string>("Comment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImgUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("ReviewDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ReviewId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("ProductReview");
                 });
 
             modelBuilder.Entity("NikeStore.Models.ProductSize", b =>
@@ -871,6 +892,17 @@ namespace NikeStore.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("NikeStore.Models.OrderDetail", b =>
+                {
+                    b.HasOne("NikeStore.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("NikeStore.Models.Payment", b =>
                 {
                     b.HasOne("NikeStore.Models.PaymentMethod", "PaymentMethod")
@@ -944,17 +976,6 @@ namespace NikeStore.Migrations
                     b.HasOne("NikeStore.Models.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("NikeStore.Models.ProductReview", b =>
-                {
-                    b.HasOne("NikeStore.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

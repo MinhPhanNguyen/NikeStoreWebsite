@@ -1,4 +1,4 @@
-﻿@model Account
+﻿@model AppUserModel
 
 @{
 	ViewData["Title"] = "Thêm tài khoản";
@@ -16,42 +16,36 @@
 				<form asp-action="Add" enctype="multipart/form-data">
 					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 					<div class="form-group">
-						<label for="AccountName">Tên tài khoản:</label>
-						<input asp-for="AccountName" type="text" class="form-control" />
-						<span asp-validation-for="AccountName" class="text-danger"></span>
+						<label for="UserName">Tên tài khoản:</label>
+						<input asp-for="UserName" required type="text" class="form-control" />
+						<span asp-validation-for="UserName" class="text-danger"></span>
 					</div>
 
 					<div class="form-group">
-						<label for="Password">Mật khẩu:</label>
-						<input asp-for="Password" type="text" class="form-control" />
-						<span asp-validation-for="Password" class="text-danger"></span>
+						<label for="PasswordHash">Mật khẩu:</label>
+						<input asp-for="PasswordHash" required type="text" class="form-control" />
+						<span asp-validation-for="PasswordHash" class="text-danger"></span>
 					</div>
 
 					<div class="form-group">
 						<label for="Email">Email:</label>
-						<input asp-for="Email" type="text" class="form-control" />
+						<input asp-for="Email" type="text" required class="form-control" />
 						<span asp-validation-for="Email" class="text-danger"></span>
 					</div>
 
 					<div class="form-group">
 						<label for="PhoneNumber">Số điện thoại:</label>
-						<input asp-for="PhoneNumber" type="text" class="form-control" />
+						<input asp-for="PhoneNumber" required type="text" class="form-control" />
 						<span asp-validation-for="PhoneNumber" class="text-danger"></span>
 					</div>
 
 					<div class="form-group">
-						<label for="Address">Địa chỉ:</label>
-						<input asp-for="Address" type="text" class="form-control" />
-						<span asp-validation-for="Address" class="text-danger"></span>
+						<label for="RoleId">Danh mục:</label>
+						<select asp-for="RoleId" required class="form-control" asp-items="ViewBag.Roles">
+							<option value="">-- Chọn quyền --</option>
+						</select>
+						<span asp-validation-for="RoleId" class="text-danger"></span>
 					</div>
-				
-					<div class="form-group">
-						<label for="ImageUpload">Ảnh:</label>
-						<input asp-for="ImageUpload" type="file" id="imageUploadInput"  class="form-control" />
-						<span asp-validation-for="ImageUpload" class="text-danger"></span>		
-					</div>
-
-					<img id="imagePreview" src="~/media/accounts/@Model?.ImgUrl" width="200" style="display: block; margin-top: 10px;" />
 
 					<div class="btnAddTable form-group">
 						<button>Thêm</button>

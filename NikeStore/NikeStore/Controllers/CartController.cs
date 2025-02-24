@@ -27,7 +27,7 @@ namespace NikeStore.Controllers
             return View(cartItemViewModel);
         }
 
-        public async Task<IActionResult> Add(int Id)
+        public async Task<IActionResult> Add(long Id)
         {
             Product product = await _context.Product.FindAsync(Id);
             List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
@@ -45,10 +45,10 @@ namespace NikeStore.Controllers
             HttpContext.Session.SetJson("Cart", cart);
 
             TempData["success"] = "Sản phẩm đã được thêm vào giỏ hàng.";
-            return Content("<script>window.history.back();</script>", "text/html"); // Quay lại ngay lập tức
+            return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> Decrease(int Id)
+        public async Task<IActionResult> Decrease(long Id)
         {
             List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
 
@@ -78,7 +78,7 @@ namespace NikeStore.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> Increase(int Id)
+        public async Task<IActionResult> Increase(long Id)
         {
             List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
 
@@ -94,7 +94,7 @@ namespace NikeStore.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> Remove(int Id)
+        public async Task<IActionResult> Remove(long Id)
         {
             List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
 

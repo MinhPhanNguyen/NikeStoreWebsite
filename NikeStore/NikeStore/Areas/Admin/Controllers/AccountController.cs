@@ -1,60 +1,102 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NikeStore.Models;
 using NikeStore.Repository;
+using System.Data;
+using System.Security.Claims;
 using System.Text.RegularExpressions;
 
 namespace NikeStore.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class AccountController : Controller
     {
+        private readonly UserManager<AppUserModel> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly DataContext _context;
-        private readonly IWebHostEnvironment _webHostEnvironment;
-
-        public AccountController(DataContext context, IWebHostEnvironment webHostEnvironment)
+        public AccountController(DataContext context ,UserManager<AppUserModel> userManager, RoleManager<IdentityRole> roleManager)
         {
+            _userManager = userManager;
+            _roleManager = roleManager;
             _context = context;
-            _webHostEnvironment = webHostEnvironment;
         }
 
-        public async Task<IActionResult> Account()
+        public async Task<IActionResult> Account(int pg = 1)
         {
-            var account = await _context.Account.OrderBy(p => p.AccountID).ToListAsync();
-            return View(account);
+            var account = await (from user in _context.Users
+                                 join userRole in _context.UserRoles on user.Id equals userRole.UserId
+                                 into UserRoles
+                                 from userRole in UserRoles.DefaultIfEmpty()
+                                 join role in _context.Roles on user.RoleId equals role.Id
+                                    into Roles
+                                 from role in Roles.DefaultIfEmpty()
+                                 select new
+                                 {
+                                     User = user,
+                                     RoleName = role.Name
+                                 }).ToListAsync();
+            var logginedUser = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.LogginedUser = logginedUser;
+
+            const int pageSize = 10;
+
+            if (pg < 1)
+            {
+                pg = 1;
+            }
+            int recsCount = account.Count();
+
+            var pager = new Paginate(recsCount, pg, pageSize);
+
+            int recSkip = (pg - 1) * pageSize;
+
+            var data = account.Skip(recSkip).Take(pageSize).ToList();
+
+            ViewBag.Pager = pager;
+
+            return View(data);
         }
 
         [HttpGet]
-        public IActionResult Add()
+        public async Task<IActionResult> Add()
         {
-            return View();
+            var roles = await _roleManager.Roles.ToListAsync();
+            ViewBag.Roles = new SelectList(roles, "Id", "Name");
+            return View(new AppUserModel());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Add(Account account)
+        public async Task<IActionResult> Add(AppUserModel user)
         {
             if (ModelState.IsValid)
             {
-                if (account.ImageUpload != null)
+                var addUser = await _userManager.CreateAsync(user, user.PasswordHash);
+                if (addUser.Succeeded)
                 {
-                    string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/accounts");
-                    string imageName = Guid.NewGuid().ToString() + "_" + account.ImageUpload.FileName;
-                    string filePath = Path.Combine(uploadDir, imageName);
+                    var createUser = await _userManager.FindByEmailAsync(user.Email);
+                    var userId = createUser.Id;
+                    var role = _roleManager.FindByIdAsync(user.RoleId);
 
-                    FileStream fs = new FileStream(filePath, FileMode.Create);
-                    await account.ImageUpload.CopyToAsync(fs);
-                    fs.Close();
-                    account.ImgUrl = imageName;
+                    var addToRole = await _userManager.AddToRoleAsync(createUser, role.Result.Name);
+
+                    if(!addToRole.Succeeded)
+                    {
+                        AddIdentityErrors(addToRole);
+                        return View(user);
+                    }
+
+                    return RedirectToAction("Account");
                 }
-
-                _context.Add(account);
-                await _context.SaveChangesAsync();
-                TempData["success"] = "Thêm tài khoản thành công";
-                return RedirectToAction("Account");
+                else
+                {
+                    AddIdentityErrors(addUser);
+                    return View(user);  
+                }
             }
             else
             {
@@ -71,76 +113,116 @@ namespace NikeStore.Areas.Admin.Controllers
                 return BadRequest(errorMessage);
             }
 
-            return View(account);
+            var roles = await _roleManager.Roles.ToListAsync();
+            ViewBag.Roles = new SelectList(roles, "Id", "Name");
+            return View(user);
         }
 
-        public async Task<IActionResult> Edit(int Id)
+        [HttpGet]
+        public async Task<IActionResult> Edit(string Id)
         {
-            Account account = await _context.Account.FindAsync(Id);
-            return View(account);
+            if (string.IsNullOrEmpty(Id))
+            {
+                return NotFound();
+            }
+
+            var user = await _userManager.FindByIdAsync(Id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var roles = await _roleManager.Roles.ToListAsync();
+            ViewBag.Roles = new SelectList(roles, "Id", "Name");
+            return View(user);
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int Id, Account account)
+        public async Task<IActionResult> Edit(string Id, AppUserModel user)
         {
+            var existUser = await _userManager.FindByIdAsync(Id);
+            if (existUser == null)
+            {
+                return NotFound();
+            }
+
             if (ModelState.IsValid)
             {
-                var existingAccount = await _context.Account.FindAsync(Id);
-                if (existingAccount == null)
+                existUser.UserName = user.UserName;
+                existUser.Email = user.Email;
+                existUser.RoleId = user.RoleId;
+                existUser.PhoneNumber = user.PhoneNumber;
+
+                var updateUser = await _userManager.UpdateAsync(existUser);
+                if (updateUser.Succeeded)
                 {
-                    return NotFound();
+                    return RedirectToAction("Account");
                 }
-
-                existingAccount.AccountName = account.AccountName;
-                existingAccount.Password = account.Password;
-                existingAccount.Email = account.Email;
-                existingAccount.PhoneNumber = account.PhoneNumber;
-                existingAccount.Address = account.Address;
-
-                if (account.ImageUpload != null)
+                else
                 {
-                    string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/accounts");
-                    string imageName = Guid.NewGuid().ToString() + "_" + account.ImageUpload.FileName;
-                    string filePath = Path.Combine(uploadDir, imageName);
-
-                    using (var fs = new FileStream(filePath, FileMode.Create))
+                    AddIdentityErrors(updateUser);
+                    return View(user);
+                }
+            }
+            else
+            {
+                TempData["error"] = "Model bị lỗi vui lòng thử lại";
+                List<string> errors = new List<string>();
+                foreach (var value in ModelState.Values)
+                {
+                    foreach (var error in value.Errors)
                     {
-                        await account.ImageUpload.CopyToAsync(fs);
+                        errors.Add(error.ErrorMessage);
                     }
-                    existingAccount.ImgUrl = imageName;
                 }
-
-                _context.Update(existingAccount);
-                await _context.SaveChangesAsync();
-
-                TempData["success"] = "Cập nhật tài khoản thành công";
-                return RedirectToAction("Product");
+                string errorMessage = string.Join("\n", errors);
+                return BadRequest(errorMessage);
             }
 
-            TempData["error"] = "Model bị lỗi, vui lòng thử lại.";
-            return View(account);
+            var roles = await _roleManager.Roles.ToListAsync();
+            ViewBag.Roles = new SelectList(roles, "Id", "Name");
+            return View(existUser);
         }
 
-        public async Task<IActionResult> Delete(int Id)
+        [HttpGet]
+        public async Task<IActionResult> Delete(string Id)
         {
-            Account account = await _context.Account.FindAsync(Id);
-
-            if (!string.Equals(account.ImgUrl, "noimage.jpg"))
+            if(string.IsNullOrEmpty(Id))
             {
-                string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/accounts");
-                string oldFileImgae = Path.Combine(uploadDir, account.ImgUrl);
-
-                if (System.IO.File.Exists(oldFileImgae))
-                {
-                    System.IO.File.Delete(oldFileImgae);
-                }
+                return NotFound();
             }
 
-            _context.Account.Remove(account);
-            await _context.SaveChangesAsync();
-            TempData["success"] = "Xóa tài khoản thành công";
+            var user = await _userManager.FindByIdAsync(Id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+            
+            var delete = await _userManager.DeleteAsync(user);
+            if (delete.Succeeded)
+            {
+                return RedirectToAction("Account");
+            }
+            else
+            {
+                AddIdentityErrors(delete);
+                return View(user);
+            }
+
+            TempData["success"] = "Xóa thành công";
             return RedirectToAction("Account");
+        }
+
+        private void AddIdentityErrors(IdentityResult result)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
         }
     }
 }
