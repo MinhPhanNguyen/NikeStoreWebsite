@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<NikeStore.Models.Product>
+
+@{
 	ViewData["Title"] = "Danh sách sản phẩm";
 	int productCount = 0;
 	foreach (var product in Model) { productCount++; }
@@ -125,7 +127,7 @@
 			{
 				<a asp-action="Details" asp-controller="Product" asp-route-Id="@product.ProductID" class="Components">
 					<div class="Contain_img">
-						<img src="/media/products/@product.ImageUrl" alt="@product.Name" />
+						<img src="@(product.Images?.FirstOrDefault()?.ImageUrl ?? "default.jpg")" alt="@product.Name" />
 					</div>
 					<div class="Content">
 						<h1>@product.Name</h1>

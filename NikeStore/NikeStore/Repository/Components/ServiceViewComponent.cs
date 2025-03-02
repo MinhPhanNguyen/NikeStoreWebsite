@@ -12,7 +12,7 @@ namespace NikeStore.Repository.Components
         }
         public IViewComponentResult Invoke()
         {
-            var service = _context.Service.Include("ServiceTypes").ToList();
+            var service = _context.Service.Include(p => p.ServiceTypes).ToList();
             return View(service);
         }
     }

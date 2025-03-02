@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/fontawesome-free-6.7.2-web/css/all.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/NikeStore.styles.css" asp-append-version="true" />
+	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -84,6 +86,16 @@
 				<div class="MenuContent">
 					<h3 onclick="toggleChildMenu(this)">
 						<i class="Right fa-solid fa-angle-right"></i>
+						<i class="Down fa-solid fa-angle-down"></i> Dịch vụ
+					</h3>
+					<ul>
+						<li><a href="/Admin/Service/Service"><i class="fa-solid fa-circle"></i> Dịch vụ chính</a></li>
+						<li><a href="/Admin/Service/ServiceType"><i class="fa-solid fa-circle"></i>Dịch vụ kèm theo</a></li>
+					</ul>
+				</div>
+				<div class="MenuContent">
+					<h3 onclick="toggleChildMenu(this)">
+						<i class="Right fa-solid fa-angle-right"></i>
 						<i class="Down fa-solid fa-angle-down"></i> Hóa đơn
 					</h3>
 					<ul>
@@ -99,7 +111,6 @@
 					</h3>
 					<ul>
 						<li><a href="/Admin/Promotion/Promotion"><i class="fa-solid fa-circle"></i> Danh sách khuyến mãi</a></li>
-						<li><a href="/Admin/Promotion/PromotionCategory"><i class="fa-solid fa-circle"></i> Danh sách loại khuyến mãi</a></li>
 					</ul>
 				</div>
 				<div class="MenuContent">
@@ -159,6 +170,38 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script>
+	<script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+	<script>
+		$(
+			function(){
+				var messsage = '@TempData["success"]';
+				if(messsage != ''){
+					Swal.fire({
+						icon: 'success',
+						title: 'Thành công',
+						text: messsage,
+						customClass: {
+								title: 'swal-title-small',
+								popup: 'swal-popup-small'
+							}
+					})
+				}
+			}
+		)
+	</script>
+	<script>
+		let table = new DataTable('#myTable', {
+			language: {
+				info: "Hiển thị _START_ đến _END_ của _TOTAL_ mục",
+				infoEmpty: "Không có dữ liệu để hiển thị",
+				lengthMenu: "Hiển thị _MENU_ mục",
+				search: "Tìm kiếm:",
+
+			}
+		});
+	</script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

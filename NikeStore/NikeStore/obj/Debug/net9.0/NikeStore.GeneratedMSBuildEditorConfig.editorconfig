@@ -136,10 +136,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvbW90aW9uXFByb21vdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Promotion/PromotionCategory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvbW90aW9uXFByb21vdGlvbkNhdGVnb3J5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Role/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -152,6 +148,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxSb2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Service/AddType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxBZGRUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Service/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Service/EditType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxFZGl0VHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Service/Service.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxTZXJ2aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Service/ServiceType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxTZXJ2aWNlVHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -160,20 +176,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Shared/_Paging.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9QYWdpbmcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Shipping/Shipping.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hpcHBpbmdcU2hpcHBpbmcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/ViewOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVmlld09yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TestWebsite/NikeStore/NikeStore/Areas/Admin/Views/Warehouse/WarehouseImporting.cshtml]
@@ -216,10 +224,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TestWebsite/NikeStore/NikeStore/Views/CheckOut/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tPdXRcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/TestWebsite/NikeStore/NikeStore/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -244,24 +248,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW90aW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TestWebsite/NikeStore/NikeStore/Views/Service/AuthAccessories.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxBdXRoQWNjZXNzb3JpZXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/TestWebsite/NikeStore/NikeStore/Views/Service/AuthShoe.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxBdXRoU2hvZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/TestWebsite/NikeStore/NikeStore/Views/Service/Caring.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxDYXJpbmcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/TestWebsite/NikeStore/NikeStore/Views/Service/MeetingDetail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxNZWV0aW5nRGV0YWlsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/TestWebsite/NikeStore/NikeStore/Views/Service/MovingSupport.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxNb3ZpbmdTdXBwb3J0LmNzaHRtbA==
+[D:/TestWebsite/NikeStore/NikeStore/Views/Service/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TestWebsite/NikeStore/NikeStore/Views/Service/Repairing.cshtml]
@@ -270,10 +258,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/TestWebsite/NikeStore/NikeStore/Views/Service/Service.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxTZXJ2aWNlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/TestWebsite/NikeStore/NikeStore/Views/Service/SupportHotline.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxTdXBwb3J0SG90bGluZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/TestWebsite/NikeStore/NikeStore/Views/Shared/Components/ProductCategory/Default.cshtml]

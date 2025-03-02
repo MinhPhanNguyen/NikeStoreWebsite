@@ -8,7 +8,6 @@ function showFilter() {
     var productList = document.querySelector('.ProductListPage .Section_2 .ProductList');
     parent.querySelector('.Show').style.display = 'none';
     parent.querySelector('.Hide').style.display = 'block';
-    category.style.maxWidth = '20%';
     category.style.opacity = '1';
     category.style.pointerEvents = 'auto';
     productList.style.width = '80%';
@@ -21,7 +20,6 @@ function hideFilter() {
     var productList = document.querySelector('.ProductListPage .Section_2 .ProductList');
     parent.querySelector('.Show').style.display = 'block';
     parent.querySelector('.Hide').style.display = 'none';
-    category.style.maxWidth = '0';
     category.style.opacity = '0';
     category.style.pointerEvents = 'none';
     productList.style.width = '100%';
@@ -34,7 +32,7 @@ function toggleOption() {
     const downIcon = document.querySelector(".DownSort");
 
     if (dropdown.style.opacity === "0") {
-        dropdown.style.maxHeight = '30vh'
+        dropdown.style.maxHeight = '50vh'
         dropdown.style.opacity = "1";
         upIcon.style.display = "block";
         downIcon.style.display = "none";
@@ -53,7 +51,7 @@ function toggleFilter(element) {
     const downIcon = filterItem.querySelector(".DownFilter");
 
     if (option.style.opacity === "0") {
-        option.style.maxHeight = "30vh";
+        option.style.maxHeight = "50vh";
         option.style.opacity = "1";
         upIcon.style.display = "block";
         downIcon.style.display = "none";
@@ -104,10 +102,10 @@ function handleScroll() {
 
     if (sectionTop <= 0 && sectionBottom > window.innerHeight) {
         category.style.position = 'fixed';
-        category.style.top = '15vh';
+        category.style.top = '12vh';
         category.style.zIndex = '999';
         category.style.height = '80vh';
-        category.style.width = 'auto';
+        category.classList.add('CategoryTop');
     } else if (sectionBottom <= window.innerHeight) {
         category.style.position = 'absolute';
         category.style.top = (productList.offsetHeight - category.offsetHeight) + 'px';

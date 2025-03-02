@@ -15,6 +15,7 @@
 }
 
 body {
+    font-size:20px;
     font-family: "Helvetica Now Text Medium", Helvetica, Arial, sans-serif;
     position: relative;
     background-color: var(--background-color);
@@ -43,4 +44,12 @@ img {
 ::-webkit-scrollbar-thumb {
     background-color: #000000;
     border-radius: 1em;
+}
+
+.swal-title-small {
+    font-size: 16px !important;
+}
+
+.swal-popup-small {
+    font-size: 14px !important;
 }

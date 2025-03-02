@@ -1,17 +1,87 @@
-﻿document.getElementById("imageUploadInput").addEventListener("change", function (event) {
-    var file = event.target.files[0];
-    if (file) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            document.getElementById("imagePreview").src = e.target.result;
-        };
-        reader.readAsDataURL(file);
+﻿document.addEventListener("DOMContentLoaded", () => {
+    const imgItems = document.querySelectorAll('.ImgItems img');
+    const displayedImage = document.getElementById('displayedImage');
+    const prevButton = document.querySelector('.PrevNext button:first-of-type');
+    const nextButton = document.querySelector('.PrevNext button:last-of-type');
+    let currentIndex = 0;
+
+    if (imgItems.length > 0 && displayedImage) {
+        imgItems.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                displayedImage.src = img.src;
+            });
+        });
+
+        function updateDisplayedImage(index) {
+            if (index >= 0 && index < imgItems.length) {
+                currentIndex = index;
+                displayedImage.src = imgItems[currentIndex].src;
+            }
+        }
+
+        if (prevButton && nextButton) {
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = imgItems.length - 1;
+                }
+                updateDisplayedImage(currentIndex);
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < imgItems.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateDisplayedImage(currentIndex);
+            });
+        }
+    } else {
+        console.error("Không tìm thấy hình ảnh hoặc phần tử cần thiết!");
     }
 });
 
+function previewImages(event) {
+    var input = event.target;
+    var container = document.getElementById('imagePreviewContainer');
+
+    if (!input.files || input.files.length === 0) {
+        container.innerHTML = "<p style='color:red;'>Không có ảnh nào được chọn.</p>";
+        return;
+    }
+
+    container.innerHTML = '';
+
+    for (let i = 0; i < input.files.length; i++) {
+        let file = input.files[i];
+        let reader = new FileReader();
+
+        reader.onload = function (e) {
+            let img = document.createElement('img');
+            img.src = e.target.result;
+            img.style.width = "100px";
+            img.style.height = "100px";
+            img.style.objectFit = "cover";
+            img.style.border = "1px solid #ddd";
+            img.style.borderRadius = "8px";
+
+            container.appendChild(img);
+        };
+
+        reader.readAsDataURL(file);
+    }
+}
+
 setTimeout(function () {
     $(".Notification").fadeOut();
-}, 3000);
+}, 2000);
+
+setTimeout(function () {
+    $(".notification").fadeOut();
+}, 2000);
 
 function toggleMenu(element) {
     const allMenus = document.querySelectorAll(".Title .Contain");

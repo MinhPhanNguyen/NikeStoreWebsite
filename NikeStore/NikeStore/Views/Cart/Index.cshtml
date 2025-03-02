@@ -3,6 +3,7 @@
 @{
 	ViewData["Title"] = "Giỏ hàng";
 	var totalPrice = Model.CartItems.Sum(item => item.Price * item.Quantity);
+	var totalPromotion = Model.CartItems.Sum(item => (item.Price * item.Quantity) - (item.Price * item.Quantity * ((decimal)item.ProductPromotion / 100)));
 }
 
 <div class="CartPage">
@@ -21,7 +22,7 @@
 							<div class="Items">
 								<div class="ItemsContent">
 									<div class="Contain_img">
-										<img src="~/media/products/@item.Image" alt="Alternate Text" />
+										<img src="@item.Image" alt="Alternate Text" />
 									</div>
 
 									<div class="Contain">
@@ -52,52 +53,54 @@
 						}
 					</div>
 
-					<div class="Summary col-lg-4">
-						<ul>
-							<li>
-								<p>Tổng tiền</p>
-								<span class="TotalPrice">2.500.000 VNĐ</span>
-							</li>
-							<li>
-								<p>Phí giao hàng</p>
-								<span>50.000 VNĐ</span>
-							</li>
-							<li>
-								<p>Chọn voucher khuyến mãi</p>
-								<button>Chọn</button>
-							</li>
-							<li>
-								<p>Cập nhật địa chỉ giao hàng</p>
-								<button>Cập nhật</button>
-							</li>
-							<li>
-								<p>Chọn phương thức giao hàng</p>
-								<i class="downItems fa-solid fa-angle-down"></i>
-								<i class="upItems fa-solid fa-angle-up"></i>
-							</li>
-							<li>
-								<p>Chọn hình thức thanh toán</p>
-								<i class="downItems fa-solid fa-angle-down"></i>
-								<i class="upItems fa-solid fa-angle-up"></i>
-							</li>
-						</ul>
-						<div class="Total">
-							<div class="Discount">
-								<h3>Giảm giá</h3>
-								<span>10%</span>
-							</div>
-							<div class="FinalPrice">
-								<h3>Thành tiền</h3>
-								<span>@totalPrice.ToString("N0") VNĐ</span>
-							</div>
-							<div class="Date">
-								<h3>Dự kiến giao hàng</h3>
-								<span>Sau 3 ngày</span>
-							</div>
-						</div>
+					@if (Model.CartItems.Count > 0)
+					{
+						@foreach (var item in Model.CartItems)
+						{
+							<div class="Summary col-lg-4">
+								<ul>
+									<li>
+										<p>Tổng tiền</p>
+										<span class="TotalPrice">@totalPrice.ToString("N0") VNĐ</span>
+									</li>
+									<li>
+										<p>Phí giao hàng</p>
+										<span>50.000 VNĐ</span>
+									</li>
+									<li>
+										<p>Cập nhật địa chỉ giao hàng</p>
+										<button>Cập nhật</button>
+									</li>
+									<li>
+										<p>Chọn phương thức giao hàng</p>
+										<i class="downItems fa-solid fa-angle-down"></i>
+										<i class="upItems fa-solid fa-angle-up"></i>
+									</li>
+									<li>
+										<p>Chọn hình thức thanh toán</p>
+										<i class="downItems fa-solid fa-angle-down"></i>
+										<i class="upItems fa-solid fa-angle-up"></i>
+									</li>
+								</ul>
+								<div class="Total">
+									<div class="Discount">
+										<h3>Giảm giá</h3>
+										<span>@item.ProductPromotion %</span>
+									</div>
+									<div class="FinalPrice">
+										<h3>Thành tiền</h3>
+										<span>@totalPromotion.ToString("N0") VNĐ</span>
+									</div>
+									<div class="Date">
+										<h3>Dự kiến giao hàng</h3>
+										<span>Sau 3 ngày</span>
+									</div>
+								</div>
 
-						<a class="btnCheck" asp-controller="CheckOut" asp-action="CheckOut">Thanh toán</a>
-					</div>
+								<a class="btnCheck" asp-controller="CheckOut" asp-action="CheckOut">Thanh toán</a>
+							</div>
+						}
+					}
 
 				}
 				else

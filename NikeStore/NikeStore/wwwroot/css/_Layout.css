@@ -24,7 +24,7 @@
 }
 
     .Navbar .Container {
-        max-width: 90vw;
+        max-width: 1700px;
         display: flex;
         margin: 0 auto;
         height: 35px;
@@ -102,7 +102,7 @@ header {
 
     header .Container {
         display: flex;
-        max-width: 90vw;
+        max-width: 1700px;
         margin: 0 auto;
         height: 65px;
         align-items: center;
@@ -516,6 +516,7 @@ header {
         flex-direction: column;
         align-items: flex-end;
         opacity: 1;
+        pointer-events: auto;
         transform: translateX(0);
         transition: all 0.3s ease;
     }
@@ -643,3 +644,34 @@ footer {
         max-width: 1200px;
         padding-left: 10px;
     }
+
+@media (max-width: 1024px) {
+    .Navbar {
+        display: none;
+    }
+
+    header {
+        transform: translateY(0);
+    }
+
+    header .Menu {
+        display: none;
+    }
+
+    header .Account {
+        display: none;
+    }
+
+    footer ul {
+        padding-left: 3em!important;
+    }
+
+    footer p {
+        text-align:center;
+    }
+
+    .CustomerSupport {
+        bottom: 0em;
+        left: 1em;
+    }
+}

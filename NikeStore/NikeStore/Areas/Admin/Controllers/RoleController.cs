@@ -42,6 +42,7 @@ namespace NikeStore.Areas.Admin.Controllers
                 _roleManager.CreateAsync(new IdentityRole(model.Name)).GetAwaiter().GetResult();
             }
 
+            TempData["success"] = "Add new role successfully";
             return RedirectToAction("Role");
         }
 
@@ -79,6 +80,7 @@ namespace NikeStore.Areas.Admin.Controllers
                 try
                 {
                     await _roleManager.UpdateAsync(role);
+                    TempData["success"] = "Update role successfully";
                     return RedirectToAction("Role");
                 }
                 catch(Exception ex)
@@ -104,6 +106,7 @@ namespace NikeStore.Areas.Admin.Controllers
                 return NotFound();
             }
             await _roleManager.DeleteAsync(role);
+            TempData["success"] = "Delete role successfully";
             return RedirectToAction("Role");
         }
     }

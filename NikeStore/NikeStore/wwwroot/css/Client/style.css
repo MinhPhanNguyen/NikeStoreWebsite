@@ -26,14 +26,13 @@
         height: 70vh;
         overflow: hidden;
         display: flex;
-        align-items: center
+        align-items: start;
     }
-
 
         .Homepage .Section_1 img {
             cursor: pointer;
-            width: 100%;
-            height: auto;
+            width: auto;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -49,8 +48,8 @@
     }
 
         .Homepage .Section_2 img {
-            width: auto;
-            height: 25vh;
+            max-width: 700px;
+            height: auto;
             overflow: hidden;
         }
 
@@ -83,10 +82,6 @@
     .Homepage .Section_3, .Section_4, .ProductListPage .Section_2 .ProductList, .PromotionPage .Section_4 {
         margin: 2em 0;
         background-color: white;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
     }
 
     .Homepage .Section_3 {
@@ -94,13 +89,12 @@
     }
 
     .Homepage .Section_4, .PromotionPage .Section_4 {
-        max-width: 80vw;
+        max-width: 1500px;
     }
 
 .Components {
     cursor: pointer;
     text-align: center;
-    flex-basis: 33%;
     flex-direction: column;
     padding: 0 2px;
     background-color: transparent;
@@ -171,8 +165,8 @@
 }
 
     .Homepage .Section_5 img {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 100%;
         object-fit: cover;
     }
 
@@ -183,7 +177,7 @@
 }
 
     .Homepage .Section_6 img {
-        height: 180px;
+        height: 220px;
         width: auto;
         border-radius: 100%;
         margin-bottom: 0.5em;
@@ -196,10 +190,9 @@
 
     .Homepage .Section_6 .Contain {
         display: flex;
-        max-width: 1200px;
         margin: 0 auto;
         padding: 30px 0;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
         .Homepage .Section_6 .Contain .Components {
@@ -252,7 +245,7 @@
     width: 100%;
     height: auto;
     margin: 95px auto 3em;
-    max-width: 85vw;
+    max-width: 1600px;
     min-height: 80vh
 }
 
@@ -291,6 +284,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            white-space:nowrap;
         }
 
             .ProductListPage .Section_1 .Filter li span {
@@ -303,11 +297,11 @@
             }
 
             .ProductListPage .Section_1 .Filter li .Show {
-                display: none;
+                display: block;
             }
 
             .ProductListPage .Section_1 .Filter li .Hide {
-                display: block;
+                display: none;
             }
 
             .ProductListPage .Section_1 .Filter li .UpSort {
@@ -333,7 +327,7 @@
             overflow: hidden;
             position: fixed;
             right: 7vw;
-            top: 190px;
+            top: 160px;
             z-index: 1000;
             background-color: white;
             filter: drop-shadow(rgba(0, 0, 0, 0.3) 0px 2px 5px);
@@ -368,13 +362,20 @@
     }
 
         .ProductListPage .Section_2 .Category {
-            width: 20%;
             overflow-y: scroll;
             overflow-x: hidden;
             background-color: #fff;
             white-space: nowrap;
+            width: 20%;
+            opacity: 0;
+            pointer-events: none;
         }
 
+
+        .ProductListPage .Section_2 .Category.CategoryTop {
+            width: 17%;
+        }
+         
             .ProductListPage .Section_2 .Category .FilterItems {
                 padding: 0.8em 0;
                 border-bottom: 1px solid #f1f1f1;
@@ -402,7 +403,7 @@
                     }
 
                 .ProductListPage .Section_2 .Category .FilterItems .Option {
-                    max-height: 20vh;
+                    max-height: 50vh;
                     overflow: hidden;
                     display: block;
                 }
@@ -509,42 +510,44 @@
                 }
 
         .ProductListPage .Section_2 .ProductList {
-            margin: 0 0 0 20%;
             height: auto;
             overflow: unset;
             display: flex;
             align-items: start;
+            width: 100%;
         }
 
 .ProductDetail {
     width: 100%;
     height: auto;
     margin: 180px auto 6em;
-    max-width: 60vw;
+    padding: 0 1em;
+    max-width: 1200px;
 }
 
     .ProductDetail .Section_1 .Contain_img {
         overflow: hidden;
-        height: 80vh;
+        height: 60vh;
         display: flex;
+        position: relative;
     }
 
         .ProductDetail .Section_1 .Contain_img .ImgItems {
             overflow-y: scroll;
-            height: 80vh;
+            height: 60vh;
             scrollbar-width: none;
             -ms-overflow-style: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0;
+            padding: 1em;
         }
 
             .ProductDetail .Section_1 .Contain_img .ImgItems img {
                 margin-bottom: 0.5em;
                 cursor: pointer;
-                height: 7vh;
-                width: 7vh;
+                height: auto;
+                width: 100%;
                 border-radius: 0.5em;
                 object-fit: cover;
             }
@@ -558,16 +561,21 @@
             padding: 0;
             overflow: hidden;
             height: 60vh;
+            display: flex;
+            align-items:center;
+            justify-content:center;
         }
 
             .ProductDetail .Section_1 .Contain_img .ImgDisplay img {
                 border-radius: 0.2em;
                 object-fit: cover;
+                height: 60vh;
+                width: auto;
             }
 
             .ProductDetail .Section_1 .Contain_img .ImgDisplay .PrevNext {
                 position: absolute;
-                bottom: 4.2em;
+                bottom: 1em;
                 right: 0.8em;
             }
 
@@ -576,17 +584,17 @@
                     background-color: white;
                     border-radius: 100%;
                     padding: 0.5em 0.9em;
-                    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 10px);
+                    filter: drop-shadow(rgba(0, 0, 0, 0.4) 0px 2px 10px);
                     margin: 0 0.5em 0.4em 0;
                 }
 
                     .ProductDetail .Section_1 .Contain_img .ImgDisplay .PrevNext button:hover {
-                        filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 2px 10px);
+                        filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 2px 10px);
                     }
 
     .ProductDetail .Section_1 .Content {
-        padding: 0.5em 0 0 1.5em;
-        height: 80vh;
+        padding: 0.5em 0 0 0;
+        height: 75vh;
         position: relative;
     }
 
@@ -686,7 +694,7 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            bottom: 8vh;
+            bottom: 0;
             border: none;
         }
 
@@ -722,7 +730,7 @@
                     }
 
     .ProductDetail .Section_2 {
-        margin: 2em 0;
+        margin: 2em 0 1em;
         height: auto;
         overflow: hidden;
     }
@@ -747,6 +755,7 @@
                 font-weight: bold;
                 text-transform: uppercase;
                 margin: 0 0.2em;
+                white-space: nowrap;
             }
 
             .ProductDetail .Section_2 .Container .TitleDescription .UpDes, .ProductDetail .Section_3 .RateStatistic .UpRate {
@@ -889,10 +898,9 @@
         height: 70vh;
         overflow: hidden;
         display: flex;
-        align-items: center;
+        align-items: start;
         margin-bottom: 3em;
     }
-
 
         .PromotionPage .Section_1 img {
             cursor: pointer;
@@ -961,7 +969,7 @@
 
         .ServicePage .Container .Section_1 .Content p, .ContactPage .Container .Section_1 .Content p {
             font-size: 0.8em;
-            width: 40vw;
+            width: 80vw;
         }
 
 
@@ -972,6 +980,7 @@
     .ServicePage .Container .TitleSc2 h2 {
         font-size: 1.3em;
         font-weight: bold;
+        text-align: center;
     }
 
 .ServicePage .Container .Section_2 {
@@ -981,12 +990,9 @@
 
     .ServicePage .Container .Section_2 ul {
         flex-direction: column;
-        max-width: 60vw;
+        max-width: 1200px;
         margin: 0 auto;
     }
-
-        .ServicePage .Container .Section_2 ul li {
-        }
 
             .ServicePage .Container .Section_2 ul li .Title {
                 display: flex;
@@ -1029,10 +1035,11 @@
                     font-size: 0.9em;
                 }
 
-.ContactPage {
+.ContactPage{
     width: 100%;
     height: auto;
     margin: 105px auto 0;
+    overflow: hidden
 }
 
     .ContactPage .Container {
@@ -1041,7 +1048,7 @@
 
         .ContactPage .Container .Section_2 {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 1em;
             background-color: transparent;
             padding-top: 40px;
             padding-bottom: 40px;
@@ -1085,12 +1092,14 @@
                         top: -2px;
                     }
 
-            .ContactPage .Container .Section_2 .TypeInput, .LogInPage .Container form .TypeInput, .SignUpPage .Container form .TypeInput {
+           .form-group {
                 margin-bottom: 1em;
-                padding: 0 1em;
-                display: flex;
-                flex-direction: column;
+                width: 100%;
             }
+
+           .form-control {
+               border-radius: 0.1em;
+           }
 
             .ContactPage .Container .Section_2 span, .LogInPage .Container form span, .SignUpPage .Container form span {
                 margin-left: 10px;
@@ -1106,11 +1115,12 @@
 
             .ContactPage .Container .Section_2 h2 {
                 text-align: center;
-                margin: 2em 6em 3em;
+                margin: 2em 0 3em;
                 font-size: 0.9em;
                 font-weight: 700;
                 line-height: 20px;
                 color: black;
+                width: 90vw;
                 text-transform: uppercase;
             }
 
@@ -1140,7 +1150,7 @@
             }
 
                 .ContactPage .Container .Section_2 .Contact input {
-                    width: 380px;
+                    max-width: 500px;
                 }
 
 
@@ -1176,8 +1186,8 @@
         flex-direction: column;
     }
 
-        .WishListPage .Container .Section_2, .Section_3 {
-            max-width: 80vw;
+        .WishListPage .Container .Section_2, .WishListPage .Container .Section_3 {
+            max-width: 1500px;
             margin: 0 auto;
             height: auto;
         }
@@ -1407,44 +1417,43 @@
         }
 
 .LogInPage, .SignUpPage {
-    height: 100vh;
-    width: 100%;
+    height:auto;
+    max-width: 1500px;
     overflow: hidden;
+    margin: 115px auto 3em;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    padding: 0 1em;
 }
 
     .LogInPage .Container, .SignUpPage .Container {
-        max-width: 35vw;
+        margin: 0 auto;
+        max-width: 1500px;
         overflow: hidden;
-        margin-bottom: 3em;
     }
-
-        .LogInPage .Container form, .SignUpPage .Container form {
-            height: auto;
-        }
 
             .LogInPage .Container form .Contain_img, .SignUpPage .Container form .Contain_img {
                 margin: 1em 0 0;
-                height: 10%;
-                width: 100%;
                 overflow: hidden;
                 padding: 1em;
             }
 
                 .LogInPage .Container form .Contain_img img, .SignUpPage .Container form .Contain_img img {
                     width: auto;
-                    height: 60%;
+                    height: 5vh;
                     object-fit: cover;
                     filter: drop-shadow(rgba(0, 0, 0, 1) 0px 2px 8px);
                 }
 
-            .LogInPage .Container form .Title, .SignUpPage .Container form .Title {
-                margin-bottom: 1em;
-                width: 100%;
-                padding: 0 1em;
-            }
+        .LogInPage .form-group, .SignUpPage .form-group {
+            margin-bottom: 0;
+        }
+
+        .LogInPage .Container form .Title, .SignUpPage .Container form .Title {
+            margin-bottom: 1em;
+            width: 100%;
+            padding: 0 1em;
+        }
 
                 .LogInPage .Container form .Title h2, .SignUpPage .Container form .Title h2 {
                     font-weight: normal;
@@ -1525,6 +1534,7 @@
                     margin-bottom: 0.8em;
                     text-decoration: underline;
                     cursor: pointer;
+                    font-size: 0.9em;
                 }
 
                     .LogInPage .Container form .TermAndPrivacy button:hover {

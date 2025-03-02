@@ -1,15 +1,5 @@
 ﻿@{
 	ViewData["Title"] = "Danh sách tài khoản";
-
-	Paginate paginate = new Paginate();
-
-	int page = 1;
-
-	if (ViewBag.Pager != null)
-	{
-		paginate = ViewBag.Pager;
-		page = paginate.CurrentPage;
-	}
 }
 
 <div class="Dashboard">
@@ -25,30 +15,17 @@
 				<section class="Section_2">
 					<div class="Container">
 						<div class="LeftFilter">
-							<div class="SearchProduct">
-								<label for="NameProduct">
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</label>
-								<input id="NameProduct" type="text" placeholder="Tên tài khoản">
-							</div>
-
 							<a class="AddIcon" href="@Url.Action("Add", "Account", new { area = "Admin" })">
 								<i class="fa-solid fa-plus"></i>
 								<span>Thêm</span>
 							</a>
-						</div>
-
-						<div class="RightFilter">
-							<div class="PageMove">
-								<partial name="_Paging" model="paginate" />
-							</div>
 						</div>
 					</div>
 				</section>
 
 				<section class="Section_3">
 					<div class="Container">
-						<table>
+						<table id="myTable">
 							<thead>
 								<tr>
 									<th>STT</th>

@@ -25,7 +25,7 @@ namespace NikeStore.Areas.Admin.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Account(int pg = 1)
+        public async Task<IActionResult> Account()
         {
             var account = await (from user in _context.Users
                                  join userRole in _context.UserRoles on user.Id equals userRole.UserId
@@ -42,23 +42,7 @@ namespace NikeStore.Areas.Admin.Controllers
             var logginedUser = User.FindFirstValue(ClaimTypes.NameIdentifier);
             ViewBag.LogginedUser = logginedUser;
 
-            const int pageSize = 10;
-
-            if (pg < 1)
-            {
-                pg = 1;
-            }
-            int recsCount = account.Count();
-
-            var pager = new Paginate(recsCount, pg, pageSize);
-
-            int recSkip = (pg - 1) * pageSize;
-
-            var data = account.Skip(recSkip).Take(pageSize).ToList();
-
-            ViewBag.Pager = pager;
-
-            return View(data);
+            return View(account);
         }
 
         [HttpGet]
@@ -115,6 +99,7 @@ namespace NikeStore.Areas.Admin.Controllers
 
             var roles = await _roleManager.Roles.ToListAsync();
             ViewBag.Roles = new SelectList(roles, "Id", "Name");
+            TempData["success"] = "Thêm role thành công!";
             return View(user);
         }
 
@@ -184,6 +169,7 @@ namespace NikeStore.Areas.Admin.Controllers
 
             var roles = await _roleManager.Roles.ToListAsync();
             ViewBag.Roles = new SelectList(roles, "Id", "Name");
+            TempData["success"] = "Cập nhật role thành công!";
             return View(existUser);
         }
 
@@ -213,7 +199,7 @@ namespace NikeStore.Areas.Admin.Controllers
                 return View(user);
             }
 
-            TempData["success"] = "Xóa thành công";
+            TempData["success"] = "Xóa role thành công";
             return RedirectToAction("Account");
         }
 

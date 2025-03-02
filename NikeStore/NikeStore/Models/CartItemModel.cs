@@ -6,6 +6,7 @@
         public string ProductName { get; set; }
         public string ProductColor { get; set; }
         public string ProductSize { get; set; }
+        public double? ProductPromotion { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
         public decimal TotalPrice
@@ -24,8 +25,9 @@
             Price = product.Price;
             ProductColor = product.ProductColor?.Color;
             ProductSize = product.ProductSize?.Size;
+            ProductPromotion = product.Promotion?.Discount;
             Quantity = 1;
-            Image = product.ImageUrl;
+            Image = product.Images?.FirstOrDefault().ImageUrl ?? "default.png";
         }
     }
 }

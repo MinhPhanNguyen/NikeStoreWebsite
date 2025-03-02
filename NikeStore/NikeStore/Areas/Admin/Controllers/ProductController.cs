@@ -26,7 +26,7 @@ namespace NikeStore.Areas.Admin.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public async Task<IActionResult> Product(int pg =1)
+        public async Task<IActionResult> Product()
         {
             List<Product> product = await _context.Product.OrderBy(p => p.ProductID)
                 .Include(p => p.ProductCategory)
@@ -34,28 +34,15 @@ namespace NikeStore.Areas.Admin.Controllers
                 .Include(p => p.ProductSize)
                 .Include(p => p.ProductColor)
                 .Include(p => p.ProductType)
+                .Include(p => p.Promotion)
+                .Include(p => p.Images)
                 .ToListAsync();
            
-            const int pageSize = 10;
 
-            if(pg < 1)
-            {
-                pg = 1;
-            }
-            int recsCount = product.Count();
-
-            var pager = new Paginate(recsCount, pg, pageSize);
-
-            int recSkip = (pg - 1) * pageSize;
-
-            var data = product.Skip(recSkip).Take(pageSize).ToList();
-
-            ViewBag.Pager = pager;
-
-            return View(data);
+            return View(product);
         }
 
-        public async Task<IActionResult> HotProduct(int pg = 1)
+        public async Task<IActionResult> HotProduct()
         {
             List<Product> product = await _context.Product.OrderBy(p => p.ProductID)
                .Include(p => p.ProductCategory)
@@ -63,29 +50,15 @@ namespace NikeStore.Areas.Admin.Controllers
                .Include(p => p.ProductSize)
                .Include(p => p.ProductColor)
                .Include(p => p.ProductType)
+               .Include(p => p.Promotion)
+               .Include(p => p.Images)
                .Where(p => p.IsHot == true)
                .ToListAsync();
 
-            const int pageSize = 10;
-
-            if (pg < 1)
-            {
-                pg = 1;
-            }
-            int recsCount = product.Count();
-
-            var pager = new Paginate(recsCount, pg, pageSize);
-
-            int recSkip = (pg - 1) * pageSize;
-
-            var data = product.Skip(recSkip).Take(pageSize).ToList();
-
-            ViewBag.Pager = pager;
-
-            return View(data);
+            return View(product);
         }
 
-        public async Task<IActionResult> LoveProduct(int pg = 1)
+        public async Task<IActionResult> LoveProduct()
         {
             List<Product> product = await _context.Product.OrderBy(p => p.ProductID)
                 .Include(p => p.ProductCategory)
@@ -93,26 +66,12 @@ namespace NikeStore.Areas.Admin.Controllers
                 .Include(p => p.ProductSize)
                 .Include(p => p.ProductColor)
                 .Include(p => p.ProductType)
+                .Include(p => p.Promotion)
+                .Include(p => p.Images)
                 .Where(p => p.IsFavorite == true)
                 .ToListAsync();
 
-            const int pageSize = 10;
-
-            if (pg < 1)
-            {
-                pg = 1;
-            }
-            int recsCount = product.Count();
-
-            var pager = new Paginate(recsCount, pg, pageSize);
-
-            int recSkip = (pg - 1) * pageSize;
-
-            var data = product.Skip(recSkip).Take(pageSize).ToList();
-
-            ViewBag.Pager = pager;
-
-            return View(data);
+            return View(product);
         }
 
         //public async Task<IActionResult> ReviewProduct()
@@ -132,6 +91,7 @@ namespace NikeStore.Areas.Admin.Controllers
             ViewBag.ProductGender = new SelectList(_context.ProductGender, "GenderID", "GenderName");
             ViewBag.ProductSize = new SelectList(_context.ProductSize, "ProductSizeID", "Size");
             ViewBag.Warehouse = new SelectList(_context.Warehouse, "WarehouseID", "WarehouseName");
+            ViewBag.Promotion = new SelectList(_context.Promotion, "Id", "Discount");
             return View();
         }
 
@@ -145,13 +105,21 @@ namespace NikeStore.Areas.Admin.Controllers
             ViewBag.ProductGender = new SelectList(_context.ProductGender, "GenderID", "GenderName", product.GenderID);
             ViewBag.ProductSize = new SelectList(_context.ProductSize, "ProductSizeID", "Size", product.ProductSizeID);
             ViewBag.Warehouse = new SelectList(_context.Warehouse, "WarehouseID", "WarehouseName", product.WarehouseID);
+            ViewBag.Promotion = new SelectList(_context.Promotion, "Id", "Discount", product.PromotionID);
 
             if (ModelState.IsValid)
             {
+                var existingProduct = await _context.Product.FirstOrDefaultAsync(p => p.Name == product.Name);
+                if (existingProduct != null)
+                {
+                    ModelState.AddModelError("", "Sản phẩm đã có trong Database");
+                    return View(product);
+                }
+
                 var category = await _context.ProductCategory.FindAsync(product.CategoryID);
                 if (category != null)
                 {
-                    product.Slug = GenerateSlug(category.CategoryName);
+                    existingProduct.Slug = GenerateSlug(category.CategoryName);
                 }
                 else
                 {
@@ -159,21 +127,46 @@ namespace NikeStore.Areas.Admin.Controllers
                     return View(product);
                 }
 
-                if (product.ImageUpload != null)
-                {
-                    string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/products");
-                    string imageName = Guid.NewGuid().ToString() + "_" + product.ImageUpload.FileName;
-                    string filePath = Path.Combine(uploadDir, imageName);
 
-                    FileStream fs = new FileStream(filePath, FileMode.Create);
-                    await product.ImageUpload.CopyToAsync(fs);
-                    fs.Close();
-                    product.ImageUrl = imageName;
+                // ✅ Thêm sản phẩm trước để lấy ProductId
+                _context.Product.Add(product);
+                await _context.SaveChangesAsync();
+
+                // ✅ Kiểm tra danh sách ảnh có tồn tại không
+                if (product.ImageUploads != null && product.ImageUploads.Count > 0)
+                {
+                    // ✅ Khởi tạo danh sách Images
+                    product.Images = new List<ProductImage>();
+
+                    string productDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/products", product.ProductID.ToString());
+                    if (!Directory.Exists(productDir))
+                    {
+                        Directory.CreateDirectory(productDir);
+                    }
+
+                    foreach (var imageFile in product.ImageUploads)
+                    {
+                        string imgName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
+                        string filePath = Path.Combine(productDir, imgName);
+
+                        using (var fs = new FileStream(filePath, FileMode.Create))
+                        {
+                            await imageFile.CopyToAsync(fs);
+                        }
+
+                        // ✅ Thêm ảnh vào danh sách Images của sản phẩm
+                        product.Images.Add(new ProductImage
+                        {
+                            ImageUrl = $"/media/products/{product.ProductID}/{imgName}",
+                            ProductID = product.ProductID
+                        });
+                    }
+
+                    // ✅ Cập nhật lại sản phẩm để lưu danh sách ảnh
+                    _context.Update(product);
+                    await _context.SaveChangesAsync();
                 }
 
-                _context.Add(product);
-                await _context.SaveChangesAsync();
-                TempData["success"] = "Thêm sản phẩm thành công";
                 return RedirectToAction("Product");
             }
             else
@@ -203,6 +196,7 @@ namespace NikeStore.Areas.Admin.Controllers
             ViewBag.ProductGender = new SelectList(_context.ProductGender, "GenderID", "GenderName", product.GenderID);
             ViewBag.ProductSize = new SelectList(_context.ProductSize, "ProductSizeID", "Size", product.ProductSizeID);
             ViewBag.Warehouse = new SelectList(_context.Warehouse, "WarehouseID", "WarehouseName", product.WarehouseID);
+            ViewBag.Promotion = new SelectList(_context.Promotion, "Id", "Discount", product.PromotionID);
 
             return View(product);
         }
@@ -217,6 +211,7 @@ namespace NikeStore.Areas.Admin.Controllers
             ViewBag.ProductGender = new SelectList(_context.ProductGender, "GenderID", "GenderName", product.GenderID);
             ViewBag.ProductSize = new SelectList(_context.ProductSize, "ProductSizeID", "Size", product.ProductSizeID);
             ViewBag.Warehouse = new SelectList(_context.Warehouse, "WarehouseID", "WarehouseName", product.WarehouseID);
+            ViewBag.Promotion = new SelectList(_context.Promotion, "Id", "Discount", product.PromotionID);
 
             if (ModelState.IsValid)
             {
@@ -234,6 +229,7 @@ namespace NikeStore.Areas.Admin.Controllers
                 existingProduct.ProductColorID = product.ProductColorID;
                 existingProduct.GenderID = product.GenderID;
                 existingProduct.ProductSizeID = product.ProductSizeID;
+                existingProduct.PromotionID = product.PromotionID;
 
                 var category = await _context.ProductCategory.FindAsync(product.CategoryID);
                 if (category != null)
@@ -246,23 +242,38 @@ namespace NikeStore.Areas.Admin.Controllers
                     return View(product);
                 }
 
-                if (product.ImageUpload != null)
+                if (product.ImageUploads != null && product.ImageUploads.Count > 0)
                 {
-                    string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/products");
-                    string imageName = Guid.NewGuid().ToString() + "_" + product.ImageUpload.FileName;
-                    string filePath = Path.Combine(uploadDir, imageName);
-
-                    using (var fs = new FileStream(filePath, FileMode.Create))
+                    string productDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/products", existingProduct.ProductID.ToString());
+                    if (!Directory.Exists(productDir))
                     {
-                        await product.ImageUpload.CopyToAsync(fs);
+                        Directory.CreateDirectory(productDir);
                     }
-                    existingProduct.ImageUrl = imageName;
+
+                    foreach (var imageFile in product.ImageUploads)
+                    {
+                        string imageName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
+                        string filePath = Path.Combine(productDir, imageName);
+
+                        using (var fs = new FileStream(filePath, FileMode.Create))
+                        {
+                            await imageFile.CopyToAsync(fs);
+                        }
+
+                        // Lưu ảnh mới vào bảng Images
+                        var image = new ProductImage
+                        {
+                            ImageUrl = $"/media/products/{existingProduct.ProductID}/{imageName}",
+                            ProductID = existingProduct.ProductID
+                        };
+                        _context.ProductImage.Add(image);
+                    }
                 }
 
                 _context.Update(existingProduct);
                 await _context.SaveChangesAsync();
 
-                TempData["success"] = "Cập nhật sản phẩm thành công";
+                TempData["success"] = "Update product successfully";
                 return RedirectToAction("Product");
             }
 
@@ -287,22 +298,26 @@ namespace NikeStore.Areas.Admin.Controllers
 
         public async Task<IActionResult> Delete(long Id)
         {
-            Product product = await _context.Product.FindAsync(Id);
+            var product = await _context.Product
+                .Include(p => p.Images)
+                .FirstOrDefaultAsync(p => p.ProductID == Id);
 
-            if(!string.Equals(product.ImageUrl,"noimage.jpg"))
+            if (product == null)
             {
-                string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/products");
-                string oldFileImgae = Path.Combine(uploadDir, product.ImageUrl);
-
-                if(System.IO.File.Exists(oldFileImgae))
-                {
-                    System.IO.File.Delete(oldFileImgae);
-                }    
+                return NotFound();
             }
 
+            string productDir = Path.Combine(_webHostEnvironment.WebRootPath, "media/products", product.ProductID.ToString());
+
+            if (Directory.Exists(productDir))
+            {
+                Directory.Delete(productDir, true); 
+            }
+
+            _context.ProductImage.RemoveRange(product.Images);
             _context.Product.Remove(product);
             await _context.SaveChangesAsync();
-            TempData["success"] = "Xóa sản phẩm thành công";
+
             return RedirectToAction("Product");
         } 
     }

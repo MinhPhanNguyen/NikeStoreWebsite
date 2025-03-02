@@ -17,9 +17,9 @@
    <section class="Section_3 row">
         @foreach (var product in Model)
         {
-            <a href="/Category?Slug=@product.Slug" class="Components col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <a href="/Category?Slug=@product.Slug" class="Components col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4">
                 <div class="Contain_img">
-                    <img src="@product.ProductCategory?.ImgUrl" alt="@product.ProductCategory?.CategoryName" />
+                    <img src="/media/categories/@product.ProductCategory?.ImgUrl" alt="@product.ProductCategory?.CategoryName" />
                 </div>
                 <div class="Content">
                     <h1><strong>@product.ProductCategory?.CategoryName</strong></h1>
@@ -35,9 +35,9 @@
    <section class="Section_4 row">
         @foreach (var product in Model)
         {
-            <a asp-action="Details" asp-controller="Product" asp-route-Id="@product.ProductID" class="Components col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <a asp-action="Details" asp-controller="Product" asp-route-Id="@product.ProductID" class="Components col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4">
                 <div class="Contain_img">
-                    <img src="/media/products/@product.ImageUrl" alt="@product.Name" />
+                    <img src="@(product.Images.FirstOrDefault()?.ImageUrl ?? "default.jpg")" alt="@product.Name" />
                 </div>
                 <div class="Content">
                     <h1>@product.Name</h1>
@@ -58,7 +58,7 @@
         <h2>Dịch vụ</h2>
     </div>
     <section class="Section_6">
-        <div class="Contain">
+        <div class="Contain row">
             <vc:service></vc:service>
         </div>
     </section>

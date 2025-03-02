@@ -261,47 +261,6 @@ namespace NikeStore.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("NikeStore.Models.Customer", b =>
-                {
-                    b.Property<int>("CustomerID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerID"));
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("CustomerName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("ImgUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
-
-                    b.HasKey("CustomerID");
-
-                    b.ToTable("Customer");
-                });
-
             modelBuilder.Entity("NikeStore.Models.Importing", b =>
                 {
                     b.Property<int>("ImportID")
@@ -530,6 +489,14 @@ namespace NikeStore.Migrations
                     b.Property<int>("ProductTypeID")
                         .HasColumnType("int");
 
+                    b.Property<int>("PromotionID")
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion");
+
                     b.Property<string>("Slug")
                         .HasColumnType("nvarchar(max)");
 
@@ -550,6 +517,8 @@ namespace NikeStore.Migrations
                     b.HasIndex("ProductSizeID");
 
                     b.HasIndex("ProductTypeID");
+
+                    b.HasIndex("PromotionID");
 
                     b.HasIndex("WarehouseID");
 
@@ -678,6 +647,31 @@ namespace NikeStore.Migrations
                     b.ToTable("ProductType");
                 });
 
+            modelBuilder.Entity("NikeStore.Models.Promotion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double?>("Discount")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Promotion");
+                });
+
             modelBuilder.Entity("NikeStore.Models.Provider", b =>
                 {
                     b.Property<int>("ProviderID")
@@ -756,8 +750,8 @@ namespace NikeStore.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<string>("Link")
                         .HasColumnType("nvarchar(max)");
@@ -911,11 +905,11 @@ namespace NikeStore.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NikeStore.Models.Customer", "Customer")
+                    b.HasOne("NikeStore.Models.Account", "Account")
                         .WithMany()
                         .HasForeignKey("UserId");
 
-                    b.Navigation("Customer");
+                    b.Navigation("Account");
 
                     b.Navigation("PaymentMethod");
                 });
@@ -952,6 +946,12 @@ namespace NikeStore.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("NikeStore.Models.Promotion", "Promotion")
+                        .WithMany("Product")
+                        .HasForeignKey("PromotionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("NikeStore.Models.Warehouse", "Warehouse")
                         .WithMany("Product")
                         .HasForeignKey("WarehouseID")
@@ -967,6 +967,8 @@ namespace NikeStore.Migrations
                     b.Navigation("ProductSize");
 
                     b.Navigation("ProductType");
+
+                    b.Navigation("Promotion");
 
                     b.Navigation("Warehouse");
                 });
@@ -1031,6 +1033,11 @@ namespace NikeStore.Migrations
                 });
 
             modelBuilder.Entity("NikeStore.Models.ProductType", b =>
+                {
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("NikeStore.Models.Promotion", b =>
                 {
                     b.Navigation("Product");
                 });

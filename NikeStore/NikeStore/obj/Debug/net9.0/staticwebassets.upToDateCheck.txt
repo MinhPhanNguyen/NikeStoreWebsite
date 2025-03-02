@@ -1788,7 +1788,6 @@ D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\brand
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\solid\dollar-sign.svg
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\brands\the-red-yeti.svg
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\solid\person-chalkboard.svg
-D:\TestWebsite\NikeStore\NikeStore\wwwroot\css\reponsive.css
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\solid\diamond-turn-right.svg
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\sprites\solid.svg
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\solid\circle-chevron-up.svg
@@ -2077,7 +2076,6 @@ D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\solid
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\brands\hips.svg
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\solid\diamond.svg
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\solid\location-dot.svg
-D:\TestWebsite\NikeStore\NikeStore\wwwroot\js\global.js
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\solid\cart-shopping.svg
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\solid\square.svg
 D:\TestWebsite\NikeStore\NikeStore\wwwroot\fontawesome-free-6.7.2-web\svgs\solid\bugs.svg
@@ -2175,7 +2173,6 @@ wwwroot\css\Admin\style.css
 wwwroot\css\Client\reponsive.css
 wwwroot\css\Client\style.css
 wwwroot\css\global.css
-wwwroot\css\reponsive.css
 wwwroot\fontawesome-free-6.7.2-web\css\all.css
 wwwroot\fontawesome-free-6.7.2-web\css\all.min.css
 wwwroot\fontawesome-free-6.7.2-web\css\brands.css
@@ -4363,42 +4360,11 @@ wwwroot\images\Posts\cach-lay-lai-mat-khau-vneid-03.jpg
 wwwroot\images\Posts\cai-mat-khau-dien-thoai-4.jpg
 wwwroot\images\Posts\huong-dan-xac-thuc-email-sau-dan.jpg
 wwwroot\images\Posts\MISA-ID-2.jpg
-wwwroot\images\ProductDetail\AIR FORCE 1 07 (1).jpg
-wwwroot\images\ProductDetail\AIR FORCE 1 07 (2).jpg
-wwwroot\images\ProductDetail\AIR FORCE 1 07 (3).jpg
-wwwroot\images\ProductDetail\AIR FORCE 1 07 (4).jpg
-wwwroot\images\ProductDetail\AIR FORCE 1 07 (5).jpg
-wwwroot\images\ProductDetail\AIR FORCE 1 07.jpg
-wwwroot\images\ProductDetail\type1.jpg
-wwwroot\images\ProductDetail\type2.jpg
-wwwroot\images\ProductDetail\type3.jpg
-wwwroot\images\ProductDetail\type4.jpg
-wwwroot\images\ProductDetail\type5.jpg
-wwwroot\images\Section3\1.png
-wwwroot\images\Section3\2.png
-wwwroot\images\Section3\3.png
-wwwroot\images\Section3\4.png
-wwwroot\images\Section3\5.png
-wwwroot\images\Section3\6.png
-wwwroot\images\Section4\AIR FORCE 1 07.jpg
-wwwroot\images\Section4\AIR FORCE 1 MID 07.jpg
-wwwroot\images\Section4\NIKE AIR MAX 90.jpg
-wwwroot\images\Section4\NIKE DUNK LOW.jpg
-wwwroot\images\Section4\W AIR MAX DN ISA.jpg
-wwwroot\images\Section4\W BLAZER MID 77.jpg
-wwwroot\images\Section4\W NIKE DUNK LOW NEXT NATURE.jpg
-wwwroot\images\Section4\W NIKE P-6000.jpg
-wwwroot\images\Section4\WMNS AIR FORCE 1 07 LX.jpg
 wwwroot\images\Section5\image_sc5.png
-wwwroot\images\Section6\1.png
-wwwroot\images\Section6\2.png
-wwwroot\images\Section6\3.png
-wwwroot\images\Section6\4.png
 wwwroot\js\_Layout.js
 wwwroot\js\Admin\chart.js
 wwwroot\js\Admin\script.js
 wwwroot\js\Client\script.js
-wwwroot\js\global.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
@@ -4461,22 +4427,27 @@ wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\media\accounts\9d9404ef-829e-4e58-a5fb-8c34b1290a69_images (1).jpg
+wwwroot\media\categories\1.png
+wwwroot\media\categories\2.png
+wwwroot\media\categories\3.png
+wwwroot\media\categories\4.png
+wwwroot\media\categories\5.png
+wwwroot\media\categories\6.png
 wwwroot\media\customers\94bb8750-a978-4df9-a1ac-d252aceabbfd_nike-just-do-it.jpg
 wwwroot\media\customers\d02973ba-2f53-4768-8a0a-1cdbf9669279_nike-just-do-it.jpg
-wwwroot\media\products\2558781a-59a1-4683-9b24-be172c4ca486_banner-ve-sinh-giay-mobile-goc.jpg
-wwwroot\media\products\26d6a9c7-204f-4667-adfc-5671025b2267_images (1).jpg
-wwwroot\media\products\3dd118a2-0a94-4a4e-a183-751098ecd036_dich-vu-ve-sinh-giay-washintown.jpg
-wwwroot\media\products\455aa42a-7669-4f9d-b01a-d16431343d5e_nike-just-do-it.jpg
-wwwroot\media\products\4dfcc003-5494-4f8b-a104-5c87ba832c67_thiế1676712879147.jpg
-wwwroot\media\products\4ff496c5-1574-4187-813e-b57395cf5945_images (1).jpg
-wwwroot\media\products\8211b54c-90ca-4a8a-8127-2f1682dc103a_vn-11134207-7ras8-m5wmiviylzqu4f.jpg
-wwwroot\media\products\83e103f5-43ff-4346-b244-e3e09761a446_dan-bao-ve-de-giay-sneaker-3.jpg
-wwwroot\media\products\8814ec85-6ace-470e-bef0-0357c27fdd14_san-pham-phuc-hoi-giay-toan-dien.jpg
-wwwroot\media\products\AIR FORCE 1 07.jpg
-wwwroot\media\products\be16f4d5-bd85-4987-ad0e-542d68682fef_thiế1676712879147.jpg
-wwwroot\media\products\cf564138-2e6b-4b2f-a73b-4cfe35a33661_99b4e708b63aebd68defd3c1abe01279.jpg
-wwwroot\media\products\ed84764b-0d69-473f-8fcc-587b08dbe33b_99b4e708b63aebd68defd3c1abe01279.jpg
-wwwroot\media\products\feb5bd40-65ff-4a30-a3ee-aad0dd5d6753_Nike-Crescent-Mall-1.jpg
-wwwroot\media\products\NIKE DUNK LOW.jpg
-wwwroot\media\products\W AIR MAX DN ISA.jpg
-wwwroot\media\products\W NIKE DUNK LOW NEXT NATURE.jpg
+wwwroot\media\products\1\01a235f9-5408-4640-9b92-6f76846957a4_banner-ve-sinh-giay-mobile-goc.jpg
+wwwroot\media\products\1\6dcd1dce-be9f-4615-a13a-dda0a2d7f439_san-pham-phuc-hoi-giay-toan-dien.jpg
+wwwroot\media\products\1\b7beb21f-8e6d-42d1-92e8-da078e9e7acc_dich-vu-ve-sinh-giay-washintown.jpg
+wwwroot\media\products\2\3b8edac5-f955-4621-a96a-4942ca0b66be_Heramo-Noi-cung-cap-dich-vu-sua.jpg
+wwwroot\media\products\2\5809b9cf-c2c3-4276-953d-84a796e0cf95_psd-wit-poster-2692.jpg
+wwwroot\media\products\2\d86aa152-b0fe-4e6e-acd5-51bf0d184938_cach-giat-giay-vai.jpg
+wwwroot\media\products\3\07211419-ade5-4662-866e-fac377a68379_dan-bao-ve-de-giay-sneaker-3.jpg
+wwwroot\media\products\3\71e8f83a-cf71-45fd-9525-77a013d0b2c4_dich-vu-ve-sinh-giay-washintown.jpg
+wwwroot\media\products\3\df6071b4-4c74-4867-a9e5-b390c60444aa_san-pham-phuc-hoi-giay-toan-dien.jpg
+wwwroot\media\products\4\3856b9da-bb68-4735-80ee-09683979333b_vn-11134207-7r98o-lo0vul06vi0ddc.jpg
+wwwroot\media\products\4\d61c5ba2-f614-4dcc-892e-65dff3215e72_99b4e708b63aebd68defd3c1abe01279.jpg
+wwwroot\media\products\4\d63d3315-afdc-448a-9bbf-9517e825eb40_vn-11134207-7ras8-m4k8orwavnn449.jpg
+wwwroot\media\services\1.png
+wwwroot\media\services\2.png
+wwwroot\media\services\3.png
+wwwroot\media\services\4.png

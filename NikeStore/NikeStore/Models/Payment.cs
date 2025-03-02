@@ -28,7 +28,7 @@ namespace NikeStore.Models
 
         // Khóa ngoại
         [ForeignKey("UserId")]
-        public virtual Customer Customer { get; set; }
+        public virtual Account Account { get; set; }
 
         [ForeignKey("PaymentMethodId")]
         public virtual PaymentMethod PaymentMethod { get; set; }

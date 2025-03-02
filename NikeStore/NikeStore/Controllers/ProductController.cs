@@ -16,14 +16,14 @@ namespace NikeStore.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var products = await _dataContext.Product.Include(p => p.ProductCategory).ToListAsync();
+            var products = await _dataContext.Product.Include(p => p.ProductCategory).Include(p => p.Images).ToListAsync();
             return View(products);
         }
 
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Details(long id)
         {
-            if (id == null) return RedirectToAction("Index");
-            var productById = _dataContext.Product.Where(p => p.ProductID == id).FirstOrDefault();
+            if (id <= 0) return RedirectToAction("Index");
+            var productById = _dataContext.Product.Where(p => p.ProductID == id).Include(p => p.Images).FirstOrDefault();
             return View(productById);
         }
     }

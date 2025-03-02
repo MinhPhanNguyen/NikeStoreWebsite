@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>v1k9uqmvgj</Fingerprint>
-      <Integrity>PYxiJ24f8p2O1avUeTTyCyx74kEyZDE/OlN5CPX2ZQ4=</Integrity>
+      <Fingerprint>tkz1a7wkcz</Fingerprint>
+      <Integrity>XTCzcheFITxFst/g/AEwFq+76x5tT8SaOP3j6LF0kuU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Admin\style.css'))</OriginalItemSpec>
@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3r8b2a0bt1</Fingerprint>
-      <Integrity>8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=</Integrity>
+      <Fingerprint>1g25c8a326</Fingerprint>
+      <Integrity>X1io4H2o91jYYphjAm7gLr+7TjL8Mhd2BbCM1Q0ax9A=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Client\reponsive.css'))</OriginalItemSpec>
@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>a7ul08y60b</Fingerprint>
-      <Integrity>JkyWmO1uffR4C6YPaAFKhGlxlM1zSEKSTRrT2lB4K9M=</Integrity>
+      <Fingerprint>c2yslkxgai</Fingerprint>
+      <Integrity>dLDKdh5ajpJ+Rbx5FQoj8Z9ajtjANwU0zQO7wMPtsNw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\Client\style.css'))</OriginalItemSpec>
@@ -84,29 +84,11 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>b1jqpbl873</Fingerprint>
-      <Integrity>IQjWANuaZO7gpiLqay9n1dGuOcTOSWgpK8n0x0ZFLKk=</Integrity>
+      <Fingerprint>lcv5ljhdmu</Fingerprint>
+      <Integrity>CyFw0rLW/aHgxAusiOeXrhvjgVOnc71NwAabOPo5q9c=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\reponsive.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>css/reponsive.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3r8b2a0bt1</Fingerprint>
-      <Integrity>8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\reponsive.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\_Layout.css'))">
       <SourceType>Package</SourceType>
@@ -120,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4e2cqnxf7x</Fingerprint>
-      <Integrity>HH3pZJGdC/U3A+s3bSyQaE+mSKSwvycEQDOXJd8tYn4=</Integrity>
+      <Fingerprint>8y10ztd84h</Fingerprint>
+      <Integrity>II/8bSj/38O72oSNO2CB5NCOOh86izJE8cxFUxaUfT0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\_Layout.css'))</OriginalItemSpec>
@@ -39492,474 +39474,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Posts\MISA-ID-2.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07 (1).jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/AIR FORCE 1 07 (1).jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>me06n3voua</Fingerprint>
-      <Integrity>jpqAqZfR8Sou/qVMDt0eo0blOUJM4KR/DK14nMkOChs=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07 (1).jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07 (2).jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/AIR FORCE 1 07 (2).jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3id7uou2yp</Fingerprint>
-      <Integrity>G97bXRfIzLF6kXVixCvhJf1358Wfiwq7Oxd7YITf8kc=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07 (2).jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07 (3).jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/AIR FORCE 1 07 (3).jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ak3cahmr9e</Fingerprint>
-      <Integrity>9hSlMyaD1dKiofM+SRG02UHcRGlkTZYMIzP0+XGngu0=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07 (3).jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07 (4).jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/AIR FORCE 1 07 (4).jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>52smf5gt2c</Fingerprint>
-      <Integrity>c+Xpi0Xu2/HcoT/wgmweV4gKUPLNsV7oUdxXrzNcDeg=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07 (4).jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07 (5).jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/AIR FORCE 1 07 (5).jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9swh2rdivy</Fingerprint>
-      <Integrity>x2EVj0gHHJagvdsP9oPdjXaV4H2jTxHxSMnw2m08kTc=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07 (5).jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/AIR FORCE 1 07.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ukie0ej5np</Fingerprint>
-      <Integrity>ckIwGJdSHn20IKbrwY4Y0LsiNMDjMqkQXjhgTl8DmPw=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\AIR FORCE 1 07.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\type1.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/type1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ncrvky6m5x</Fingerprint>
-      <Integrity>ySfC9sJCNCj1HW7QMTauglIz/siB3mBuJ/EQLq+vRPM=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\type1.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\type2.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/type2.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>y9yfcjuq7f</Fingerprint>
-      <Integrity>RnNiDAshBi0NG8K72v5UD/zFay9kAMfeimNre03yWK4=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\type2.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\type3.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/type3.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>swr3alwv9u</Fingerprint>
-      <Integrity>9NHQ8YiH2kbMYvjuZaqBuY1zXaGXdUZGtcpOYGSpl7A=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\type3.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\type4.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/type4.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>strsq451c8</Fingerprint>
-      <Integrity>IAoxWwxaocuBtgzwc0pLMvJd9oeDvpMkpsDJdNxfrfk=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\type4.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\type5.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/ProductDetail/type5.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>szfaupqyo6</Fingerprint>
-      <Integrity>iI4hM5lthV/DuGd4hCIozIhwllrLz6fQIGPyq4fTFVo=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ProductDetail\type5.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\1.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section3/1.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>p2l47j1065</Fingerprint>
-      <Integrity>TxkGt8X6zhTeBpU3BHgWsbBs020h0JWvayMHXuUZlJY=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\1.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\2.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section3/2.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2rwhr4o1lk</Fingerprint>
-      <Integrity>DgtY6YpZBgdVfSHXnVf6abqqlQZMjx3QHI2geXq6Rn0=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\2.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\3.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section3/3.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>p96pw7i3ak</Fingerprint>
-      <Integrity>A5grppr+GqyqBvuqEmEQ+Olf31IAPvPzcp5cNmBOcNM=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\3.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\4.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section3/4.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6ex6vlayk5</Fingerprint>
-      <Integrity>cv5dKz9HRtHL9Mt/s05vc1YDnYwbeZ5OLJOE/x+2f5o=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\4.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\5.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section3/5.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>p2jk0d2960</Fingerprint>
-      <Integrity>b64SyCGdfEOm1oXLiuN9+QCAWOUgCaGojtKH1yoHi4Q=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\5.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\6.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section3/6.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uucbxce6c3</Fingerprint>
-      <Integrity>Khl6XuBLbxbeRG0Al2/JLPFkx7X4I3CnZVbMMOKLpjY=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section3\6.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\AIR FORCE 1 07.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section4/AIR FORCE 1 07.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>45z42zrsms</Fingerprint>
-      <Integrity>GBcJbKqDIb2ovbWU8Y+qVRF7xeR00ujaCkguMgcJNhg=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\AIR FORCE 1 07.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\AIR FORCE 1 MID 07.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section4/AIR FORCE 1 MID 07.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>cx15kbkd56</Fingerprint>
-      <Integrity>ALls61yW+7YPkIHZxUj/L6MdHkrjN7LcfdEFK7yo9PQ=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\AIR FORCE 1 MID 07.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\NIKE AIR MAX 90.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section4/NIKE AIR MAX 90.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>l5m7i2b7w3</Fingerprint>
-      <Integrity>F4qC3fD+TMa/seyrCMiTOJWhPX5uUA88CzApzfiCRFQ=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\NIKE AIR MAX 90.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\NIKE DUNK LOW.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section4/NIKE DUNK LOW.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1jl9m5ge6k</Fingerprint>
-      <Integrity>w6Dx5l4ZTS3EEN1pbhl6yZ+dN4YafBfptSj2ZAg2tYU=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\NIKE DUNK LOW.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\W AIR MAX DN ISA.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section4/W AIR MAX DN ISA.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>r2ehob5nyl</Fingerprint>
-      <Integrity>fWoueV8D+EvxYz7/AfBAcsibKuoM6jeDgn3eoxLtRUs=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\W AIR MAX DN ISA.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\W BLAZER MID 77.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section4/W BLAZER MID 77.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tzmi87vzzh</Fingerprint>
-      <Integrity>6Xjx2YYfFT8Q/A8/xw8WSInl6+XzUA4Cx8NWlvhSd84=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\W BLAZER MID 77.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\W NIKE DUNK LOW NEXT NATURE.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section4/W NIKE DUNK LOW NEXT NATURE.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>irbd1alv2b</Fingerprint>
-      <Integrity>Mmqunh7x787nu4lKV/V+qdnGhN5n9uYVCwu/pF1HlvE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\W NIKE DUNK LOW NEXT NATURE.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\W NIKE P-6000.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section4/W NIKE P-6000.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>90gqv8qkxa</Fingerprint>
-      <Integrity>d+0vBOOws935zsF6suCgMUruuf9aGxAHqLEg+tvGlEw=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\W NIKE P-6000.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\WMNS AIR FORCE 1 07 LX.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section4/WMNS AIR FORCE 1 07 LX.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0nx7ytm9dr</Fingerprint>
-      <Integrity>9MNZl6/g582SJyvkcJiSb4gkfJ2sQJLflGkt6LYaTK4=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section4\WMNS AIR FORCE 1 07 LX.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section5\image_sc5.png'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
@@ -39977,78 +39491,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section5\image_sc5.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section6\1.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section6/1.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ubz8p8pusj</Fingerprint>
-      <Integrity>2k1o/ZJezKgCZoe0FnhP254SwwTfJRiJe5zR+s34qdU=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section6\1.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section6\2.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section6/2.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>p0uiurftyq</Fingerprint>
-      <Integrity>ecJ27AKtNRYkuxzUOTmEuOqktRZNxxStxWUxWhLq1Xo=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section6\2.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section6\3.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section6/3.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5obaqzlqcv</Fingerprint>
-      <Integrity>axCDAPpfZqaJM4GKVFI/XsFi+ugLTLXy1dfrtzrpnZc=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section6\3.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section6\4.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>images/Section6/4.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>numoy524ge</Fingerprint>
-      <Integrity>UcCi4eNiYiGbhxR4jk+k/t5IBAdXme4XT9o4pxe5NZE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Section6\4.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Admin\chart.js'))">
       <SourceType>Package</SourceType>
@@ -40080,8 +39522,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mbadgxcp62</Fingerprint>
-      <Integrity>flb2qGz8sd/Djh3RmnUzCU1oV1NucYanrEQJwpQMKdU=</Integrity>
+      <Fingerprint>zpemgsxj2c</Fingerprint>
+      <Integrity>B8R1Nd6Uk5Ye6RCu7Wh3aXoIGtD5pdqFq0jC78rEzpM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Admin\script.js'))</OriginalItemSpec>
@@ -40098,29 +39540,11 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>otz5r1pv83</Fingerprint>
-      <Integrity>ZMwWhS6eMs2jukZ27oAHcDJMcF4DO/hV3A5+UNfi7Cc=</Integrity>
+      <Fingerprint>sh2zkb8ato</Fingerprint>
+      <Integrity>YJdiahWv41gmzB15s7d3SLK8PuOYMHEIA/o2DELOXDU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Client\script.js'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\global.js'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>js/global.js</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3r8b2a0bt1</Fingerprint>
-      <Integrity>8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\global.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\_Layout.js'))">
       <SourceType>Package</SourceType>
@@ -41256,6 +40680,114 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\accounts\9d9404ef-829e-4e58-a5fb-8c34b1290a69_images (1).jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\1.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/categories/1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>p2l47j1065</Fingerprint>
+      <Integrity>TxkGt8X6zhTeBpU3BHgWsbBs020h0JWvayMHXuUZlJY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\1.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\2.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/categories/2.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>2rwhr4o1lk</Fingerprint>
+      <Integrity>DgtY6YpZBgdVfSHXnVf6abqqlQZMjx3QHI2geXq6Rn0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\2.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\3.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/categories/3.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>p96pw7i3ak</Fingerprint>
+      <Integrity>A5grppr+GqyqBvuqEmEQ+Olf31IAPvPzcp5cNmBOcNM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\3.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\4.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/categories/4.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6ex6vlayk5</Fingerprint>
+      <Integrity>cv5dKz9HRtHL9Mt/s05vc1YDnYwbeZ5OLJOE/x+2f5o=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\4.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\5.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/categories/5.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>p2jk0d2960</Fingerprint>
+      <Integrity>b64SyCGdfEOm1oXLiuN9+QCAWOUgCaGojtKH1yoHi4Q=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\5.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\6.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/categories/6.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>uucbxce6c3</Fingerprint>
+      <Integrity>Khl6XuBLbxbeRG0Al2/JLPFkx7X4I3CnZVbMMOKLpjY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\categories\6.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\customers\94bb8750-a978-4df9-a1ac-d252aceabbfd_nike-just-do-it.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
@@ -41292,12 +40824,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\customers\d02973ba-2f53-4768-8a0a-1cdbf9669279_nike-just-do-it.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2558781a-59a1-4683-9b24-be172c4ca486_banner-ve-sinh-giay-mobile-goc.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\1\01a235f9-5408-4640-9b92-6f76846957a4_banner-ve-sinh-giay-mobile-goc.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/2558781a-59a1-4683-9b24-be172c4ca486_banner-ve-sinh-giay-mobile-goc.jpg</RelativePath>
+      <RelativePath>media/products/1/01a235f9-5408-4640-9b92-6f76846957a4_banner-ve-sinh-giay-mobile-goc.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -41308,140 +40840,14 @@
       <Integrity>1IXMwlGN9Bq4H1DOv955kh/UCze1ckWhI9Y3f078Nr0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2558781a-59a1-4683-9b24-be172c4ca486_banner-ve-sinh-giay-mobile-goc.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\1\01a235f9-5408-4640-9b92-6f76846957a4_banner-ve-sinh-giay-mobile-goc.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\26d6a9c7-204f-4667-adfc-5671025b2267_images (1).jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\1\6dcd1dce-be9f-4615-a13a-dda0a2d7f439_san-pham-phuc-hoi-giay-toan-dien.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/26d6a9c7-204f-4667-adfc-5671025b2267_images (1).jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>shm4rrlnva</Fingerprint>
-      <Integrity>IF6uIbwX1o3iH+3dJnDilVp4nkyChcea2mb7F1Ls/68=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\26d6a9c7-204f-4667-adfc-5671025b2267_images (1).jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3dd118a2-0a94-4a4e-a183-751098ecd036_dich-vu-ve-sinh-giay-washintown.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/3dd118a2-0a94-4a4e-a183-751098ecd036_dich-vu-ve-sinh-giay-washintown.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>iosgqfk18r</Fingerprint>
-      <Integrity>Mmv1dBBq3U157JXg2hElSJ/fz0K+cdqTFwJMHCEMnCQ=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3dd118a2-0a94-4a4e-a183-751098ecd036_dich-vu-ve-sinh-giay-washintown.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\455aa42a-7669-4f9d-b01a-d16431343d5e_nike-just-do-it.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/455aa42a-7669-4f9d-b01a-d16431343d5e_nike-just-do-it.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>l91o53k4hg</Fingerprint>
-      <Integrity>l5LnmU5Ui0yPRv5LDVkIPd6K78qEhmUfH1u6jQj5Cio=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\455aa42a-7669-4f9d-b01a-d16431343d5e_nike-just-do-it.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\4dfcc003-5494-4f8b-a104-5c87ba832c67_thiế1676712879147.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/4dfcc003-5494-4f8b-a104-5c87ba832c67_thiế1676712879147.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0ywclceu0m</Fingerprint>
-      <Integrity>yHbZRe7wtjJ+jg5xzhDb0xQa9nQW69aplAPt7wKDHmY=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\4dfcc003-5494-4f8b-a104-5c87ba832c67_thiế1676712879147.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\4ff496c5-1574-4187-813e-b57395cf5945_images (1).jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/4ff496c5-1574-4187-813e-b57395cf5945_images (1).jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>shm4rrlnva</Fingerprint>
-      <Integrity>IF6uIbwX1o3iH+3dJnDilVp4nkyChcea2mb7F1Ls/68=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\4ff496c5-1574-4187-813e-b57395cf5945_images (1).jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\8211b54c-90ca-4a8a-8127-2f1682dc103a_vn-11134207-7ras8-m5wmiviylzqu4f.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/8211b54c-90ca-4a8a-8127-2f1682dc103a_vn-11134207-7ras8-m5wmiviylzqu4f.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>cj6w6rel2o</Fingerprint>
-      <Integrity>GBuwhKI+DnYXBfu+LhRMrmmajgXTtdXPfy0RarVIddM=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\8211b54c-90ca-4a8a-8127-2f1682dc103a_vn-11134207-7ras8-m5wmiviylzqu4f.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\83e103f5-43ff-4346-b244-e3e09761a446_dan-bao-ve-de-giay-sneaker-3.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/83e103f5-43ff-4346-b244-e3e09761a446_dan-bao-ve-de-giay-sneaker-3.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gn7bottwnl</Fingerprint>
-      <Integrity>fHd7Zf4GOQNsRECI2PeDoJk1dADVX7tQKg8JYSPfwZc=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\83e103f5-43ff-4346-b244-e3e09761a446_dan-bao-ve-de-giay-sneaker-3.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\8814ec85-6ace-470e-bef0-0357c27fdd14_san-pham-phuc-hoi-giay-toan-dien.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>NikeStore</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/8814ec85-6ace-470e-bef0-0357c27fdd14_san-pham-phuc-hoi-giay-toan-dien.jpg</RelativePath>
+      <RelativePath>media/products/1/6dcd1dce-be9f-4615-a13a-dda0a2d7f439_san-pham-phuc-hoi-giay-toan-dien.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -41452,50 +40858,158 @@
       <Integrity>akEexgcNYc+aVAquYxzojrbIIyDZ+7UHDITKGnHi5FA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\8814ec85-6ace-470e-bef0-0357c27fdd14_san-pham-phuc-hoi-giay-toan-dien.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\1\6dcd1dce-be9f-4615-a13a-dda0a2d7f439_san-pham-phuc-hoi-giay-toan-dien.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\AIR FORCE 1 07.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\1\b7beb21f-8e6d-42d1-92e8-da078e9e7acc_dich-vu-ve-sinh-giay-washintown.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/AIR FORCE 1 07.jpg</RelativePath>
+      <RelativePath>media/products/1/b7beb21f-8e6d-42d1-92e8-da078e9e7acc_dich-vu-ve-sinh-giay-washintown.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>45z42zrsms</Fingerprint>
-      <Integrity>GBcJbKqDIb2ovbWU8Y+qVRF7xeR00ujaCkguMgcJNhg=</Integrity>
+      <Fingerprint>iosgqfk18r</Fingerprint>
+      <Integrity>Mmv1dBBq3U157JXg2hElSJ/fz0K+cdqTFwJMHCEMnCQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\AIR FORCE 1 07.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\1\b7beb21f-8e6d-42d1-92e8-da078e9e7acc_dich-vu-ve-sinh-giay-washintown.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\be16f4d5-bd85-4987-ad0e-542d68682fef_thiế1676712879147.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2\3b8edac5-f955-4621-a96a-4942ca0b66be_Heramo-Noi-cung-cap-dich-vu-sua.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/be16f4d5-bd85-4987-ad0e-542d68682fef_thiế1676712879147.jpg</RelativePath>
+      <RelativePath>media/products/2/3b8edac5-f955-4621-a96a-4942ca0b66be_Heramo-Noi-cung-cap-dich-vu-sua.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0ywclceu0m</Fingerprint>
-      <Integrity>yHbZRe7wtjJ+jg5xzhDb0xQa9nQW69aplAPt7wKDHmY=</Integrity>
+      <Fingerprint>qiabnlkyk0</Fingerprint>
+      <Integrity>/kpFn0mQAeWyVV4Ij7Gm1Qb8YJ+SdUExfoFsvrSpU+I=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\be16f4d5-bd85-4987-ad0e-542d68682fef_thiế1676712879147.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2\3b8edac5-f955-4621-a96a-4942ca0b66be_Heramo-Noi-cung-cap-dich-vu-sua.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\cf564138-2e6b-4b2f-a73b-4cfe35a33661_99b4e708b63aebd68defd3c1abe01279.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2\5809b9cf-c2c3-4276-953d-84a796e0cf95_psd-wit-poster-2692.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/cf564138-2e6b-4b2f-a73b-4cfe35a33661_99b4e708b63aebd68defd3c1abe01279.jpg</RelativePath>
+      <RelativePath>media/products/2/5809b9cf-c2c3-4276-953d-84a796e0cf95_psd-wit-poster-2692.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ep7ph5jadg</Fingerprint>
+      <Integrity>QoiEWXe9b6NlTTGJdxVoN1dRz3m7eWrKVq+dvRDElSU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2\5809b9cf-c2c3-4276-953d-84a796e0cf95_psd-wit-poster-2692.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2\d86aa152-b0fe-4e6e-acd5-51bf0d184938_cach-giat-giay-vai.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/products/2/d86aa152-b0fe-4e6e-acd5-51bf0d184938_cach-giat-giay-vai.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pphkwqk7ue</Fingerprint>
+      <Integrity>rV4uDpFPtWA3j26LbgcKXpkwZBj3uDPo2ZACGqH4Ryc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\2\d86aa152-b0fe-4e6e-acd5-51bf0d184938_cach-giat-giay-vai.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3\07211419-ade5-4662-866e-fac377a68379_dan-bao-ve-de-giay-sneaker-3.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/products/3/07211419-ade5-4662-866e-fac377a68379_dan-bao-ve-de-giay-sneaker-3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gn7bottwnl</Fingerprint>
+      <Integrity>fHd7Zf4GOQNsRECI2PeDoJk1dADVX7tQKg8JYSPfwZc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3\07211419-ade5-4662-866e-fac377a68379_dan-bao-ve-de-giay-sneaker-3.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3\71e8f83a-cf71-45fd-9525-77a013d0b2c4_dich-vu-ve-sinh-giay-washintown.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/products/3/71e8f83a-cf71-45fd-9525-77a013d0b2c4_dich-vu-ve-sinh-giay-washintown.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>iosgqfk18r</Fingerprint>
+      <Integrity>Mmv1dBBq3U157JXg2hElSJ/fz0K+cdqTFwJMHCEMnCQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3\71e8f83a-cf71-45fd-9525-77a013d0b2c4_dich-vu-ve-sinh-giay-washintown.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3\df6071b4-4c74-4867-a9e5-b390c60444aa_san-pham-phuc-hoi-giay-toan-dien.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/products/3/df6071b4-4c74-4867-a9e5-b390c60444aa_san-pham-phuc-hoi-giay-toan-dien.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>u2re2vqqsl</Fingerprint>
+      <Integrity>akEexgcNYc+aVAquYxzojrbIIyDZ+7UHDITKGnHi5FA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\3\df6071b4-4c74-4867-a9e5-b390c60444aa_san-pham-phuc-hoi-giay-toan-dien.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\4\3856b9da-bb68-4735-80ee-09683979333b_vn-11134207-7r98o-lo0vul06vi0ddc.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/products/4/3856b9da-bb68-4735-80ee-09683979333b_vn-11134207-7r98o-lo0vul06vi0ddc.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3d1ifoig76</Fingerprint>
+      <Integrity>mTlBq+R5ATyfo8v2g5pMo8Zff2ulwOhOunlIwfPFsa4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\4\3856b9da-bb68-4735-80ee-09683979333b_vn-11134207-7r98o-lo0vul06vi0ddc.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\4\d61c5ba2-f614-4dcc-892e-65dff3215e72_99b4e708b63aebd68defd3c1abe01279.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>NikeStore</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NikeStore</BasePath>
+      <RelativePath>media/products/4/d61c5ba2-f614-4dcc-892e-65dff3215e72_99b4e708b63aebd68defd3c1abe01279.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -41506,97 +41020,97 @@
       <Integrity>6Bye1GLvAK0WKB2GPkKSPC8OpofDDNwoUodots0pB7s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\cf564138-2e6b-4b2f-a73b-4cfe35a33661_99b4e708b63aebd68defd3c1abe01279.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\4\d61c5ba2-f614-4dcc-892e-65dff3215e72_99b4e708b63aebd68defd3c1abe01279.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ed84764b-0d69-473f-8fcc-587b08dbe33b_99b4e708b63aebd68defd3c1abe01279.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\4\d63d3315-afdc-448a-9bbf-9517e825eb40_vn-11134207-7ras8-m4k8orwavnn449.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/ed84764b-0d69-473f-8fcc-587b08dbe33b_99b4e708b63aebd68defd3c1abe01279.jpg</RelativePath>
+      <RelativePath>media/products/4/d63d3315-afdc-448a-9bbf-9517e825eb40_vn-11134207-7ras8-m4k8orwavnn449.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>s3qrstra38</Fingerprint>
-      <Integrity>6Bye1GLvAK0WKB2GPkKSPC8OpofDDNwoUodots0pB7s=</Integrity>
+      <Fingerprint>hv45isexlv</Fingerprint>
+      <Integrity>7QkVh0ttYWVzIHtTk3i2hK5kHZ0Q+uDUYig3QpTi4j8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\ed84764b-0d69-473f-8fcc-587b08dbe33b_99b4e708b63aebd68defd3c1abe01279.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\4\d63d3315-afdc-448a-9bbf-9517e825eb40_vn-11134207-7ras8-m4k8orwavnn449.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\feb5bd40-65ff-4a30-a3ee-aad0dd5d6753_Nike-Crescent-Mall-1.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\services\1.png'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/feb5bd40-65ff-4a30-a3ee-aad0dd5d6753_Nike-Crescent-Mall-1.jpg</RelativePath>
+      <RelativePath>media/services/1.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uiyung9s29</Fingerprint>
-      <Integrity>uq7F0TxIv0+uv5bsQePuYC3zG5iDwzsNuD3kssZVxxw=</Integrity>
+      <Fingerprint>ubz8p8pusj</Fingerprint>
+      <Integrity>2k1o/ZJezKgCZoe0FnhP254SwwTfJRiJe5zR+s34qdU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\feb5bd40-65ff-4a30-a3ee-aad0dd5d6753_Nike-Crescent-Mall-1.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\services\1.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\NIKE DUNK LOW.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\services\2.png'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/NIKE DUNK LOW.jpg</RelativePath>
+      <RelativePath>media/services/2.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1jl9m5ge6k</Fingerprint>
-      <Integrity>w6Dx5l4ZTS3EEN1pbhl6yZ+dN4YafBfptSj2ZAg2tYU=</Integrity>
+      <Fingerprint>p0uiurftyq</Fingerprint>
+      <Integrity>ecJ27AKtNRYkuxzUOTmEuOqktRZNxxStxWUxWhLq1Xo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\NIKE DUNK LOW.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\services\2.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\W AIR MAX DN ISA.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\services\3.png'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/W AIR MAX DN ISA.jpg</RelativePath>
+      <RelativePath>media/services/3.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>r2ehob5nyl</Fingerprint>
-      <Integrity>fWoueV8D+EvxYz7/AfBAcsibKuoM6jeDgn3eoxLtRUs=</Integrity>
+      <Fingerprint>5obaqzlqcv</Fingerprint>
+      <Integrity>axCDAPpfZqaJM4GKVFI/XsFi+ugLTLXy1dfrtzrpnZc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\W AIR MAX DN ISA.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\services\3.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\W NIKE DUNK LOW NEXT NATURE.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\services\4.png'))">
       <SourceType>Package</SourceType>
       <SourceId>NikeStore</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/NikeStore</BasePath>
-      <RelativePath>media/products/W NIKE DUNK LOW NEXT NATURE.jpg</RelativePath>
+      <RelativePath>media/services/4.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>irbd1alv2b</Fingerprint>
-      <Integrity>Mmqunh7x787nu4lKV/V+qdnGhN5n9uYVCwu/pF1HlvE=</Integrity>
+      <Fingerprint>numoy524ge</Fingerprint>
+      <Integrity>UcCi4eNiYiGbhxR4jk+k/t5IBAdXme4XT9o4pxe5NZE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\products\W NIKE DUNK LOW NEXT NATURE.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\media\services\4.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\NikeStore.na1nfgdxu8.bundle.scp.css'))">
       <SourceType>Package</SourceType>

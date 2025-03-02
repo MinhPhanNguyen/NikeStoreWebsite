@@ -30,6 +30,7 @@ namespace NikeStore.Controllers
 
             // Tìm sản phẩm theo danh mục
             var productsByCategory = await _dataContext.Product
+                .Include(p => p.Images)
                 .Where(p => p.CategoryID == category.CategoryID)
                 .OrderByDescending(p => p.ProductID)
                 .ToListAsync();

@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/_Layout.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Client/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Client/reponsive.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/fontawesome-free-6.7.2-web/css/all.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/NikeStore.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="Navbar">
@@ -183,8 +185,8 @@
     @RenderBody()
 
     <footer>
-        <div class="TotalFooter">
-            <ul>
+        <div class="TotalFooter row">
+            <ul class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
                 <h2>SẢN PHẨM</h2>
                 <li><a href="/Category?Slug=airforce1">Air Force 1</a></li>
                 <li><a href="/Category?Slug=airjordan1">Air Jordan 1</a></li>
@@ -192,19 +194,19 @@
                 <li><a href="/Category?Slug=blazer">Blazer</a></li>
                 <li><a href="/Category?Slug=pegasus">Pegasus</a></li>
             </ul>
-            <ul>
+            <ul class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
                 <h2>DỊCH VỤ</h2>
                 <li><a href="/">Dịch vụ sau bán hàng</a></li>
                 <li><a href="/">Phụ kiện</a></li>
                 <li><a href="/">Chăm sóc khách hàng</a></li>
             </ul>
-            <ul>
+            <ul class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
                 <h2>CHÍNH SÁCH</h2>
                 <li><a href="/">Chính sách Thanh toán</a></li>
                 <li><a href="/">Chính sách Bảo mật</a></li>
                 <li><a href="/">Chính sách Giao nhận - Vận chuyển</a></li>
             </ul>
-            <ul>
+            <ul class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
                 <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
                 <li><a href="tel:0934190061">Hotline Kinh doanh: 0934.1900.61</a></li>
                 <li><a href="tel:0934190061">Hotline Dịch vụ: 0934.1900.61</a></li>
@@ -227,6 +229,7 @@
     <script src="~/js/Client/script.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

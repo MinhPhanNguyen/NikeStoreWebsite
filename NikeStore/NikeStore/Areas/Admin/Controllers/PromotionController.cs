@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using NikeStore.Repository;
 
 namespace NikeStore.Areas.Admin.Controllers
 {
@@ -7,14 +9,15 @@ namespace NikeStore.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class PromotionController : Controller
     {
-        public IActionResult Promotion()
+        private readonly DataContext _context;
+        public PromotionController(DataContext context)
         {
-            return View();
+            _context = context;
         }
-
-        public IActionResult PromotionCategory()
+        public async Task<IActionResult> Promotion()
         {
-            return View();
+            var promotion = await _context.Promotion.ToListAsync();
+            return View(promotion);
         }
     }
 }

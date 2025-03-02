@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using NikeStore.Models;
 using NikeStore.Models.ViewModels;
 using NikeStore.Repository;
@@ -29,7 +30,19 @@ namespace NikeStore.Controllers
 
         public async Task<IActionResult> Add(long Id)
         {
-            Product product = await _context.Product.FindAsync(Id);
+            Product product = await _context.Product
+                .Include(p => p.ProductColor)
+                .Include(p => p.ProductSize)
+                .Include(p => p.Promotion)
+                .Include(p => p.Images)
+                .FirstOrDefaultAsync(p => p.ProductID == Id);
+
+            if (product == null)
+            {
+                TempData["error"] = "Sản phẩm không tồn tại.";
+                return RedirectToAction("Index");
+            }
+
             List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
             CartItemModel cartItem = cart.FirstOrDefault(x => x.ProductId == Id);
 
@@ -43,8 +56,8 @@ namespace NikeStore.Controllers
             }
 
             HttpContext.Session.SetJson("Cart", cart);
-
             TempData["success"] = "Sản phẩm đã được thêm vào giỏ hàng.";
+
             return RedirectToAction("Index");
         }
 

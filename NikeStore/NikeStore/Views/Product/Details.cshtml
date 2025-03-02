@@ -6,18 +6,16 @@
 
 <div class="ProductDetail">
 	<section class="Section_1 row">
-		<div class="Contain_img col-lg-7 row">
-			<div class="ImgItems col-lg-2">
-				<img src="/images/ProductDetail/AIR FORCE 1 07.jpg" alt="Alternate Text" />
-				<img src="/images/ProductDetail/AIR FORCE 1 07 (1).jpg" alt="Alternate Text" />
-				<img src="/images/ProductDetail/AIR FORCE 1 07 (2).jpg" alt="Alternate Text" />
-				<img src="/images/ProductDetail/AIR FORCE 1 07 (3).jpg" alt="Alternate Text" />
-				<img src="/images/ProductDetail/AIR FORCE 1 07 (4).jpg" alt="Alternate Text" />
-				<img src="/images/ProductDetail/AIR FORCE 1 07 (5).jpg" alt="Alternate Text" />
+		<div class="Contain_img col-lg-7 col-md-12 col-sm-12 col-xs-12 mb-4 row">
+			<div class="ImgItems col-lg-2 col-md-2 col-sm-2 col-xs-2 mb-2">
+				@foreach (var img in Model.Images)
+				{
+					<img src="@img.ImageUrl" />
+				}
 			</div>
 
-			<div class="ImgDisplay col-lg-10">
-				<img src="~/media/products/@Model.ImageUrl" alt="Alternate Text" id="displayedImage" />
+			<div class="ImgDisplay col-lg-10 col-md-10 col-sm-12 col-xs-12">
+				<img src="@(Model.Images.FirstOrDefault()?.ImageUrl ?? "default.jpg")" alt="Alternate Text" id="displayedImage" />
 				<div class="PrevNext">
 					<button><i class="fa-solid fa-angle-left"></i></button>
 					<button><i class="fa-solid fa-angle-right"></i></button>
@@ -25,7 +23,7 @@
 			</div>
 		</div>
 
-		<div class="Content  col-lg-5">
+		<div class="Content  col-lg-5 col-md-12 col-sm-12 col-xs-12 mb-4">
 			<div class="Title">
 				<h2>@Model.Name</h2>
 				<h3>@Model.ProductCategory?.CategoryName</h3>
@@ -51,12 +49,14 @@
 			</div>
 
 			<div class="btn">
-				@if(User.Identity.IsAuthenticated){
-					<a asp-action="Add" asp-controller="Cart" asp-route-Id="@Model.ProductID" class="button">Thêm vào giỏ hàng</a>
+				@if (User.Identity.IsAuthenticated)
+				{
+					<button class="button" data-product_id="@Model.ProductID">Thêm vào giỏ hàng</button>
 					<a class="button">Yêu thích <i class="fa-regular fa-heart"></i></a>
 				}
-				else {
-					<a class="button" asp-action="LogIn" asp-controller="Account">Vui lòng đăng nhập</a>
+				else
+				{
+					<a class="button add-to-cart" asp-action="LogIn" asp-controller="Account">Vui lòng đăng nhập</a>
 				}
 			</div>
 		</div>
@@ -77,14 +77,72 @@
 	</section>
 
 	<section class="Section_3">
-		<div class="RateStatistic" onclick="toggleRate(this)">
-			<span>Đánh giá 4.9/5.0 (320)<i class="fa-solid fa-star"></i></span>
-			<i class="UpRate fa-solid fa-angle-down"></i>
-			<i class="DownRate fa-solid fa-angle-up"></i>
-		</div>
+		<div class="Container">
+			<div class="RateStatistic" onclick="toggleRate(this)">
+				<span>Đánh giá 4.9/5.0 (320)<i class="fa-solid fa-star"></i></span>
+				<i class="UpRate fa-solid fa-angle-down"></i>
+				<i class="DownRate fa-solid fa-angle-up"></i>
+			</div>
 
-		<div class="RateContent">
-			@* <vc:product-review></vc:product-review> *@
+			<div class="RateContent">
+				@* <vc:product-review></vc:product-review> *@
+			</div>
 		</div>
 	</section>
 </div>
+
+
+@section Scripts {
+	<script>
+		$(document).ready(function (){
+			$('.button[data-product_id]').click(function (event){
+				event.preventDefault();
+
+				var Id = $(this).data("product_id");
+
+				$.ajax({
+					type: "POST",
+					url: "@Url.Action("Add", "Cart")",
+					data: { Id: Id },
+					success: function(result) {
+						if(result) {
+							Swal.fire({
+								icon: 'success',
+								title: 'Sản phẩm đã được thêm vào giỏ hàng!',
+								showConfirmButton: false,
+								timer: 1500,
+								customClass: {
+									title: 'swal-title-small',
+									popup: 'swal-popup-small'
+								}
+							});
+						} else {
+							Swal.fire({
+								icon: 'error',
+								title: 'Thêm sản phẩm thất bại!',
+								text: 'Vui lòng thử lại sau.',
+								customClass: {
+									title: 'swal-title-small',
+									popup: 'swal-popup-small'
+								}
+							});
+						}
+					},
+					error: function(xhr, status, error) {
+						console.error("AJAX Error:", error);
+						Swal.fire({
+							icon: 'error',
+							title: 'Lỗi hệ thống!',
+							text: 'Vui lòng thử lại sau.',
+							customClass: {
+								title: 'swal-title-small',
+								popup: 'swal-popup-small'
+							}
+						});
+					}
+				});
+			});
+		});
+	</script>
+
+}

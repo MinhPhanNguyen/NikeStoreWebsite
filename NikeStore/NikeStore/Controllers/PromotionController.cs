@@ -15,7 +15,7 @@ namespace NikeStore.Controllers
 
         public IActionResult Index()
         {
-            var product = _context.Product.Include(p => p.ProductCategory).ToList();
+            var product = _context.Product.Include(p => p.ProductCategory).Include(p => p.Images).ToList();
             return View(product);
         }
     }

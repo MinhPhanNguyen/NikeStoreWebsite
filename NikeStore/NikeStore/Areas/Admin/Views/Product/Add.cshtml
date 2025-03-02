@@ -10,7 +10,9 @@
 		<div class="AddTable Manager">
 			<div class="Container">
 				<div class="Title">
-					<h3>Thêm sản phẩm</h3>
+					<h3>Thêm sản phẩm
+						<a class="Backto" asp-action="Product" asp-controller="Product">Quay lại<i class="fa-solid fa-angle-right"></i></a>
+					</h3>
 				</div>
 
 				<form asp-action="Add" enctype="multipart/form-data">
@@ -88,12 +90,20 @@
 					</div>
 
 					<div class="form-group">
-						<label for="ImageUpload">Ảnh:</label>
-						<input asp-for="ImageUpload" type="file" id="imageUploadInput"  class="form-control" />
-						<span asp-validation-for="ImageUpload" class="text-danger"></span>		
+						<label for="PromotionID">Kho:</label>
+						<select asp-for="PromotionID" class="form-control" asp-items="ViewBag.Promotion">
+							<option value="">-- Kho --</option>
+						</select>
+						<span asp-validation-for="PromotionID" class="text-danger"></span>
 					</div>
 
-					<img id="imagePreview" src="~/media/products/@Model?.ImageUrl" width="200" style="display: block; margin-top: 10px;" />
+					<div class="form-group">
+						<label for="ImageUploads">Ảnh:</label>
+						<input asp-for="ImageUploads" type="file" id="imageUploadInput" class="form-control" multiple onchange="previewImages(event)" />
+						<span asp-validation-for="ImageUploads" class="text-danger"></span>
+					</div>
+
+					<div id="imagePreviewContainer" style="margin: 2em 0; display: flex; gap: 10px;"></div>
 
 					<div class="btnAddTable form-group">
 						<button>Thêm</button>

@@ -10,6 +10,7 @@ namespace NikeStore.Repository
         {
         }
         public DbSet<Models.Product> Product { get; set; }
+        public DbSet<Models.Promotion> Promotion { get; set; }
         public DbSet<Models.ProductCategory> ProductCategory { get; set; }
         public DbSet<Models.ProductColor> ProductColor { get; set; }
         public DbSet<Models.ProductImage> ProductImage { get; set; }
@@ -19,7 +20,6 @@ namespace NikeStore.Repository
         public DbSet<Models.Service> Service { get; set; }
         public DbSet<Models.ServiceType> ServiceType { get; set; }
         public DbSet<Models.Account> Account { get; set; }
-        public DbSet<Models.Customer> Customer { get; set; }
         public DbSet<Models.Payment> Payment { get; set; }
         public DbSet<Models.PaymentMethod> PaymentMethod { get; set; }
         public DbSet<Models.Provider> Provider { get; set; }

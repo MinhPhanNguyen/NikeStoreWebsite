@@ -2,16 +2,6 @@
 
 @{
 	ViewData["Title"] = "Sản phẩm bán chạy";
-
-	Paginate paginate = new Paginate();
-
-	int page = 1;
-
-	if (ViewBag.Pager != null)
-	{
-		paginate = ViewBag.Pager;
-		page = paginate.CurrentPage;
-	}
 }
 
 <div class="Dashboard">
@@ -27,13 +17,6 @@
 				<section class="Section_2">
 					<div class="Container">
 						<div class="LeftFilter">
-							<div class="SearchProduct">
-								<label for="NameProduct">
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</label>
-								<input id="NameProduct" type="text" placeholder="Tên sản phẩm">
-							</div>
-
 							<a class="AddIcon" href="@Url.Action("Add", "Product", new { area = "Admin" })">
 								<i class="fa-solid fa-plus"></i>
 								<span>Thêm</span>
@@ -132,17 +115,13 @@
 									</div>
 								</div>
 							</div>
-
-							<div class="PageMove">
-								<partial name="_Paging" model="paginate" />
-							</div>
 						</div>
 					</div>
 				</section>
 
 				<section class="Section_3">
 					<div class="Container">
-						<table>
+						<table id="myTable">
 							<thead>
 								<tr>
 									<th>STT</th>
@@ -156,6 +135,7 @@
 									<th>Loại</th>
 									<th>Giới tính</th>
 									<th>Bộ sưu tập</th>
+									<th>Khuyến mãi</th>
 									<th>Sửa</th>
 									<th>Xóa</th>
 								</tr>
@@ -166,7 +146,7 @@
 									<tr>
 										<td>@product.ProductID</td>
 										<td><input type="checkbox"></td>
-										<td><img src="/media/products/@product.ImageUrl" alt="@product.Name"></td>
+										<td><img src="@(product.Images.FirstOrDefault()?.ImageUrl ?? "default.jpg")" alt="@product.Name"></td>
 										<td>@product.Name</td>
 										<td>@product.Slug</td>
 										<td>@product.Price</td>
@@ -175,6 +155,7 @@
 										<td>@product.ProductType?.Type</td>
 										<td>@product.ProductGender?.GenderName</td>
 										<td>@product.ProductCategory?.CategoryName</td>
+										<td>@product.Promotion?.Discount (%)</td>
 										<td><a asp-action="Edit" asp-controller="Product" asp-route-Id="@product.ProductID"><i class="fa-solid fa-edit"></i></a></td>
 										<td><a asp-action="Delete" asp-controller="Product" asp-route-Id="@product.ProductID"><i class="fa-solid fa-trash"></i></a></td>
 									</tr>

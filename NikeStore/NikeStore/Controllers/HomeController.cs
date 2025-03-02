@@ -19,7 +19,7 @@ namespace NikeStore.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var products = await _context.Product.Include(p => p.ProductCategory).ToListAsync();
+            var products = await _context.Product.Include(p => p.ProductCategory).Include(p => p.Images).ToListAsync();
             return View(products);
         }
 
