@@ -1,4 +1,4 @@
-﻿@model NikeStore.Models.Product
+﻿@model ProductDetailsViewModel
 
 @{
 	ViewData["Title"] = "Chi tiết sản phẩm";
@@ -8,14 +8,14 @@
 	<section class="Section_1 row">
 		<div class="Contain_img col-lg-7 col-md-12 col-sm-12 col-xs-12 mb-4 row">
 			<div class="ImgItems col-lg-2 col-md-2 col-sm-2 col-xs-2 mb-2">
-				@foreach (var img in Model.Images)
+				@foreach (var img in Model.Product?.Images)
 				{
 					<img src="@img.ImageUrl" />
 				}
 			</div>
 
 			<div class="ImgDisplay col-lg-10 col-md-10 col-sm-12 col-xs-12">
-				<img src="@(Model.Images.FirstOrDefault()?.ImageUrl ?? "default.jpg")" alt="Alternate Text" id="displayedImage" />
+				<img src="@(Model.Product?.Images.FirstOrDefault()?.ImageUrl ?? "default.jpg")" alt="Alternate Text" id="displayedImage" />
 				<div class="PrevNext">
 					<button><i class="fa-solid fa-angle-left"></i></button>
 					<button><i class="fa-solid fa-angle-right"></i></button>
@@ -25,9 +25,9 @@
 
 		<div class="Content  col-lg-5 col-md-12 col-sm-12 col-xs-12 mb-4">
 			<div class="Title">
-				<h2>@Model.Name</h2>
-				<h3>@Model.ProductCategory?.CategoryName</h3>
-				<span>@Model.Price</span>
+				<h2>@Model.Product?.Name</h2>
+				<h3>@Model.Product?.ProductCategory?.CategoryName</h3>
+				<span>@Model.Product?.Price.ToString("#,##0 VNĐ")</span>
 			</div>
 
 			<div class="TypeOption">
@@ -51,7 +51,7 @@
 			<div class="btn">
 				@if (User.Identity.IsAuthenticated)
 				{
-					<button class="button" data-product_id="@Model.ProductID">Thêm vào giỏ hàng</button>
+					<button class="button" data-product_id="@Model.Product?.ProductID">Thêm vào giỏ hàng</button>
 					<a class="button">Yêu thích <i class="fa-regular fa-heart"></i></a>
 				}
 				else
@@ -71,7 +71,7 @@
 			</div>
 
 			<div class="Content">
-				<p>@Html.Raw(Model.Description)</p>
+				<p>@Html.Raw(Model.Product?.Description)</p>
 			</div>
 		</div>
 	</section>
@@ -85,8 +85,38 @@
 			</div>
 
 			<div class="RateContent">
-				@* <vc:product-review></vc:product-review> *@
+				<vc:product-review></vc:product-review>
+				<form autocomplete="off" asp-action="Comment" asp-controller="Product">
+					<input type="hidden" asp-for="@Model.Product.ProductID" name="ProductID" />
+					<input name="Rating" class="form-control" asp-for="@Model.Rating"/>
+					<span asp-validation-for="@Model.Rating" class="text-danger"></span>
+					<div class="form-group">
+						<label for="@Model.Review">Đánh giá</label>
+						<textarea class="form-control" asp-for="@Model.Review" id="Review" name="Review" rows="3"></textarea>
+						<span asp-validation-for="@Model.Review" class="text-danger"></span>
+					</div>
+
+					<button type="submit">Gửi</button>
+				</form>
 			</div>
+		</div>
+	</section>
+
+	<section class="Section_4">
+		<div class="ProductList col-lg-9 col-md-12 col-sm-12 col-xs-12 mb-4 row">
+			@foreach (var product in ViewBag.RelatedProduct as IEnumerable<Product>)
+			{
+				<a asp-action="Details" asp-controller="Product" asp-route-Id="@product.ProductID" class="Components  col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4">
+					<div class="Contain_img">
+						<img src="@(product.Images.FirstOrDefault()?.ImageUrl ?? "default.jpg")" alt="@product.Name" />
+					</div>
+					<div class="Content">
+						<h1>@product.Name</h1>
+						<h2>@product.ProductCategory?.CategoryName</h2>
+						<h1>@product.Price.ToString("#,##0 VNĐ")</h1>
+					</div>
+				</a>
+			}
 		</div>
 	</section>
 </div>

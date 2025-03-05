@@ -1,18 +1,19 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - NikeStore</title>
-    <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/Admin/style.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/Admin/reponsive.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/fontawesome-free-6.7.2-web/css/all.min.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/NikeStore.styles.css" asp-append-version="true" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - NikeStore</title>
+	<script type="importmap"></script>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/Admin/style.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/Admin/reponsive.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/fontawesome-free-6.7.2-web/css/all.min.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/NikeStore.styles.css" asp-append-version="true" />
 	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css" rel="stylesheet">
 	<link href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/buttons/3.2.2/css/buttons.dataTables.css" rel="stylesheet">
 </head>
 
 <body>
@@ -164,14 +165,20 @@
 		@Html.Partial("_NotificationPartial")
 	</div>
 
-    @RenderBody()
+	@RenderBody()
 	<script src="~/js/Admin/chart.js" defer></script>
-    <script src="~/js/Admin/script.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="~/js/Admin/script.js"></script>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script>
 	<script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.2.2/js/dataTables.buttons.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.dataTables.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.html5.min.js"></script>
 	<script>
 		$(
 			function(){
@@ -196,12 +203,13 @@
 				info: "Hiển thị _START_ đến _END_ của _TOTAL_ mục",
 				infoEmpty: "Không có dữ liệu để hiển thị",
 				lengthMenu: "Hiển thị _MENU_ mục",
-				search: "Tìm kiếm:",
-
-			}
+				search: "Tìm kiếm:"
+			},
+			dom: '<"top d-flex justify-content-between align-items-center"lfB>rt<"bottom d-flex justify-content-between align-items-center"ip>',
+			buttons: ['copy', 'excel', 'csv', 'pdf', 'print']
 		});
 	</script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

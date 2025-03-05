@@ -149,7 +149,7 @@
 										<td><img src="@(product.Images.FirstOrDefault()?.ImageUrl ?? "default.jpg")" alt="@product.Name"></td>
 										<td>@product.Name</td>
 										<td>@product.Slug</td>
-										<td>@product.Price</td>
+										<td>@product.Price.ToString("#,##0 VNĐ")</td>
 										<td>@product.ProductColor?.Color</td>
 										<td>@product.ProductSize?.Size</td>
 										<td>@product.ProductType?.Type</td>

@@ -1,14 +1,14 @@
 ﻿.LogInPage .error, .SignUpPage .error {
-    position: absolute; 
-    right: 1em; 
-    top: 1em; 
-    padding: 1em 2em; 
-    width: 20vw; 
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    padding: 1em 2em;
+    width: 20vw;
     background-color: #ff7676;
-    color:white; 
+    color: white;
     font-weight: bold;
-    font-size: 1em; 
-    border-radius:0.2em;
+    font-size: 1em;
+    border-radius: 0.2em;
 }
 
 .Homepage {

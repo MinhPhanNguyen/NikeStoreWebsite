@@ -52,7 +52,7 @@
 										<td>@item.Product?.ProductSize?.Size</td>
 										<td>@item.Product?.ProductColor?.Color</td>
 										<td>@item.Quantity</td>
-										<td>@item.Price</td>
+										<td>@item.Price.ToString("#,##0 VNĐ")</td>
 										<td>@item.Product?.Promotion?.Discount %</td>
 									</tr>
 								}

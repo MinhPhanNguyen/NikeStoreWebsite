@@ -70,6 +70,7 @@ namespace NikeStore.Models
         public Warehouse Warehouse { get; set; }
         [ForeignKey("PromotionID")]
         public Promotion Promotion { get; set; }
+        public ProductReview ProductReview { get; set; }
         public ICollection<ProductImage> Images { get; set; } = new List<ProductImage>();
         public ICollection<ImportingDetail> ImportingDetails { get; set; }
 

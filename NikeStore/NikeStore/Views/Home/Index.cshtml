@@ -42,7 +42,7 @@
                 <div class="Content">
                     <h1>@product.Name</h1>
                     <h2>@product.ProductCategory?.CategoryName</h2>
-                    <h1>@product.Price</h1>
+                    <h1>@product.Price.ToString("#,##0 VNĐ")</h1>
                 </div>
             </a>
         }

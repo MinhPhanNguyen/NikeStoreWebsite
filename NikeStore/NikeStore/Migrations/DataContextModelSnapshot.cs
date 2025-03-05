@@ -611,6 +611,41 @@ namespace NikeStore.Migrations
                     b.ToTable("ProductImage");
                 });
 
+            modelBuilder.Entity("NikeStore.Models.ProductReview", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Review")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Reviewer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReviewerEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId")
+                        .IsUnique();
+
+                    b.ToTable("ProductReview");
+                });
+
             modelBuilder.Entity("NikeStore.Models.ProductSize", b =>
                 {
                     b.Property<int>("ProductSizeID")
@@ -984,6 +1019,17 @@ namespace NikeStore.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("NikeStore.Models.ProductReview", b =>
+                {
+                    b.HasOne("NikeStore.Models.Product", "Product")
+                        .WithOne("ProductReview")
+                        .HasForeignKey("NikeStore.Models.ProductReview", "ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("NikeStore.Models.ServiceType", b =>
                 {
                     b.HasOne("NikeStore.Models.Service", "Service")
@@ -1010,6 +1056,8 @@ namespace NikeStore.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("ImportingDetails");
+
+                    b.Navigation("ProductReview");
                 });
 
             modelBuilder.Entity("NikeStore.Models.ProductCategory", b =>

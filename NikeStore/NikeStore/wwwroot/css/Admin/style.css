@@ -1,7 +1,7 @@
 ﻿#myTable_wrapper {
     width: 100%;
 }
-    
+
 .dt-layout-row button {
     margin: 0 !important;
     padding: 0.5em 1em !important;
@@ -16,7 +16,6 @@
     border: 1px solid #cfcfcf !important;
     cursor: pointer;
 }
-
 
 .dt-search {
     font-size: 0.9em !important;
