@@ -39,7 +39,7 @@
     .Homepage .Section_2 {
         margin: 2em 0 1em;
         width: 100%;
-        height: 40vh;
+        min-height: 40vh;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -89,7 +89,7 @@
     }
 
     .Homepage .Section_4, .PromotionPage .Section_4 {
-        max-width: 1500px;
+        max-width: 90vw;
     }
 
 .Components {
@@ -245,7 +245,7 @@
     width: 100%;
     height: auto;
     margin: 95px auto 3em;
-    max-width: 1600px;
+    max-width: 90vw;
     min-height: 80vh
 }
 
@@ -284,7 +284,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            white-space:nowrap;
+            white-space: nowrap;
         }
 
             .ProductListPage .Section_1 .Filter li span {
@@ -372,10 +372,10 @@
         }
 
 
-        .ProductListPage .Section_2 .Category.CategoryTop {
-            width: 17%;
-        }
-         
+            .ProductListPage .Section_2 .Category.CategoryTop {
+                width: 17%;
+            }
+
             .ProductListPage .Section_2 .Category .FilterItems {
                 padding: 0.8em 0;
                 border-bottom: 1px solid #f1f1f1;
@@ -521,8 +521,8 @@
     width: 100%;
     height: auto;
     margin: 180px auto 6em;
-    padding: 0 1em;
-    max-width: 1200px;
+    padding: 0;
+    max-width: 90vw;
 }
 
     .ProductDetail .Section_1 .Contain_img {
@@ -562,8 +562,8 @@
             overflow: hidden;
             height: 60vh;
             display: flex;
-            align-items:center;
-            justify-content:center;
+            align-items: center;
+            justify-content: center;
         }
 
             .ProductDetail .Section_1 .Contain_img .ImgDisplay img {
@@ -693,9 +693,8 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            position: absolute;
-            bottom: 0;
             border: none;
+            margin-top: 1em;
         }
 
             .ProductDetail .Section_1 .Content .btn .button, .CartPage .Container .Section_1 .Contain .Summary .btnCheck {
@@ -990,52 +989,52 @@
 
     .ServicePage .Container .Section_2 ul {
         flex-direction: column;
-        max-width: 1200px;
+        max-width: 85vw;
         margin: 0 auto;
     }
 
-            .ServicePage .Container .Section_2 ul li .Title {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                cursor: pointer;
-                padding: 1em 0;
-                margin: 0 1em;
-                border-bottom: 1px solid #e9e9e9;
-                color: #c3c3c3;
+        .ServicePage .Container .Section_2 ul li .Title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 1em 0;
+            margin: 0 1em;
+            border-bottom: 1px solid #e9e9e9;
+            color: #c3c3c3;
+        }
+
+            .ServicePage .Container .Section_2 ul li .Title:hover {
+                color: black;
+                border-bottom: 1px solid black;
             }
 
-                .ServicePage .Container .Section_2 ul li .Title:hover {
-                    color: black;
-                    border-bottom: 1px solid black;
-                }
-
-                .ServicePage .Container .Section_2 ul li .Title h3 {
-                    margin: 0;
-                    font-size: 1em;
-                }
-
-                .ServicePage .Container .Section_2 ul li .Title .AddService {
-                    display: block;
-                }
-
-                .ServicePage .Container .Section_2 ul li .Title .RemoveService {
-                    display: none;
-                }
-
-            .ServicePage .Container .Section_2 ul li .Content {
-                max-height: 0;
-                opacity: 0;
-                pointer-events: none;
+            .ServicePage .Container .Section_2 ul li .Title h3 {
+                margin: 0;
+                font-size: 1em;
             }
 
-                .ServicePage .Container .Section_2 ul li .Content p {
-                    padding: 2em;
-                    text-align: justify;
-                    font-size: 0.9em;
-                }
+            .ServicePage .Container .Section_2 ul li .Title .AddService {
+                display: block;
+            }
 
-.ContactPage{
+            .ServicePage .Container .Section_2 ul li .Title .RemoveService {
+                display: none;
+            }
+
+        .ServicePage .Container .Section_2 ul li .Content {
+            max-height: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+            .ServicePage .Container .Section_2 ul li .Content p {
+                padding: 2em;
+                text-align: justify;
+                font-size: 0.9em;
+            }
+
+.ContactPage {
     width: 100%;
     height: auto;
     margin: 105px auto 0;
@@ -1092,76 +1091,76 @@
                         top: -2px;
                     }
 
-           .form-group {
-                margin-bottom: 1em;
-                width: 100%;
-            }
+.form-group {
+    margin-bottom: 1em;
+    width: 100%;
+}
 
-           .form-control {
-               border-radius: 0.1em;
-           }
+.form-control {
+    border-radius: 0.1em;
+}
 
-            .ContactPage .Container .Section_2 span, .LogInPage .Container form span, .SignUpPage .Container form span {
-                margin-left: 10px;
-                font-size: 0.8em;
-                color: black;
-            }
+.ContactPage .Container .Section_2 span, .LogInPage .Container form span, .SignUpPage .Container form span {
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: black;
+}
 
-            .LogInPage .Container form .text-danger, .SignUpPage .Container form .text-danger {
-                font-size: 0.65em;
-                color: red;
-                margin: 0.5em 0.2em 0;
-            }
+.LogInPage .Container form .text-danger, .SignUpPage .Container form .text-danger {
+    font-size: 0.65em;
+    color: red;
+    margin: 0.5em 0.2em 0;
+}
 
-            .ContactPage .Container .Section_2 h2 {
-                text-align: center;
-                margin: 2em 0 3em;
-                font-size: 0.9em;
-                font-weight: 700;
-                line-height: 20px;
-                color: black;
-                width: 90vw;
-                text-transform: uppercase;
-            }
+.ContactPage .Container .Section_2 h2 {
+    text-align: center;
+    margin: 2em 0 3em;
+    font-size: 0.9em;
+    font-weight: 700;
+    line-height: 20px;
+    color: black;
+    width: 90vw;
+    text-transform: uppercase;
+}
 
-            .ContactPage .Container .Section_2 button {
-                text-transform: uppercase;
-                font-size: 0.9em;
-                color: white;
-                cursor: pointer;
-                padding: 1em 2em;
-                background-color: black;
-                margin: 1em 0 2em;
-                font-weight: bold;
-            }
+.ContactPage .Container .Section_2 button {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: white;
+    cursor: pointer;
+    padding: 1em 2em;
+    background-color: black;
+    margin: 1em 0 2em;
+    font-weight: bold;
+}
 
-                .ContactPage .Container .Section_2 button:hover {
-                    opacity: 0.7;
-                }
+    .ContactPage .Container .Section_2 button:hover {
+        opacity: 0.7;
+    }
 
-            .ContactPage .Container .Section_2 .Name {
-                display: flex;
-                flex-direction: column;
-            }
+.ContactPage .Container .Section_2 .Name {
+    display: flex;
+    flex-direction: column;
+}
 
-            .ContactPage .Container .Section_2 .Contact {
-                display: flex;
-                justify-content: space-between;
-            }
+.ContactPage .Container .Section_2 .Contact {
+    display: flex;
+    justify-content: space-between;
+}
 
-                .ContactPage .Container .Section_2 .Contact input {
-                    max-width: 500px;
-                }
+    .ContactPage .Container .Section_2 .Contact input {
+        max-width: 500px;
+    }
 
 
-            .ContactPage .Container .Section_2 .Content input {
-                padding-bottom: 80px;
-            }
+.ContactPage .Container .Section_2 .Content input {
+    padding-bottom: 80px;
+}
 
-            .ContactPage .Container .Section_2 .Check, .SignUpPage .Container form .Check {
-                padding: 0 1em;
-                display: flex;
-            }
+.ContactPage .Container .Section_2 .Check, .SignUpPage .Container form .Check {
+    padding: 0 1em;
+    display: flex;
+}
 
 .SignUpPage .Container form .Check {
     margin: 1em 0;
@@ -1187,7 +1186,7 @@
     }
 
         .WishListPage .Container .Section_2, .WishListPage .Container .Section_3 {
-            max-width: 1500px;
+            max-width: 90vw;
             margin: 0 auto;
             height: auto;
         }
@@ -1286,11 +1285,11 @@
                                 font-size: 1em;
                             }
 
-                            .CartPage .Container .Section_1 .Contain .TableItems .Items .ItemsContent .Contain .Content p {
-                                margin-bottom: 0.5em;
-                                font-size: 0.9em;
-                                color: #929292;
-                            }
+                        .CartPage .Container .Section_1 .Contain .TableItems .Items .ItemsContent .Contain .Content p {
+                            margin-bottom: 0.5em;
+                            font-size: 0.9em;
+                            color: #929292;
+                        }
 
                 .CartPage .Container .Section_1 .Contain .TableItems .Items .ItemsFeature {
                     padding: 1em 1em 2em;
@@ -1339,7 +1338,6 @@
                 display: flex;
                 flex-direction: column;
                 height: 70vh;
-                overflow: hidden;
             }
 
                 .CartPage .Container .Section_1 .Contain .Summary ul {
@@ -1417,7 +1415,7 @@
         }
 
 .LogInPage, .SignUpPage {
-    height:auto;
+    height: auto;
     max-width: 1500px;
     overflow: hidden;
     margin: 115px auto 3em;
@@ -1432,145 +1430,146 @@
         overflow: hidden;
     }
 
-            .LogInPage .Container form .Contain_img, .SignUpPage .Container form .Contain_img {
-                margin: 1em 0 0;
-                overflow: hidden;
-                padding: 1em;
-            }
-
-                .LogInPage .Container form .Contain_img img, .SignUpPage .Container form .Contain_img img {
-                    width: auto;
-                    height: 5vh;
-                    object-fit: cover;
-                    filter: drop-shadow(rgba(0, 0, 0, 1) 0px 2px 8px);
-                }
-
-        .LogInPage .form-group, .SignUpPage .form-group {
-            margin-bottom: 0;
+        .LogInPage .Container form .Contain_img, .SignUpPage .Container form .Contain_img {
+            margin: 1em 0 0;
+            overflow: hidden;
+            padding: 1em;
         }
 
-        .LogInPage .Container form .Title, .SignUpPage .Container form .Title {
-            margin-bottom: 1em;
-            width: 100%;
-            padding: 0 1em;
+            .LogInPage .Container form .Contain_img img, .SignUpPage .Container form .Contain_img img {
+                width: auto;
+                height: 5vh;
+                object-fit: cover;
+                filter: drop-shadow(rgba(0, 0, 0, 1) 0px 2px 8px);
+            }
+
+    .LogInPage .form-group, .SignUpPage .form-group {
+        margin-bottom: 0;
+    }
+
+    .LogInPage .Container form .Title, .SignUpPage .Container form .Title {
+        margin-bottom: 1em;
+        width: 100%;
+        padding: 0 1em;
+    }
+
+        .LogInPage .Container form .Title h2, .SignUpPage .Container form .Title h2 {
+            font-weight: normal;
+            margin-bottom: 0.5em;
+            font-size: 0.9em;
+            text-align: justify;
         }
 
-                .LogInPage .Container form .Title h2, .SignUpPage .Container form .Title h2 {
-                    font-weight: normal;
-                    margin-bottom: 0.5em;
-                    font-size: 0.9em;
-                    text-align: justify;
-                }
+        .SignUpPage .Container form .Title p {
+            font-weight: normal;
+            margin-bottom: 0.5em;
+            font-size: 0.9em;
+            text-align: justify;
+        }
 
-                .SignUpPage .Container form .Title p {
-                    font-weight: normal;
-                    margin-bottom: 0.5em;
-                    font-size: 0.9em;
-                    text-align: justify;
-                }
-
-                .SignUpPage .Container form .Title .EditEmail {
-                    margin-bottom: 2em;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                }
-
-                    .SignUpPage .Container form .Title .EditEmail span {
-                        text-decoration: underline;
-                        margin: 0;
-                    }
-
-                    .SignUpPage .Container form .Title .EditEmail a {
-                        color: #008aff;
-                        cursor: pointer;
-                        font-size: 0.7em;
-                    }
-
-                        .SignUpPage .Container form .Title .EditEmail a:hover {
-                            opacity: 0.7;
-                        }
-
-            .LogInPage .Container form .Language {
-                margin-bottom: 2em;
-                width: 100%;
-                padding: 0 1em;
-                display: flex;
-                align-items: end;
-            }
-
-                .LogInPage .Container form .Language h2 {
-                    font-weight: normal;
-                    margin: 0;
-                    font-size: 0.9em;
-                    text-align: justify;
-                }
-
-                .LogInPage .Container form .Language a {
-                    font-weight: normal;
-                    margin: 0 0 0.1em 1em;
-                    font-size: 0.7em;
-                    text-align: justify;
-                    color: #008aff;
-                    text-decoration: underline;
-                }
-
-                    .LogInPage .Container form .Language a:hover {
-                        opacity: 0.5;
-                    }
-
-            .LogInPage .Container form .TermAndPrivacy {
-                margin-top: 1.5em;
-                padding: 0 1em;
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-            }
-
-                .LogInPage .Container form .TermAndPrivacy button {
-                    background-color: transparent;
-                    border: none;
-                    color: #a3a3a3;
-                    margin-bottom: 0.8em;
-                    text-decoration: underline;
-                    cursor: pointer;
-                    font-size: 0.9em;
-                }
-
-                    .LogInPage .Container form .TermAndPrivacy button:hover {
-                        color: #343434;
-                    }
-
-        .LogInPage .Container .btn, .SignUpPage .Container .btn {
-            max-width: 90%;
-            margin: 1.5em auto;
-            border-radius: 10vw;
-            width: 100%;
-            background-color: black;
-            padding: 1.1em;
-            color: white;
-            font-weight: bold;
+        .SignUpPage .Container form .Title .EditEmail {
+            margin-bottom: 2em;
             display: flex;
-            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
         }
-            .LogInPage .Container .btnRegister {
-                margin-top: 2em;
-                  font-size: 0.8em;
-                  width: 100%;
-                  display: flex;
-                  justify-content: center;
-                  color:#008aff;
-                  font-style:italic;
-                  text-decoration: underline;
+
+            .SignUpPage .Container form .Title .EditEmail span {
+                text-decoration: underline;
+                margin: 0;
             }
+
+            .SignUpPage .Container form .Title .EditEmail a {
+                color: #008aff;
+                cursor: pointer;
+                font-size: 0.7em;
+            }
+
+                .SignUpPage .Container form .Title .EditEmail a:hover {
+                    opacity: 0.7;
+                }
+
+    .LogInPage .Container form .Language {
+        margin-bottom: 2em;
+        width: 100%;
+        padding: 0 1em;
+        display: flex;
+        align-items: end;
+    }
+
+        .LogInPage .Container form .Language h2 {
+            font-weight: normal;
+            margin: 0;
+            font-size: 0.9em;
+            text-align: justify;
+        }
+
+        .LogInPage .Container form .Language a {
+            font-weight: normal;
+            margin: 0 0 0.1em 1em;
+            font-size: 0.7em;
+            text-align: justify;
+            color: #008aff;
+            text-decoration: underline;
+        }
+
+            .LogInPage .Container form .Language a:hover {
+                opacity: 0.5;
+            }
+
+    .LogInPage .Container form .TermAndPrivacy {
+        margin-top: 1.5em;
+        padding: 0 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+        .LogInPage .Container form .TermAndPrivacy button {
+            background-color: transparent;
+            border: none;
+            color: #a3a3a3;
+            margin-bottom: 0.8em;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+            .LogInPage .Container form .TermAndPrivacy button:hover {
+                color: #343434;
+            }
+
+    .LogInPage .Container .btn, .SignUpPage .Container .btn {
+        max-width: 90%;
+        margin: 1.5em auto;
+        border-radius: 10vw;
+        width: 100%;
+        background-color: black;
+        padding: 1.1em;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+    }
+
+    .LogInPage .Container .btnRegister {
+        margin-top: 2em;
+        font-size: 0.8em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: #008aff;
+        font-style: italic;
+        text-decoration: underline;
+    }
 
         .LogInPage .Container .btnRegister:hover {
             opacity: 0.6;
         }
 
-            .LogInPage .Container .btn:hover, .SignUpPage .Container .btn:hover {
-                opacity: 0.7;
-            }
+    .LogInPage .Container .btn:hover, .SignUpPage .Container .btn:hover {
+        opacity: 0.7;
+    }
 
 
 .AccountPage {
@@ -1579,58 +1578,86 @@
     margin: 105px auto 0;
 }
 
-    .AccountPage .Container {
-        display: flex;
+.AccountIconCO {
+    opacity: 0;
+    position: fixed;
+    top: 105px;
+    left: 2em;
+    z-index: 1000;
+    padding: 0.8em;
+    border-radius: 100%;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+    filter: drop-shadow(rgba(0,0,0,0.2) 0 2px 5px)
+}
+
+.AccountClose {
+    display: none;
+}
+
+.MenuAccount {
+    display: flex;
+}
+
+    .MenuAccount:hover {
+        background-color: #ebebeb;
     }
 
-        .AccountPage .Container .SideBar {
-            width: 20%;
-            padding: 0em 0 2em 2em;
-            min-height: 90vh;
-            height: auto;
-            position: relative;
+.AccountPage .Container {
+    display: flex;
+    position: relative;
+}
+
+    .AccountPage .Container .SideBar {
+        width: 30%;
+        padding: 0em 0 2em 5em;
+        min-height: 90vh;
+        height: auto;
+        position: relative;
+    }
+
+        .AccountPage .Container .SideBar ul {
+            flex-direction: column;
+            position: sticky;
+            top: 15vh;
         }
 
-            .AccountPage .Container .SideBar ul {
-                flex-direction: column;
-                position: sticky;
-                top: 15vh;
+            .AccountPage .Container .SideBar ul li {
+                padding: 1em;
+                cursor: pointer;
+                white-space: nowrap
             }
 
-                .AccountPage .Container .SideBar ul li {
-                    padding: 1em;
-                    cursor: pointer;
+                .AccountPage .Container .SideBar ul li:hover {
+                    background-color: #e0e0e0;
                 }
 
-                    .AccountPage .Container .SideBar ul li:hover {
-                        background-color: #e0e0e0;
-                    }
+                .AccountPage .Container .SideBar ul li a {
+                    text-decoration: none;
+                    color: #001D35;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.9em;
+                }
 
-                    .AccountPage .Container .SideBar ul li a {
-                        text-decoration: none;
-                        color: #001D35;
-                        font-weight: bold;
+                    .AccountPage .Container .SideBar ul li a i {
                         display: flex;
-                        align-items: center;
-                        font-size: 0.9em;
+                        justify-content: end;
+                        margin-right: 1em;
                     }
 
-                        .AccountPage .Container .SideBar ul li a i {
-                            width: 20%;
-                            display: flex;
-                            justify-content: center;
-                        }
-
-        .AccountPage .Container .AccountContent {
-            width: 80%;
-            height: auto;
-            background-color: white;
-        }
+    .AccountPage .Container .AccountContent {
+        width: 70%;
+        height: auto;
+        background-color: white;
+    }
 
 .AccountContent .Title {
     width: 80%;
-    margin: 2em auto 0.5em;
+    margin: 1em auto 0.5em;
     padding: 0 0.5em;
+    font-size: 0.9em;
 }
 
 .AccountContent h2 {
@@ -1647,7 +1674,7 @@
 
 .AccountContent h3 {
     width: 100%;
-    font-size: 0.9em;
+    font-size: 0.75em;
     margin-bottom: 0.5em;
 }
 
@@ -1693,6 +1720,16 @@
     height: auto;
 }
 
+.AccountContent .AccountHome .Section_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .AccountContent .AccountHome .Section_2 h3 {
+        font-weight: bold;
+    }
+
 .AccountContent .AccountHome .Section_3, .AccountContent .AccountFAQ .Section_1 {
     margin-bottom: 3em;
 }
@@ -1704,26 +1741,29 @@
         background-color: white;
         padding: 1em 2em;
         width: 100%;
-        min-height: 20vh;
-        border-radius: 3em;
+        min-height: 25vh;
+        border-radius: 0.2em;
     }
 
 .AccountContent .AccountHome .Section_2 .Container {
     flex-direction: unset;
-    flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.AccountContent .Container {
+    padding: 0 !important;
 }
 
 .AccountContent .AccountHome .Section_1 .Contain_img {
     overflow: hidden;
-    width: 6em;
-    height: 6em;
+    width: 4em;
+    height: 4em;
     margin-bottom: 1.5em;
 }
 
     .AccountContent .AccountHome .Section_1 .Contain_img img {
-        width: 6em;
-        height: 6em;
+        width: 4em;
+        height: 4em;
         object-fit: cover;
         border-radius: 100%;
     }
@@ -1743,14 +1783,14 @@
     }
 
     .AccountContent .AccountHome .Section_1 .Content p {
-        font-size: 0.9em;
-        width: 80%;
+        font-size: 0.75em;
+        width: 100%;
         margin-bottom: 1em;
     }
 
     .AccountContent .AccountHome .Section_1 .Content span {
         cursor: pointer;
-        font-size: 0.8em;
+        font-size: 0.7em;
         width: 80%;
         color: #008aff;
         display: flex;
@@ -1764,14 +1804,11 @@
         }
 
 .AccountContent .AccountHome .Section_2 .Container .RecommendationItems {
-    flex-basis: 45%;
     border: 1px solid #e8e8e8;
-    border-radius: 2em;
-    min-height: 28vh;
-    max-height: 30vh;
+    border-radius: 0.2em;
+    height: auto;
     padding: 1em;
     display: flex;
-    margin: 1em;
     align-items: center;
     overflow: hidden;
 }
@@ -1820,11 +1857,9 @@
                 }
 
 .AccountContent .AccountHome .Section .Container .Content {
-    width: 95%;
     border: 1px solid #e8e8e8;
-    border-radius: 2em;
-    padding: 2em;
-    margin-right: 1.5em;
+    border-radius: 0.2em;
+    padding: 1em;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1858,7 +1893,7 @@
 
 .AccountContent .AccountHome .Section .Container .btn {
     padding: 1em 0;
-    width: 85%;
+    width: 90%;
     display: flex;
     justify-content: end;
 }
@@ -1998,39 +2033,35 @@
         flex-direction: column;
         align-items: center;
         background-color: white;
-        padding: 0 3em;
+        padding: 0;
         width: 100%;
         height: auto;
         margin-bottom: 4em;
     }
 
-.AccountContent .AccountHistory .Container {
-    padding-right: 4em;
-}
-
-.AccountContent .AccountInformation .Section_1 .Container ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-    .AccountContent .AccountInformation .Section_1 .Container ul li {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0.8em 0;
-    }
-
-        .AccountContent .AccountInformation .Section_1 .Container ul li p {
-            font-size: 1em;
-            margin: 0;
-            font-weight: bold;
+        .AccountContent .AccountInformation .Section_1 .Container ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
+            .AccountContent .AccountInformation .Section_1 .Container ul li {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0.8em 0;
+            }
+
+                .AccountContent .AccountInformation .Section_1 .Container ul li p {
+                    font-size: 0.8em;
+                    margin: 0;
+                    font-weight: bold;
+                }
+
 .AccountContent span {
-    font-size: 1em;
+    font-size: 0.8em;
     display: flex;
     width: 100%;
     justify-content: end;
@@ -2051,7 +2082,7 @@
         }
 
 .AccountContent .AccountInformation .Section_2 .Container .Content {
-    width: 80%;
+    width: 100%;
     text-align: justify;
     overflow: hidden;
 }
@@ -2100,7 +2131,7 @@
                 }
 
             .AccountContent .AccountHistory .Section_1 .Container ul li .Content, .AccountContent .AccountHistory .Section_2 .Container ul li .Content {
-                margin-left: 2em;
+                margin-left: 1em;
                 display: flex;
                 flex-direction: unset;
                 justify-content: space-between;
@@ -2152,7 +2183,7 @@
         }
 
 .AccountContent .AccountSecurity .Section .Container {
-    max-width: 60%;
+    max-width: 80%;
     margin: 0 auto;
     text-align: center;
     padding: 2em 0 4em;
@@ -2166,7 +2197,7 @@
 }
 
 .AccountContent .AccountFAQ .Title {
-    width: 90%;
+    width: 100%;
     margin: 1em 0 1em 0;
 }
 
@@ -2196,7 +2227,7 @@
     }
 
         .AccountContent .AccountSecurity .Container ul li p, .AccountContent .AccountPayment ul p, .AccountContent .AccountFAQ .Section_2 ul p {
-            font-size: 1em;
+            font-size: 0.8em;
             margin: 0;
             font-weight: bold;
         }
@@ -2206,9 +2237,9 @@
 .AccountContent .AccountSecurity .Section_3 .Container,
 .AccountContent .AccountPayment .Container,
 .AccountContent .AccountFAQ .Section_2 .Container {
-    border-radius: 2em;
+    border-radius: 0.2em;
     border: 1px solid #e7e7e7;
-    padding: 2em 2em 4em 2em;
+    padding: 1em;
     width: 90%;
     margin: 0 auto 2em;
 }
@@ -2220,7 +2251,7 @@
     .AccountContent .AccountFAQ .Section_2 .Container p {
         display: flex;
         justify-content: start;
-        max-width: 70%;
+        max-width: 100%;
         margin: 0 auto;
     }
 

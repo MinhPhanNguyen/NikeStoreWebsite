@@ -17,6 +17,7 @@
     cursor: pointer;
 }
 
+
 .dt-search {
     font-size: 0.9em !important;
 }
@@ -65,7 +66,7 @@ th {
 
 .dt-length {
     font-size: 0.9em;
-     margin-left: 0.5em;
+    margin-left: 0.5em;
 }
 
 .Backto {
@@ -85,13 +86,13 @@ th {
     text-transform: none;
 }
 
-.Backto:hover {
-   opacity:1;
-}
+    .Backto:hover {
+        opacity: 1;
+    }
 
-.Backto i {
-    margin-left: 0.5em;
-}
+    .Backto i {
+        margin-left: 0.5em;
+    }
 
 .Notification, .notification {
     position: fixed;
@@ -233,7 +234,7 @@ th {
             }
 
                 .Sidebar .Title .Contain .MenuContent h3 {
-                    font-size:1em;
+                    font-size: 1em;
                 }
 
                     .Sidebar .Title .Contain .MenuContent h3:hover {
@@ -324,9 +325,9 @@ th {
             font-size: 0.8em;
         }
 
-        .DashboardContent .DashboardNotification input::placeholder {
-            font-size: 0.85em;
-        }
+            .DashboardContent .DashboardNotification input::placeholder {
+                font-size: 0.85em;
+            }
 
         .DashboardContent .DashboardNotification label {
             font-size: 0.85em;
@@ -1485,7 +1486,7 @@ th {
 .Manager .RightFilter, .LeftFilter, .AddIcon {
     display: flex;
     align-items: center;
-    margin: 0!important;
+    margin: 0 !important;
 }
 
 .Manager .AddIcon {
@@ -1566,11 +1567,11 @@ th {
         justify-content: center;
     }
 
-    .Manager .Section_1 .Container h2 {
-        font-size: 1.2em;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
+        .Manager .Section_1 .Container h2 {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 
 .Manager .Section_2 {
     padding: 0.5em 1em;
@@ -1608,10 +1609,11 @@ th {
     .Manager .Section_2 .Filter:hover {
         opacity: 0.6;
     }
-        .Manager .Section_2 .PageMove .pagination {
-            display: flex;
-            align-items: center;
-        }
+
+    .Manager .Section_2 .PageMove .pagination {
+        display: flex;
+        align-items: center;
+    }
 
         .Manager .Section_2 .PageMove .pagination li {
         }
@@ -1674,19 +1676,18 @@ th {
             font-size: 0.8em;
         }
 
-        .Manager .Section_3 .Container tbody a {
-            align-items: center;
-            justify-content: center;
-        }
+            .Manager .Section_3 .Container tbody a {
+                align-items: center;
+                justify-content: center;
+            }
 
             .Manager .Section_3 .Container tbody tr {
                 height: 10vh;
-
             }
 
-            .Manager .Section_3 .Container tbody tr:hover {
-                background-color: #f5f5f5;
-            }
+                .Manager .Section_3 .Container tbody tr:hover {
+                    background-color: #f5f5f5;
+                }
 
         .Manager .Section_3 .Container img {
             max-width: 10vh;
@@ -1713,23 +1714,22 @@ th {
     align-items: center;
 }
 
-.AddTable .Title {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1em;
-    text-transform: uppercase;
-}
-
-    .AddTable .Title h3 {
+    .AddTable .Title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1em;
         text-transform: uppercase;
-        font-size: 1.2em;
-        font-weight: bold;
     }
+
+        .AddTable .Title h3 {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
 
     .AddTable input,
     .AddTable select,
-    .AddTable textarea
-    {
+    .AddTable textarea {
         width: 100%;
         padding: 0.5em 1em;
         border: 1px solid #DEE2E6;
@@ -1746,9 +1746,9 @@ th {
             background-color: #DEE2E6;
         }
 
-    .AddTable input::placeholder {
-        font-size: 0.9em;
-    }
+        .AddTable input::placeholder {
+            font-size: 0.9em;
+        }
 
     .AddTable label {
         margin-left: 0.2em;
@@ -1760,51 +1760,52 @@ th {
         width: 100%;
     }
 
-.AddTable .selectImage {
-    max-width: 80%;
-    display: flex;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 0.1em;
-}
-
-.AddTable .customFile {
-    width: 70%;
-}
-
-.AddTable .btnAddTable {
-    width: 100%;
-    margin: 1em 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-    .AddTable .btnAddTable button {
-        padding: 0.6em 2em;
-        background-color: black;
-        color: white;
-        font-size: 1em;
-        cursor: pointer;
-        font-weight: bold;
-        border: 1px solid black;
-        margin: 0 0.5em;
+    .AddTable .selectImage {
+        max-width: 80%;
+        display: flex;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 0.1em;
     }
-        .AddTable .btnAddTable button:hover {
-            background-color: #212121
+
+    .AddTable .customFile {
+        width: 70%;
+    }
+
+    .AddTable .btnAddTable {
+        width: 100%;
+        margin: 1em 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .AddTable .btnAddTable button {
+            padding: 0.6em 2em;
+            background-color: black;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+            border: 1px solid black;
+            margin: 0 0.5em;
         }
 
-.AddTable .Container {
-    width: 80%;
-    height: 90vh;
-    overflow-y: scroll;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 0.2em;
-    scrollbar-width: none;
-}
+            .AddTable .btnAddTable button:hover {
+                background-color: #212121
+            }
+
+    .AddTable .Container {
+        width: 80%;
+        height: 90vh;
+        overflow-y: scroll;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 0.2em;
+        scrollbar-width: none;
+    }
 
 .Dashboard .DashboardContent .DashboardHome, .Dashboard .DashboardContent .PageChart {
     display: flex;
@@ -1839,7 +1840,7 @@ th {
         padding: 1em;
     }
 
-        .Dashboard .DashboardContent .DashboardHome .Title h2{
+        .Dashboard .DashboardContent .DashboardHome .Title h2 {
             font-weight: bold;
             color: rgba(0,0,0, 1);
             font-size: 0.9em;
@@ -1866,8 +1867,6 @@ th {
 }
 
     .DashboardHome .Section_1 ul li, .Dashboard .DashboardContent .PageChart .Section_1 ul li {
-        padding: 1.5em 3em 1.5em 2.5em;
-        border: 1px solid #dbdbdb;
         margin: 0.5em 0;
         border-radius: 0.2em;
         cursor: pointer;
@@ -1876,6 +1875,8 @@ th {
 
         .DashboardHome .Section_1 ul li a, .Dashboard .DashboardContent .PageChart .Section_1 ul li a {
             flex-direction: column;
+            padding: 1.5em;
+            border: 1px solid #dbdbdb;
         }
 
         .DashboardHome .Section_1 ul li:hover, .Dashboard .DashboardContent .PageChart .Section_1 ul li:hover {

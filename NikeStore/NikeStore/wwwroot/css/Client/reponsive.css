@@ -1,4 +1,30 @@
-﻿@media (max-width: 1024px) {
+﻿@media (max-width: 1300px) {
+    .AccountPage {
+        margin: 65px auto 0;
+    }
+
+    .AccountIconCO {
+        opacity: 1;
+    }
+
+    .AccountPage .Container .SideBar {
+        width: 100%;
+        display: none;
+        position: fixed;
+        top: 65px;
+        left: 0;
+        z-index: 20;
+        background-color: white;
+    }
+
+        .AccountPage .Container .SideBar ul {
+            width: 90%;
+        }
+
+    .AccountPage .Container .AccountContent {
+        width: 100%;
+    }
+
     .Homepage {
         margin: 0 !important;
     }
@@ -13,22 +39,22 @@
         align-items: center;
     }
 
-        .ProductListPage .Section_2 .Category {
+    .ProductListPage .Section_2 .Category {
+        width: 100%;
+    }
+
+        .ProductListPage .Section_2 .Category.CategoryTop {
             width: 100%;
         }
 
-            .ProductListPage .Section_2 .Category.CategoryTop {
-                width: 100%;
-            }
+    .ProductListPage .Section_1 .dropdown {
+        right: 0;
+        top: 140px;
+    }
 
-        .ProductListPage .Section_1 .dropdown {
-            right: 0;
-            top: 140px;
-        }
-
-        .ProductListPage .Section_1 .Filter.scrollFilter {
-            right: 0;
-        }
+    .ProductListPage .Section_1 .Filter.scrollFilter {
+        right: 0;
+    }
 
     .PromotionPage, .ContactPage, .ServicePage, .LogInPage, .SignUpPage, .WishListPage {
         width: 100%;
@@ -51,6 +77,15 @@
 }
 
 @media (max-width: 768px) {
+    .AccountIconCO {
+        top: 85px;
+        left: 1em;
+    }
+
+    .AccountPage .Container .SideBar {
+        padding: 3em 0 2em 2em;
+    }
+
     .ProductDetail {
         margin: 85px auto 2em;
     }

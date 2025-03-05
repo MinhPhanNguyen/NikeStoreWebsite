@@ -2,9 +2,9 @@
     color: #810000;
 }
 
-.LogOutIcon:hover {
-    opacity: 0.6;
-}
+    .LogOutIcon:hover {
+        opacity: 0.6;
+    }
 
 .Notification {
     position: fixed;
@@ -24,7 +24,7 @@
 }
 
     .Navbar .Container {
-        max-width: 1700px;
+        max-width: 95vw;
         display: flex;
         margin: 0 auto;
         height: 35px;
@@ -33,26 +33,26 @@
         position: relative;
     }
 
-.Navbar .Logo {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    height: 100%;
-    left: 0;
-}
-
-    .Navbar .Logo img {
-        cursor: pointer;
-        height: 25px;
-        width: auto;
-        object-fit: cover;
-        filter: drop-shadow(rgba(0, 0, 0, 1) 0px 2px 8px);
-        margin-left: 1em;
+    .Navbar .Logo {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        height: 100%;
+        left: 0;
     }
 
-        .Navbar .Logo img:hover {
-            scale: 1.1;
+        .Navbar .Logo img {
+            cursor: pointer;
+            height: 25px;
+            width: auto;
+            object-fit: cover;
+            filter: drop-shadow(rgba(0, 0, 0, 1) 0px 2px 8px);
+            margin-left: 1em;
         }
+
+            .Navbar .Logo img:hover {
+                scale: 1.1;
+            }
 
     .Navbar .Menu {
         color: #212121;
@@ -62,7 +62,7 @@
             height: 35px;
         }
 
-        .Navbar .Menu  li {
+        .Navbar .Menu li {
             padding: 0 0.5em;
             display: flex;
             align-items: center;
@@ -75,9 +75,9 @@
                 font-weight: bold;
             }
 
-            .Navbar .Menu li a:hover {
-                opacity: 0.6
-            }
+                .Navbar .Menu li a:hover {
+                    opacity: 0.6
+                }
 
 header {
     width: 100%;
@@ -102,7 +102,7 @@ header {
 
     header .Container {
         display: flex;
-        max-width: 1700px;
+        max-width: 95vw;
         margin: 0 auto;
         height: 65px;
         align-items: center;
@@ -645,6 +645,35 @@ footer {
         padding-left: 10px;
     }
 
+@media (max-width: 1400px) {
+    .CustomerSupport {
+        bottom: 0em;
+        left: 1.5em;
+    }
+
+        .CustomerSupport ul li img,
+        .CustomerSupport ul li i {
+            width: 2em;
+            height: 2em;
+        }
+
+    .Services .service-item {
+        padding: 0.5em;
+        align-items: center;
+        justify-content: center;
+        min-width: 3em;
+        max-width: 3em;
+    }
+
+        .Services .service-item a i {
+            font-size: 0.8em;
+        }
+
+        .Services .service-item a .content {
+            font-size: 0.75em;
+        }
+}
+
 @media (max-width: 1024px) {
     .Navbar {
         display: none;
@@ -654,20 +683,28 @@ footer {
         transform: translateY(0);
     }
 
-    header .Menu {
-        display: none;
-    }
+        header .Menu {
+            display: none;
+        }
 
-    header .Account {
-        display: none;
-    }
+        header .Account .LogIn {
+            display: flex;
+        }
+
+        header .Account input {
+            display: none;
+        }
+
+        header .Account button {
+            display: none;
+        }
 
     footer ul {
-        padding-left: 3em!important;
+        padding-left: 3em !important;
     }
 
     footer p {
-        text-align:center;
+        text-align: center;
     }
 
     .CustomerSupport {
